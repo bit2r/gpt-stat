@@ -1,0 +1,278 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# 프로이센 기병
+
+## 교통사고
+
+포아송은 미래에 발생할 경우의 수를 예측하기 위해서 포아송 분포를 창안했다.
+좀더 구체적으로 고정된 시간 범위에 발생할 사건을 예측하기 위해서다.
+
+한가지 사례로 한국 R 사용자회 페이스북 그룹에 
+매주 페이스북 게시글을 올리는데 좋아요를 누르는 평균 회원수가 10명이다.
+새로운 페이스북 게시글을 올렸는데 좋아요를 누른 회원이 15명이 될 확률은 얼마나 될까?
+
+이와 같이 다음주(미래) 좋아요를 누른(사건) 회원수가 15명(5, 10, 20, ...)이 될 
+확률을 알고 싶은 것이다.
+
+### 포아송 분포 수렴
+
+다음 조건을 만족할 때 이항분포가 포아송 분포로 수렴되어 근사할 수 있다.
+
+1. 시행 횟수 $n$ 이 매우 크다.
+2. 성공 확률 $p$ 가 매우 작다.
+3. 따라서, $\lambda = n \times p$ 가 일정하다.
+
+이항분포 $Bin(n, p)$는 포아송 분포 $Poi(\lambda)$에 근사한다.
+
+전체 제품 중에서 고장확률이 매우 작은 전자제품을 사례로 들어보자.
+예를 들어, 어떤 공장에서 10,000개의 제품을 제조했을 때, 
+각 제품이 고장날 확률이 0.0001이라고 가정하면 
+이항분포로 전체 제품 중 1개 고장확률을 계산할 수 있지만, 
+제품 수가 매우 크고 고장 확률이 매우 작기 때문에 
+$\lambda = np = 10,000 \times 0.0001 = 1$를 갖는 
+포아송 분포를 사용하여 근사할 수 있다. 
+
+### 월간 교통사고
+
+한 도시의 주요 교차로에서, 
+지난 1년 동안의 데이터를 기반으로 하루 평균 3건의 교통 사고가 발생했다고 가정하자. 
+이 정보를 바탕으로 특정 날에 교통 사고가 발생할 횟수의 확률 분포를 예측해보자.
+
+포아송 분포의 평균은 $\lambda$이며, 
+이 경우에는 하루 평균 교통 사고 횟수인 3으로 설정할 수 있다.
+
+이제 포아송 분포의 확률 질량 함수를 사용하여, 
+특정 날에 교통 사고가 k번 발생할 확률을 계산할 수 있다.
+
+$$
+P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}
+$$
+
+여기서, $e$는 자연상수입니다.
+
+예를 들어, 특정 날에 교통 사고가 정확히 2번 발생할 확률을 계산하려면:
+
+$$P(X=2) = \frac{3^2 e^{-3}}{2!} = 0.224$$
+
+한걸음 더 들어가 실세 [교통사고분석시스템(TAAS)](https://taas.koroad.or.kr/) 웹사이트에서 
+2022년 월별 교통사고 데이터를 얻을 수 있다.
+
+```{r}
+library(tidyverse)
+library(readxl)
+
+accident_raw <- read_excel("data/2022년_월별_교통사고.xlsx", sheet = "2022년도 월별 교통사고", skip = 2)
+
+accident_tbl <- accident_raw |> 
+  janitor::clean_names(ascii = FALSE) |> 
+  select(월, 사고건수 = 사고건수_건) 
+
+accident_tbl
+
+```
+
+월별 평균 사고건수를 `mean()` 함수를 사용해서 계산할 수 있다.
+교통량은 상당히 크고, 교통사고 확률은 매우 낮기 때문에 포아송 분포로 근사를 하는 것이 가능하다.
+교통사고 건수가 많기 때문에 단위를 천대 기준으로 조정하여 포아송 분포 모수 $\lambda$를 계산한다.
+
+```{r}
+accident_mean <- mean(accident_tbl$사고건수) / 1000
+
+accident_mean
+```
+
+월별로 2만대 이상 교통사고가 발생될 경우 교통사고 환자수가 급증하여 병원에 큰 부하가 걸려
+사회적 문제가 된다는 가정하에 월별로 2만대 이상 교통사고가 발생할 확률을 계산해보자.
+
+
+$P(X \geq 20)$ 확률값은 전체 경우의 수에서 0 ~ 1.9 만대 사고건수가 발생할 확률을 빼주면
+계산이 가능하고 다음과 같이 수식으로 표현할 수 있다.
+
+$$
+P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
+$$
+
+이를 R 코드로 작성하면 다음과 같이 함수형 프로그래밍 `purrr` 패키지 `map_dbl()` 함수와 
+포아송 함수에 $\lambda = 16.403$를 넣어 계산이 가능하거나 내장 함수 `ppois()`로 직접 동일한 계산작업을 수행할 수 있다.
+
+
+```{r}
+library(tidyverse)
+
+accident_prob <- 1 - sum(map_dbl(0:19, ~ (accident_mean^.x * exp(-accident_mean)) / factorial(.x)))
+# 1 - ppois(19, lambda = 16.403)
+
+accident_prob
+```
+
+
+## 프로이센 기병 사망자
+
+프로이센 기병대에서 말 발길질로 사망한 병사의 수를 
+1875년부터 1894년까지, 14개의 기병 군단을 대상으로 수집한 
+데이터([Prussian Horse-Kick Data](https://www.randomservices.org/random/data/HorseKicks.html))가 포아송 분포에 잘 적합되는 것으로 유명하다. 
+
+![](images/horse_kicks.jpg)
+
+원본 데이터를 디지털로 복원한 후에 고정된 기간 말 발차기 사망자수를 빈도통계를 통해 표로 정리할 수 있다. 총 관측 횟수는 $14 \times 20 = 280$ (즉, 1875년부터 1894년까지 20년간 프로이센 군단 14개를 관측), 총 사망자 병사수가 196명으로부터 평균 사망병사수를 $\lambda = \frac{196}{280} = 0.7$ 으로 계산할 수 있다. 다음으로 포아송분포에 적합시켜서 분포로부터 말 발차기 사망자수 빈도수를 계산한다.
+
+
+```{r}
+library(rvest)
+library(gt)
+library(gtExtras)
+
+kick_raw <- read_html(x = 'https://www.randomservices.org/random/data/HorseKicks.html') |> 
+  html_node("table") |> 
+  html_table()
+
+# kick_raw |> 
+#   write_csv("data/horse_kick.csv")
+
+kick_tbl <- kick_raw |> 
+  pivot_longer(-Year, names_to = "군단", values_to = "병사수") |> 
+  count(사망횟수 = 병사수, name = "빈도수") |> 
+  mutate(사망자수 = 사망횟수 * 빈도수)  |> 
+  mutate(포아송적합 = map_dbl(사망횟수, dpois, lambda = 196/280) * 280) |> 
+  mutate(포아송적합 = round(포아송적합, digits = 0)) |> 
+  janitor::adorn_totals(c("row"), name = "합계")
+
+kick_tbl |> 
+  gt() |> 
+  gt_theme_538() |> 
+  cols_align("center") |> 
+  gt::tab_spanner(label = "데이터", 
+                  columns = c(사망횟수, 빈도수))
+```
+
+시각적으로 실제 관측한 빈도수와 포아송 분포로부터 추정한 값을 함께 겹칠 경우 일부 차이가 있긴 하지만 대체로 포아송 분포에 잘 적합됨을 확인할 수 있다.
+
+
+```{r}
+kick_tbl |> 
+  filter(사망횟수 != "합계") |> 
+  ggplot() +
+    geom_segment(aes(x = 사망횟수, xend = 사망횟수, y = 0, yend=빈도수),
+                 linewidth= 2) +
+    geom_point(aes(사망횟수, 포아송적합), size=3, color="red") +
+    labs(x = "말 발차기로 사망한 병사 수",
+         y = "빈도수",
+         title = "말 발길질로 인한 프로이센 병사 사망",
+         subtitle = "실제 관측 데이터와 포아송분포 적합 기대값")
+  
+```
+
+## 런던 투하 V2 로켓  {#v2-rocket}
+
+2차 세계대전 중 독일은 신형 무기 V1, V2 로켓을 개발하여 전쟁 막판에 영국 런던을 폭격하여 반전을 노렸다.
+독일 신형폭탄의 공격을 받은 영국에서는 독일에서 발사한 신형 폭탄이 정밀 타격한 것인지 아니면 무작위로 대충 발사를 한 것인지 데이터를 통해 검정을 하고자 한다. [^clark-poisson] [^v2-bomb-stat]
+
+[^clark-poisson]: [R. D. Clarke, “An Application of the Poisson Distribution,” Journal of the Institute of Actuaries, Vol. 72 (1946), p. 481; V-2]()
+
+[^v2-bomb-stat]: [Generalized Linear Models - 4. Poisson Models for Count Data](http://data.princeton.edu/wws509/notes/c4s1.html)
+
+
+### 데이터 {#v2-data}
+
+가장 먼저 데이터를 준비한다. 데이터는 [R.D. Clarke, "An Applicatin of the Poisson Distribution"](https://www.actuaries.org.uk/system/files/documents/pdf/0481.pdf)을 참조한다.
+
+``` {r v2-data}
+# 1. 기본 데이터 --------- 
+
+bombs <- c("0 개","1 개", "2 개","3 개","4 개","5 개 이상")
+hit <- c(229, 211, 93, 35, 7, 1)
+expected <- c(226.74, 211.39, 98.54, 30.62, 7.14, 1.57)
+
+bomb_df <- tibble(bombs, hit, expected)
+bomb_df |> 
+  gt() |> 
+  gt_theme_538()
+```
+
+### 포아송 분포 {#v2-poisson}
+
+런던에 떨어진 폭탄이 포아송 분포, 즉 무작위로 떨어진 것이라고 가정하고 시각화를 한다.
+포아송 분포는 모수가 $\lambda$ 하나만 추정하면 되기 때문에 데이터에서 모수를 추정한다.
+
+$$P(\text{ 해당 구간에서 발생한 k개 사건(k events in interval)}) = e^{-\lambda}\frac{\lambda^k}{k!}$$
+
+``` {r v2-viz}
+# 2. 포아송 분포 --------- 
+
+hit <- 537
+area <- 576
+
+(lambda <- hit/area)
+
+ggplot(bomb_df, aes(x=bombs,xend=bombs, y=0, yend=hit)) +
+  geom_segment(size=1.5) +
+  geom_point(aes(bombs, expected), size=2, color="red") +
+  labs(x="런던 지역에 투하된 폭탄 수", y="런던 지역 숫자", title="영국 런던에 떨어진 V2 로켓 폭탄",
+       subtitle="실제 투하 폭탄수와 포아송 분포로 추정한 폭탄수")
+```
+
+모수($\lambda$)는 `r hit/area`로 추정된다. 이를 실제 데이터와 포아송 분포에서 나온 데이터와 겹쳐 시각화한다. 
+
+예를 들어, 폭탄이 투하되지 않을 확률은 다음과 같다.
+
+$$P(x=0) = e^{-0.9322917}\frac{0.9322917^0}{0!} = 0.3936506$$
+
+이를 R 코드로 표현하면 다음과 같다.
+
+``` {r calculation}
+lambda^0 *exp(-lambda) / factorial(0)
+```
+
+
+### 가설 검정 {#v2-goodness-of-fit}
+
+시각적으로 살펴봤지만, 통계적 가설검정을 통해 다시 한번 런던에 투척된 폭탄이 포아송 분포를 따르는 것인지 검정해본다.
+
+- 귀무가설($H_0$): 런던에 투하된 폭탄은 무작위로 떨어진 것이다. 즉, 폭탄이 떨어진 분포는 포아송 분포다.
+- 대립가설($H_A$): 폭탄이 떨어진 것은 의도를 갖고 특정지역에 투하된 것이다.
+
+유의수준을 설정하고 검정통계량 $\chi^2$을 정의해서 계산하면 귀무가설을 채택하게 된다.
+
+``` {r v2-statistical-testing}
+# 3. 통계적 검정 --------- 
+
+chisq.test(bomb_df$hit, p=bomb_df$expected, rescale.p=TRUE, simulate.p.value=TRUE)
+
+# 4. 최종 데이터 ---------
+
+bomb_df$r_expected <- 573 * c( dpois(0:4, lambda), 1 - sum(dpois(0:4, lambda)))
+
+bomb_df |> 
+  gt() |> 
+    gt_theme_538()
+
+
+```
+
+### 지리정보를 통한 이해 {#v2-spatial}
+
+공간정보를 활용한 사례로 이를 공간정보에 시각화하면 다음과 같다.
+물론 정확한 데이터가 없어 런던 남부에 떨어진 폭탄이 포아송 분포를 따른다고 가정하고 576개 구획으로 나눈 것에 임의로 폭탄이 떨어진 것을 시각화하면 다음과 같다.
+
+``` {r v2-spatial-viz}
+# 5. 지리정보 ---------
+library(spatstat)
+par(mar = rep(0, 4))
+
+# 24*24 = 576
+south_london <- rpoispp(lambda, win = owin(c(0, 24), c(0, 24)))
+plot(south_london, main="", cex=0.5)
+abline(h = 0:24, v = 0:24, col = "lightgray", lty = 3)
+```
+
+포아송 분포를 가정하고 통계적 검정도 물론 가능하다. `spatstat` 팩키지의 함수를 활용하여 통계적 검정을 해도 동일한 결론에 도달하게 된다.
+
+``` {r v2-spatial-testing}
+bomb_test <- quadrat.test(south_london, nx = 24, ny = 24, method="Chisq")
+bomb_test
+```
+

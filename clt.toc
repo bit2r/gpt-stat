@@ -1,0 +1,18 @@
+\cftinsert {end-0}
+\contentsline {chapter}{\chapternumberline {제\,1\,장}중심극한정리}{1}{chapter.1}%
+\cftinsert {start-1}
+\cftinsert {end-1}
+\contentsline {chapter}{\chapternumberline {제\,2\,장}실험}{3}{chapter.2}%
+\cftinsert {start-2}
+\contentsline {section}{\numberline {1}이를 실험을 통해 살펴보자.}{4}{section.2.1}%
+\contentsline {section}{\numberline {2}그림에서 보듯}{4}{section.2.2}%
+\contentsline {section}{\numberline {3}R Markdown}{5}{section.2.3}%
+\contentsline {section}{\numberline {4}플로트 포함하기}{5}{section.2.4}%
+\contentsline {section}{\numberline {5}재미있는 배열 문제}{6}{section.2.5}%
+\cftinsert {end-2}
+\contentsline {chapter}{\chapternumberline {제\,3\,장}tabular와 bibliography}{7}{chapter.3}%
+\cftinsert {start-3}
+\contentsline {section}{\numberline {1}개관}{8}{section.3.1}%
+\contentsline {section}{\numberline {2}표 그리기}{8}{section.3.2}%
+\contentsline {section}{\numberline {3}footnotes in boxed environment}{8}{section.3.3}%
+\contentsline {section}{\numberline {4}문헌목록}{9}{section.3.4}%

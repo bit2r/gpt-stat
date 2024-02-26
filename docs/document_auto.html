@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.4.288" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="이광춘" />
+
+<title>GPT 통계 – 4  보고서 자동화</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn"
+      data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
+      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환"
+      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
+        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환"
+        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="/">
+      GPT 통계
+      </a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">서문</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">데이터 관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/data_mgmt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>데이터 관리 방법론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/database_mgmt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>데이터베이스</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/document.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>문서</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/document_auto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>보고서 자동화</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>모형 관리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/model_value.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>예측모형 가치</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">사례연구</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/cs_nightingale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>나이팅게일</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/cs_napolean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>8</span>  <span class='chapter-title'>나폴레옹 러시아 침공</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/u_boats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>9</span>  <span class='chapter-title'>유보드</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/cs_prussia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>10</span>  <span class='chapter-title'>프로이센 기병</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/cs_german_tank.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>11</span>  <span class='chapter-title'>독일 탱크 문제</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/cs_bomber.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>12</span>  <span class='chapter-title'>폭격비행기</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">참고문헌</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" ></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <div id="quarto-toc-target"></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#보고서-작성-작업흐름" id="toc-보고서-작성-작업흐름"><span class="header-section-number">4.1</span> 보고서 작성 작업흐름</a></li>
+  <li><a href="#다수-보고서-자동-생성" id="toc-다수-보고서-자동-생성"><span class="header-section-number">4.2</span> 다수 보고서 자동 생성</a></li>
+  <li><a href="#보고서-생성-자동화-r" id="toc-보고서-생성-자동화-r"><span class="header-section-number">4.3</span> 보고서 생성 자동화 (R)</a>
+  <ul>
+  <li><a href="#보고서-make-파일" id="toc-보고서-make-파일"><span class="header-section-number">4.3.1</span> 보고서 Make 파일</a></li>
+  <li><a href="#매개변수를-받는-보고서" id="toc-매개변수를-받는-보고서"><span class="header-section-number">4.3.2</span> 매개변수를 받는 보고서</a></li>
+  </ul></li>
+  <li><a href="#예측모형-보고서" id="toc-예측모형-보고서"><span class="header-section-number">4.4</span> 예측모형 보고서</a>
+  <ul>
+  <li><a href="#원본데이터-정제" id="toc-원본데이터-정제"><span class="header-section-number">4.4.1</span> 원본데이터 정제</a></li>
+  <li><a href="#보고서-생성" id="toc-보고서-생성"><span class="header-section-number">4.4.2</span> 보고서 생성</a></li>
+  </ul></li>
+  </ul>
+</nav>
+<section id="보고서-작성-작업흐름" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> 보고서 작성 작업흐름</h2>
+<p>일반적인 보고서 작성을 위한 작업흐름과 필요한 요소는 다음과 같다. 데이터 기반 보고서를 작성할 때 데이터와 데이터를 처리하는데 필요한 R/SAS/SPSS/파이썬 스크립트, 마크다운으로 작성한 문서가 포함된다. 즉, 데이터를 데이터베이스, 웹, 파일형태로 가져오면 R 스크립트를 통해 전처리를 하고 필요한 통계량을 뽑아내고 시각적으로 히스토그램, 막대그래프, 원그래프, 시계열 추세 선 그래프 등이 포함된다. 그리고, 데이터에서 나온 다양한 통계량 및 시각적 산출물에 대한 견해와 함께 최종 보고서 작성자의 의견을 덧붙여 마무리하고 보고서 작성자, 참고문헌, 목차, 각주 등을 붙여 보고서를 완성한다.</p>
+<p>GUI가 아닌 CLI 방식으로 데이터를 분석한 후에 이를 <code>.R</code> 파일로 저장하고 나서 이를 <code>.Rmd</code> 파일(코드와 문서)로 함께 작성한 뒤에 이를 기계에 던져 원하는 형태의 문서 <code>.pdf</code>, <code>.html</code>, <code>.docx</code> 파일을 뽑아내서 웹, PC 배포문서, 저작 가능한 문서 형태로 배포한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/report-single-automation.png" class="lightbox" title="일별 통계보고서 자동화" data-gallery="quarto-lightbox-gallery-1"><img src="images/report-single-automation.png" class="img-fluid" /></a></p>
+<figcaption>일별 통계보고서 자동화</figcaption>
+</figure>
+</div>
+</section>
+<section id="다수-보고서-자동-생성" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> 다수 보고서 자동 생성</h2>
+<p>하루일과는 아침에 일어나서 밥을 먹고, 학교나 회사에 출근하고, 점심먹고, 오후에 놀거나 추가 작업을 하고, 퇴근을 하고 저녁을 먹고, 쉬고 잠을 자는 과정이 일반적인 일상이다. 이런 과정이 매일 매일 반복된다. 마찬가지로 보고서도 이런 일상적인 과정을 담아내야 한다. 즉, 일별로 생성되는 데이터를 동일한 형태의 보고서로 작성하게 된다. 이를 위해 상기 “일반적인 보고서 작성 흐름”을 복사해서 붙여넣기 신공을 발휘하기 보다는 데이터를 바꿔넣고 해당 데이터를 매개변수(parameter)로 던져서 일별 보고서를 자동화시킨다.</p>
+<p>따라서, 일자 정보를 <code>.Rmd</code> 파일에 전달하는 과정을 거치는 것이 필요하고, 통계보고서를 자동생성시키는 과정을 별도 스크립트로 만들어서 실행시킨다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/report-many-automation.png" class="lightbox" title="주간/월간 통계보고서 자동화" data-gallery="quarto-lightbox-gallery-2"><img src="images/report-many-automation.png" class="img-fluid" /></a></p>
+<figcaption>주간/월간 통계보고서 자동화</figcaption>
+</figure>
+</div>
+</section>
+<section id="보고서-생성-자동화-r" class="level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span> 보고서 생성 자동화 (R)</h2>
+<p>보고서 생성 자동화 프로세스를 구현하는 방법은 다양하다. RStudio 통합개발도구를 바탕으로 운영체제 쉘로 내려가지 않고 R 스크립트 내에서 작업하는 업무 구현사례는 다음과 같다.</p>
+<p>즉, 다양한 보고서 템프릿을 생성시켜놓는다. 일별, 주별, 월별, 년도별 보고서를 템플릿형태로 작성하고 나서 내용을 채워 넣는다.</p>
+<p>보고서 내용보다 변하는 것이 데이터가 된다. 2017-01-01 데이터부터 일별로 데이터가 쭉 생성된다. 이를 일자별로, 주별, 월별, 연도별로 인식한 후 이에 대한 적절한 데이터 분석결과를 담아내는 분석 R 스크립트를 활용한다.</p>
+<p>데이터, 보고서 콘텐츠, 데이터분석 스크립트가 모두 준비되면 이를 리포트보고서(.Rmd)가 담고 있어야 한다. 마지막으로 <code>make_report.r</code>을 실행하여 보고서를 자동생성 시킨다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/report-automation-before-after.png" class="lightbox" title="주간/월간 통계보고서 자동화 구현사례" data-gallery="quarto-lightbox-gallery-3"><img src="images/report-automation-before-after.png" class="img-fluid" /></a></p>
+<figcaption>주간/월간 통계보고서 자동화 구현사례</figcaption>
+</figure>
+</div>
+<section id="보고서-make-파일" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1"><span class="header-section-number">4.3.1</span> 보고서 Make 파일</h3>
+<p>일자별로 보고서를 생성시키기 위해서 보고서에 일자를 <code>.Rmd</code> 파일에 넘겨야 한다. 우선 일자 정보를 보고서에 전달할 수 있는 형태로 만들기 위해서 다음과정을 거친다.</p>
+<ul>
+<li>리포트 생성일자를 자동 생성</li>
+<li>월, 일을 뽑아내고 0을 덧붙여 일자를 두자리로 생성</li>
+<li>해당 리포트는 <code>daily_cars_report.Rmd</code> 파일에 <code>params</code> 리스트로 월(<code>dmonth</code>)과 일(<code>dday</code>)을 넘김.</li>
+<li>출력결과는 <code>html_document</code> 형식으로 지정</li>
+<li>한국어가 깨지는 문제가 있어 인코딩은 <code>UTF-8</code>으로 필히 지정</li>
+<li>1월1일부터 5월18일까지 일별로 돌리게 되면 오류가 생겨는 경우 이를 무시하고 계속 보고서 생성시키도록 <code>try</code>, <code>silent=TRUE</code>를 지정하여 넘김.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>reporting_date <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">&quot;2017-01-01&quot;</span>), <span class="fu">as.Date</span>(<span class="st">&quot;2017-05-18&quot;</span>), <span class="at">by =</span> <span class="st">&quot;day&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> reporting_date) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 날짜뽑아내기</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    xmonth <span class="ot">&lt;-</span> <span class="fu">month</span>(<span class="fu">as.Date</span>(i, <span class="at">origin=</span><span class="st">&quot;1970-01-01&quot;</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    xday <span class="ot">&lt;-</span> <span class="fu">day</span>(<span class="fu">as.Date</span>(i, <span class="at">origin=</span><span class="st">&quot;1970-01-01&quot;</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    dmonth <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_pad</span>(xmonth, <span class="dv">2</span>, <span class="at">pad=</span><span class="st">&quot;0&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    dday <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_pad</span>(xday, <span class="dv">2</span>, <span class="at">pad=</span><span class="st">&quot;0&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 보고서 생성</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">try</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">&#39;./report/daily_cars_report.Rmd&#39;</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">params =</span> <span class="fu">list</span>(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                          <span class="at">dmonth =</span> dmonth,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                          <span class="at">dday   =</span> dday),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                      <span class="at">output_format=</span><span class="st">&quot;html_document&quot;</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                      <span class="at">output_file =</span><span class="fu">paste0</span> (<span class="st">&quot;daily_cars_2017&quot;</span>, dmonth, dday, <span class="st">&quot;.html&quot;</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                      <span class="at">encoding =</span> <span class="st">&#39;UTF-8&#39;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+</section>
+<section id="매개변수를-받는-보고서" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2"><span class="header-section-number">4.3.2</span> 매개변수를 받는 보고서</h3>
+<p><code>make_report.r</code> 파일에서 정의된 매개변수(parameter)를 받는 <code>.Rmd</code> 파일은 다음과 같은 모양이 된다. 즉, YAML 헤더에 params에 <code>dmonth</code>, <code>dday</code>를 정의하고 이를 <code>params$dmonth, params$dday</code>로 문서의 변수로 적용한다. 이를 통해 일자별로 생성되는 데이터를 자동으로 분석하여 보고서를 자동생성시키게 된다.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> 보고서 예제</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">&#39;`r strftime(Sys.time(), format = &quot;%B %d, %Y&quot;)`&#39;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>output<span class="sc">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  html_document<span class="sc">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">:</span> yes</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    toc_depth<span class="sc">:</span> <span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>params<span class="sc">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    dmonth<span class="sc">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        value<span class="sc">:</span> x</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    dday<span class="sc">:</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        value<span class="sc">:</span> x</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#```{r, include = F}</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>, <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">999</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#```</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="do">### 3.3. 보고서 시작합니다.</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#```{r, sample-report}</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(params<span class="sc">$</span>directory, params<span class="sc">$</span>file, <span class="at">sep =</span> <span class="st">&#39;/&#39;</span>))</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(<span class="st">&quot;../data/cars_2017&quot;</span>, params<span class="sc">$</span>dmonth, params<span class="sc">$</span>dday, <span class="st">&quot;.rds&quot;</span>))</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dataset)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">#```</span></span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="예측모형-보고서" class="level2" data-number="4.4">
+<h2 data-number="4.4"><span class="header-section-number">4.4</span> 예측모형 보고서</h2>
+<p>R 스크립트로 데이터 분석과정을 프로그래밍하게 되면, 이를 다양한 R 팩키지와 조합하여 예측모형을 담은 보고서도 손쉽게 작성할 수 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/predictive_model_automation.png" class="lightbox" title="예측모형 보고서 자동화" data-gallery="quarto-lightbox-gallery-4"><img src="images/predictive_model_automation.png" class="img-fluid" /></a></p>
+<figcaption>예측모형 보고서 자동화</figcaption>
+</figure>
+</div>
+<ul>
+<li>데이터
+<ul>
+<li>원본작업데이터: 로그파일, 엑셀파일, RDBMS 등</li>
+<li>R 바이너리 파일: 아스키 형태 데이터(.csv 등)로 저장할 경우 메타 정보가 증발하여 R 작업흐름에 태워서 사용할 경우 <code>.rds</code>와 같은 R 바이너리 파일이 유용하다.</li>
+<li>보고서 HTML 파일: 최종 산출물 보고서</li>
+</ul></li>
+<li>R 스크립트
+<ul>
+<li>원본 데이터를 정제하는 R 스크립트</li>
+<li>보고서 혹은 예측모형을 산출하는 R 스크립트</li>
+</ul></li>
+</ul>
+<section id="원본데이터-정제" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1"><span class="header-section-number">4.4.1</span> 원본데이터 정제</h3>
+<p>윈도우 터미널을 열고 <code>RScript</code> 명령어를 실행한다.</p>
+<ul>
+<li>R 정제 파일: <code>cleansing_code.R</code></li>
+<li>데이터 디렉토리: <code>../data</code></li>
+<li>채팅 로그 파일: <code>abc.txt</code></li>
+<li>처리결과 저장 디렉토리: <code>../data_processed</code></li>
+<li>처리결과 파일명: <code>abc_clean.rds</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\xwMOOC_project\code<span class="sc">&gt;</span> RScript cleansing_code.R <span class="st">&quot;../data&quot;</span> <span class="st">&quot;abc.txt&quot;</span> <span class="st">&quot;../data_processed&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;../data_processed</span><span class="sc">\\</span><span class="st">abc_clean.rds&quot;</span></span></code></pre></div>
+</div>
+</section>
+<section id="보고서-생성" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2"><span class="header-section-number">4.4.2</span> 보고서 생성</h3>
+<p>정제된 데이터(<code>.rds</code>)를 통계분석하여 예측모형이 포함된 보고서를 생성한다.</p>
+<ul>
+<li>R make 파일: <code>make_report.R</code></li>
+<li>보고서 Rmd 파일: <code>report_automation.Rmd</code> 은 <code>make_report.R</code> 파일 내 지정됨</li>
+<li>정제된 데이터 디렉토리: <code>data_processed</code></li>
+<li>정제된 데이터 파일: <code>abc_clean.rds</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\xwMOOC_project\report<span class="sc">&gt;</span> RScript make_report.R <span class="st">&quot;data_processed&quot;</span> <span class="st">&quot;abc_clean.rds&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>processing file<span class="sc">:</span> report_automation.Rmd</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>output file<span class="sc">:</span> report_automation.knit.md</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Output created<span class="sc">:</span> report_abc_clean_file.html</span></code></pre></div>
+</div>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden" data-render-id="quarto-int-sidebar-title">GPT 통계</span> <span class="hidden" data-render-id="quarto-int-navbar-title">GPT 통계</span> <span class="hidden" data-render-id="quarto-int-next"><span class="chapter-number">5</span>  <span class="chapter-title">모형 관리</span></span> <span class="hidden" data-render-id="quarto-int-prev"><span class="chapter-number">3</span>  <span class="chapter-title">문서</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/index.html">서문</span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-1">데이터 관리</span> <span class="hidden" data-render-id="quarto-int-sidebar:/data_mgmt.html"><span class="chapter-number">1</span>  <span class="chapter-title">데이터 관리 방법론</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/database_mgmt.html"><span class="chapter-number">2</span>  <span class="chapter-title">데이터베이스</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/document.html"><span class="chapter-number">3</span>  <span class="chapter-title">문서</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/document_auto.html"><span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/model.html"><span class="chapter-number">5</span>  <span class="chapter-title">모형 관리</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/model_value.html"><span class="chapter-number">6</span>  <span class="chapter-title">예측모형 가치</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-2">사례연구</span> <span class="hidden" data-render-id="quarto-int-sidebar:/cs_nightingale.html"><span class="chapter-number">7</span>  <span class="chapter-title">나이팅게일</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/cs_napolean.html"><span class="chapter-number">8</span>  <span class="chapter-title">나폴레옹 러시아 침공</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/u_boats.html"><span class="chapter-number">9</span>  <span class="chapter-title">유보드</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/cs_prussia.html"><span class="chapter-number">10</span>  <span class="chapter-title">프로이센 기병</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/cs_german_tank.html"><span class="chapter-number">11</span>  <span class="chapter-title">독일 탱크 문제</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/cs_bomber.html"><span class="chapter-number">12</span>  <span class="chapter-title">폭격비행기</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/references.html">참고문헌</span> <span class="hidden" data-render-id="quarto-breadcrumbs-29dc06faaf347b4e2a1e66cee02e2692">데이터 관리</span> <span class="hidden" data-render-id="quarto-breadcrumbs-c83259098657b8bdbe287827cde7277c"><span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden" data-render-id="quarto-metatitle">GPT 통계 - <span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></span> <span class="hidden" data-render-id="quarto-twittercardtitle">GPT 통계 - <span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></span> <span class="hidden" data-render-id="quarto-ogcardtitle">GPT 통계 - <span class="chapter-number">4</span>  <span class="chapter-title">보고서 자동화</span></span> <span class="hidden" data-render-id="quarto-metasitename">GPT 통계</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id = "quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a  href="/document.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>문서</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a  href="/model.html" class="pagination-link">
+        <span class="nav-page-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>모형 관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
+
+</body>
+
+</html>

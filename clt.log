@@ -1,0 +1,2821 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.15)  16 AUG 2023 08:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**clt.tex
+(./clt.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-11>
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/oblivoir.cls
+Document Class: oblivoir 2023/03/09 v3.2.1
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count181
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-08-11 L3 programming layer (loader) 
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count182
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count183
+\g__pdf_backend_annotation_int=\count184
+\g__pdf_backend_link_int=\count185
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/oblivoir-xl.cls
+Document Class: oblivoir-xl 2023/03/08 v3.2.1 memoir-based class to typeset Korean
+\fa@setheight=\skip48
+\fa@setwidth=\skip49
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/08 v3.8 configurable book, report, article document class
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count186
+))
+\onelineskip=\skip50
+\lxvchars=\skip51
+\xlvchars=\skip52
+\@memcnta=\count187
+\c@@memmarkcntra=\count188
+\stockheight=\dimen140
+\stockwidth=\dimen141
+\trimtop=\skip53
+\trimedge=\skip54
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/mem10.clo
+File: mem10.clo 2022/07/29 v0.5 memoir class 10pt size option
+)
+\binding=\skip55
+\spinemargin=\skip56
+\foremargin=\skip57
+\uppermargin=\skip58
+\lowermargin=\skip59
+\headdrop=\skip60
+\normalrulethickness=\skip61
+\mem@maxheadheight=\skip62
+\mem@maxfootheight=\skip63
+\headwidth=\skip64
+\c@storedpagenumber=\count189
+\memPD=\dimen142
+\m@mabparskip=\skip65
+\thanksmarkwidth=\skip66
+\thanksmarksep=\skip67
+\droptitle=\skip68
+\c@book=\count190
+\c@part=\count191
+\c@chapter=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\beforechapskip=\skip69
+\midchapskip=\skip70
+\afterchapskip=\skip71
+\chapindent=\skip72
+\bottomsectionskip=\skip73
+\secindent=\skip74
+\beforesecskip=\skip75
+\aftersecskip=\skip76
+\subsecindent=\skip77
+\beforesubsecskip=\skip78
+\aftersubsecskip=\skip79
+\subsubsecindent=\skip80
+\beforesubsubsecskip=\skip81
+\aftersubsubsecskip=\skip82
+\paraindent=\skip83
+\beforeparaskip=\skip84
+\afterparaskip=\skip85
+\subparaindent=\skip86
+\beforesubparaskip=\skip87
+\aftersubparaskip=\skip88
+\pfbreakskip=\skip89
+\c@@ppsavesec=\count198
+\c@@ppsaveapp=\count199
+\ragrparindent=\dimen143
+\everylistparindent=\dimen144
+\parsepi=\skip90
+\topsepi=\skip91
+\itemsepi=\skip92
+\parsepii=\skip93
+\topsepii=\skip94
+\topsepiii=\skip95
+\itemsepii=\skip96
+\itemsepiii=\skip97
+\partopsepii=\skip98
+\partopsepiii=\skip99
+\m@msavetopsep=\skip100
+\m@msavepartopsep=\skip101
+\@enLab=\toks19
+\abstitleskip=\skip102
+\absleftindent=\skip103
+\abs@leftindent=\dimen145
+\absrightindent=\skip104
+\absparindent=\skip105
+\absparsep=\skip106
+\c@vslineno=\count266
+\c@poemline=\count267
+\c@modulo@vs=\count268
+\c@memfvsline=\count269
+\vleftskip=\skip107
+\vrightskip=\skip108
+\stanzaskip=\skip109
+\versewidth=\skip110
+\vgap=\skip111
+\vindent=\skip112
+\vleftmargin=\dimen146
+\c@verse=\count270
+\c@chrsinstr=\count271
+\beforepoemtitleskip=\skip113
+\afterpoemtitleskip=\skip114
+\c@poem=\count272
+\beforePoemTitleskip=\skip115
+\midPoemTitleskip=\skip116
+\afterPoemTitleskip=\skip117
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen147
+\ar@mcellbox=\box52
+\extrarowheight=\dimen148
+\NC@list=\toks20
+\extratabsurround=\skip118
+\backup@length=\skip119
+\ar@cellbox=\box53
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/delarray.sty
+Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen149
+\TX@old@table=\dimen150
+\TX@old@col=\dimen151
+\TX@target=\dimen152
+\TX@delta=\dimen153
+\TX@cols=\count273
+\TX@ftn=\toks21
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count274
+\@cmidlb=\count275
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count276
+\@lastruleclass=\count277
+\@thisrulewidth=\dimen166
+)
+\ctableftskip=\skip120
+\ctabrightskip=\skip121
+\abovecolumnspenalty=\count278
+\@linestogo=\count279
+\@cellstogo=\count280
+\@cellsincolumn=\count281
+\crtok=\toks22
+\@mincolumnwidth=\dimen167
+\c@newflo@tctr=\count282
+\mem@margin@floatbox=\box54
+\@contcwidth=\skip122
+\@contindw=\skip123
+\abovecaptionskip=\skip124
+\belowcaptionskip=\skip125
+\subfloattopskip=\skip126
+\subfloatcapskip=\skip127
+\subfloatcaptopadj=\skip128
+\subfloatbottomskip=\skip129
+\subfloatlabelskip=\skip130
+\subfloatcapmargin=\dimen168
+\c@@contsubnum=\count283
+\m@mscap@capbox=\box55
+\m@mscap@fbox=\box56
+\sidecapsep=\dimen169
+\sidecapwidth=\dimen170
+\m@m@tempdima=\dimen171
+\m@mscapraise=\dimen172
+\sidecapraise=\dimen173
+\m@mscapmainwidth=\dimen174
+\m@mscaplkern=\dimen175
+\beforeepigraphskip=\skip131
+\afterepigraphskip=\skip132
+\epigraphwidth=\skip133
+\epigraphrule=\skip134
+LaTeX Info: Redefining \em on input line 6878.
+LaTeX Info: Redefining \emph on input line 6886.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-08-07 v2.53 Cross-referencing by name of section
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
+\c@section@level=\count284
+)
+\tocentryskip=\skip135
+\tocbaseline=\skip136
+\cftparskip=\skip137
+\cftbeforebookskip=\skip138
+\cftbookindent=\dimen176
+\cftbooknumwidth=\dimen177
+\cftbeforepartskip=\skip139
+\cftpartindent=\skip140
+\cftpartnumwidth=\skip141
+\cftbeforechapterskip=\skip142
+\cftchapterindent=\skip143
+\cftchapternumwidth=\skip144
+\cftbeforesectionskip=\skip145
+\cftsectionindent=\skip146
+\cftsectionnumwidth=\skip147
+\cftbeforesubsectionskip=\skip148
+\cftsubsectionindent=\skip149
+\cftsubsectionnumwidth=\skip150
+\cftbeforesubsubsectionskip=\skip151
+\cftsubsubsectionindent=\skip152
+\cftsubsubsectionnumwidth=\skip153
+\cftbeforeparagraphskip=\skip154
+\cftparagraphindent=\skip155
+\cftparagraphnumwidth=\skip156
+\cftbeforesubparagraphskip=\skip157
+\cftsubparagraphindent=\skip158
+\cftsubparagraphnumwidth=\skip159
+\prechapterprecisshift=\dimen178
+\c@maxsecnumdepth=\count285
+\bibindent=\dimen179
+\bibitemsep=\skip160
+\indexcolsep=\skip161
+\indexrule=\skip162
+\indexmarkstyle=\toks23
+\@indexbox=\insert252
+LaTeX Info: Redefining \raggedbottom on input line 7881.
+LaTeX Info: Redefining \flushbottom on input line 7885.
+\glossarycolsep=\dimen180
+\glossaryrule=\dimen181
+\sideparvshift=\skip163
+\sideins=\insert251
+\sidebartopsep=\skip164
+\sidebarhsep=\skip165
+\sidebarvsep=\skip166
+\sidebarwidth=\skip167
+\footmarkwidth=\skip168
+\footmarksep=\skip169
+\footparindent=\skip170
+\footinsdim=\skip171
+\footinsv@r=\insert250
+\@mpfootinsv@r=\insert249
+\m@m@k=\count286
+\m@m@h=\dimen182
+\m@mipn@skip=\skip172
+\sidefootins=\insert248
+\sidefootadjust=\skip173
+\sidefootheight=\skip174
+\sidefoothsep=\skip175
+\sidefootvsep=\skip176
+\sidefootwidth=\skip177
+\m@mdownsf=\skip178
+\c@sidefootnote=\count287
+\sidefootmarkwidth=\skip179
+\sidefootmarksep=\skip180
+\sidefootparindent=\skip181
+\c@pagenote=\count288
+\c@pagenoteshadow=\count289
+\mem@pn@lastkern=\skip182
+\every@verbatim=\toks24
+\afterevery@verbatim=\toks25
+\verbatim@line=\toks26
+\tab@position=\count290
+\verbatim@in@stream=\read2
+\verbatimindent=\skip183
+\verbatim@out=\write3
+\bvboxsep=\skip184
+\c@memfbvline=\count291
+\c@bvlinectr=\count292
+\bvnumlength=\skip185
+\fb@frw=\dimen183
+\fb@frh=\dimen184
+\FrameRule=\dimen185
+\FrameSep=\dimen186
+\c@cp@cntr=\count293
+\c@ism@mctr=\count294
+\c@xsm@mctr=\count295
+\c@csm@mctr=\count296
+\c@ksm@mctr=\count297
+\c@xksm@mctr=\count298
+\c@cksm@mctr=\count299
+\c@msm@mctr=\count300
+\c@xmsm@mctr=\count301
+\c@cmsm@mctr=\count302
+\c@bsm@mctr=\count303
+\c@workm@mctr=\count304
+\c@sheetsequence=\count305
+\c@lastsheet=\count306
+\c@lastpage=\count307
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2023/07/27 v1.04 Text only upper/lower case changing (DPC)
+Package textcase Info: Defining Legacy names on input line 20.
+)
+\c@figure=\count308
+\c@lofdepth=\count309
+\cftbeforefigureskip=\skip186
+\cftfigureindent=\skip187
+\cftfigurenumwidth=\skip188
+\c@table=\count310
+\c@lotdepth=\count311
+\cftbeforetableskip=\skip189
+\cfttableindent=\skip190
+\cfttablenumwidth=\skip191
+Package abstract [2008/07/23] emulated by memoir.
+Package appendix [2008/07/23] emulated by memoir.
+Package ccaption [2008/07/23] emulated by memoir.
+Package changepage [2008/07/23] emulated by memoir.
+Package chngcntr [2008/07/23] emulated by memoir.
+Package chngpage [2008/07/23] emulated by memoir.
+Package crop emulated by memoir.
+Package enumerate [2008/07/23] emulated by memoir.
+Package epigraph [2008/07/23] emulated by memoir.
+Package ifmtarg [2008/07/23] emulated by memoir.
+Package index [2008/07/23] emulated by memoir.
+Package makeidx [2008/07/23] emulated by memoir.
+Package moreverb [2008/07/23] emulated by memoir.
+Package needspace [2008/07/23] emulated by memoir.
+Package newfile [2008/07/23] emulated by memoir.
+Package nextpage [2008/07/23] emulated by memoir.
+Package pagenote [2008/07/23] emulated by memoir.
+Package parskip [2008/07/23] emulated by memoir.
+Package patchcmd [2008/07/23] emulated by memoir.
+Package setspace [2008/07/23] emulated by memoir.
+Package shortvrb [2008/07/23] emulated by memoir.
+Package showidx [2008/07/23] emulated by memoir.
+Package titleref [2008/07/23] emulated by memoir.
+Package titling [2008/07/23] emulated by memoir.
+Package tocbibind [2008/07/23] emulated by memoir.
+Package tocloft [2008/07/23] emulated by memoir.
+Package tocvsec2 [2008/07/23] emulated by memoir.
+Package verbatim [2008/07/23] emulated by memoir.
+Package verse [2008/07/23] emulated by memoir.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/memhangul-x.sty
+Package: memhangul-x 2023/03/08Hangul Typography for (x)oblivoir
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/xetexko-var.sty
+Package: xetexko-var 2020/02/05 v0.14 Korean Typesetting under XeTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/xetex/xetexko/xetexko-space.sty
+Package: xetexko-space 2021/03/20 v3.0 A deprecated addendum to XeTeX-ko
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/xetex/xetexko/xetexko.sty
+Package: xetexko 2022/11/01 v4.2 typesetting Korean with XeTeX
+\XeTeXcharclassID=\XeTeXcharclass1
+\XeTeXcharclassCJ=\XeTeXcharclass2
+\XeTeXcharclassOP=\XeTeXcharclass3
+\XeTeXcharclassCL=\XeTeXcharclass4
+\XeTeXcharclassEX=\XeTeXcharclass5
+\XeTeXcharclassCM=\XeTeXcharclass6
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/unicode-data/load-unicode-xetex-classes.tex 
+load-unicode-xetex-classes.tex v1.16 (2022-09-17)
+Reading Unicode east Asian character class data
+# LineBreak-15.0.0.txt 
+# Date: 2022-07-28, 09:20:42 GMT [KW, LI] 
+# EastAsianWidth-15.0.0.txt 
+# Date: 2022-05-24, 17:40:20 GMT [KW, LI] 
+)
+\XeTeXcharclassHG=\XeTeXcharclass7
+\XeTeXcharclassJJ=\XeTeXcharclass8
+\XeTeXcharclassMD=\XeTeXcharclass9
+\XeTeXcharclassFS=\XeTeXcharclass10
+\XeTeXcharclassLD=\XeTeXcharclass11
+\XeTeXcharclassSY=\XeTeXcharclass12
+\XeTeXcharclassAO=\XeTeXcharclass13
+\XeTeXcharclassAC=\XeTeXcharclass14
+\XeTeXcharclassAM=\XeTeXcharclass15
+\XeTeXcharclassAH=\XeTeXcharclass16
+\XeTeXcharclassAP=\XeTeXcharclass17
+\XeTeXcharclassVC=\XeTeXcharclass18
+\XeKo@toks@=\toks27
+\XeKo@toks@ii=\toks28
+\XeKo@skip@=\skip192
+\XeKo@count@=\count312
+\XeKo@dimen@=\dimen187
+\XeKo@box@=\box57
+\XeKo@dotemph@box=\box58
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count313
+\l__fontspec_language_int=\count314
+\l__fontspec_strnum_int=\count315
+\l__fontspec_tmp_int=\count316
+\l__fontspec_tmpa_int=\count317
+\l__fontspec_tmpb_int=\count318
+\l__fontspec_tmpc_int=\count319
+\l__fontspec_em_int=\count320
+\l__fontspec_emdef_int=\count321
+\l__fontspec_strong_int=\count322
+\l__fontspec_strongdef_int=\count323
+\l__fontspec_tmpa_dim=\dimen188
+\l__fontspec_tmpb_dim=\dimen189
+\l__fontspec_tmpc_dim=\dimen190
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/xetex/xetexko/xetexko-josa.sty
+Package: xetexko-josa 2021/03/20 v3.0 A deprecated addendum to XeTeX-ko
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/xetex/xetexko/xetexko-vertical.sty
+Package: xetexko-vertical 2021/03/20 v3.0 A deprecated addendum to XeTeX-ko
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/xob-dotemph.sty
+\useremphraisedim=\dimen191
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/xob-hyper.sty) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/xob-font.sty
+Package: xob-font 2023/02/19 v0.9.7 select hangul/hanja fonts for oblivoir
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/xetex/xetexko/xetexko-font.sty
+Package: xetexko-font 2021/03/20 v3.0 A deprecated addendum to XeTeX-ko
+)))
+\memh@hu=\dimen192
+\t@nch@ars=\skip193
+\tmp@XXbox=\box59
+\tmp@XXdim=\dimen193
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/memhangul-common.sty
+Package: memhangul-common 2022/11/04
+\togetheightoffont=\box60
+\htoffnt=\skip194
+\divnoteskip=\skip195
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/memhangul-patch.sty) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/hologo/hologo.sty
+Package: hologo 2021-11-16 v1.15 A logo collection with bookmark support (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+Package hologo Info: Using driver `xetex'.
+)
+\pghgheadwidth=\dimen194
+\c@APPchapter=\count324
+\c@APPsection=\count325
+\c@APPsubsection=\count326
+\memucsadjustwidthtopsep=\dimen195
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/memucs-setspace.sty
+Package: memucs-setspace 2021/03/03 6.7-mu9 Contributed and Supported LaTeX2e package
+Package: `memucs-setspace', a modified version of `setspace', 6.7-mu9 <2021/03/03>
+))
+\ob@hu=\dimen196
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen197
+\Hy@linkcounter=\count327
+\Hy@pagecounter=\count328
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count329
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4050.
+Package hyperref Info: Hyper figures OFF on input line 4167.
+Package hyperref Info: Link nesting OFF on input line 4172.
+Package hyperref Info: Hyper index ON on input line 4175.
+Package hyperref Info: Plain pages OFF on input line 4182.
+Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4434.
+\c@Hy@tempcnt=\count330
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4772.
+\XeTeXLinkMargin=\dimen198
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count331
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
+Package hyperref Info: Hyper figures OFF on input line 6051.
+Package hyperref Info: Link nesting OFF on input line 6056.
+Package hyperref Info: Hyper index ON on input line 6059.
+Package hyperref Info: backreferencing OFF on input line 6066.
+Package hyperref Info: Link coloring OFF on input line 6071.
+Package hyperref Info: Link coloring with OCG OFF on input line 6076.
+Package hyperref Info: PDF/A mode OFF on input line 6081.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count332
+\c@Item=\count333
+\c@Hfootnote=\count334
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-07-08 v7.01b Hyperref driver for XeTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box61
+\c@Hy@AnnotLevel=\count335
+\HyField@AnnotCount=\count336
+\Fld@listcount=\count337
+\c@bookmark@seq@number=\count338
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip196
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.sty
+Package: memhfixc 2023/07/28 v1.21 hyperref package fixes for memoir class
+\c@memhycontfloat=\count339
+\c@Hpagenote=\count340
+)
+\@ensp=\skip197
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/ob-koreanappendix.sty))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip198
+For additional information on amsmath, use the `?' option.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen257
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen258
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count341
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count342
+\leftroot@=\count343
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count344
+\DOTSCASE@=\count345
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen259
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count346
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count347
+\dotsspace@=\muskip17
+\c@parentequation=\count348
+\dspbrk@lvl=\count349
+\tag@help=\toks30
+\row@=\count350
+\column@=\count351
+\maxfields@=\count352
+\andhelp@=\toks31
+\eqnshift@=\dimen260
+\alignsep@=\dimen261
+\tagshift@=\dimen262
+\tagwidth@=\dimen263
+\totwidth@=\dimen264
+\lineht@=\dimen265
+\@envbody=\toks32
+\multlinegap=\skip199
+\multlinetaggap=\skip256
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\g__um_fam_int=\count353
+\g__um_fonts_used_int=\count354
+\l__um_primecount_int=\count355
+\g__um_primekern_muskip=\muskip18
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+\MT@toks=\toks34
+\MT@tempbox=\box64
+\MT@count=\count356
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks35
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen266
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count357
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 238.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2022/06/12 v2.14 Predefined colors according to SVG 1.1 (UK)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2022/06/12 v2.14 Predefined colors according to Unix/X11 (UK)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count358
+\FV@InFile=\read3
+\FV@TabBox=\box65
+\c@FancyVerbLine=\count359
+\FV@StepNumber=\count360
+\FV@OutFile=\write4
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip257
+\fb@frw=\dimen267
+\fb@frh=\dimen268
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip258
+\LTright=\skip259
+\LTpre=\skip260
+\LTpost=\skip261
+\LTchunksize=\count361
+\LTcapwidth=\dimen269
+\LT@head=\box66
+\LT@firsthead=\box67
+\LT@foot=\box68
+\LT@lastfoot=\box69
+\LT@gbox=\box70
+\LT@cols=\count362
+\LT@rows=\count363
+\c@LT@tables=\count364
+\c@LT@chunks=\count365
+\LT@p@ftn=\toks36
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count366
+\calc@Bcount=\count367
+\calc@Adimen=\dimen270
+\calc@Bdimen=\dimen271
+\calc@Askip=\skip262
+\calc@Bskip=\skip263
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count368
+\calc@Cskip=\skip264
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box71
+\fn@width=\dimen272
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen273
+\Gin@req@width=\dimen274
+) (./sampl.sty
+Package: sampl 2023/08/10 v0.1
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ksmisc/ksjosaref.sty
+Package: ksjosaref 2021/02/10, v0.3.1
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ksmisc/ksjosaref-kotex.sty)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/fapapersize.sty
+Package: fapapersize 2022/03/08 v0.3
+\fa@stockheight=\skip265
+\fa@stockwidth=\skip266
+\fa@paperheight=\skip267
+\fa@paperwidth=\skip268
+\fa@leftmargin=\skip269
+\fa@rightmargin=\skip270
+\fa@uppermargin=\skip271
+\fa@lowermargin=\skip272
+\fa@tmplenwd=\skip273
+\fa@tmplenht=\skip274
+\tmp@dim=\dimen275
+)
+
+******************************************************
+Stock height and width: 845.04684pt by 597.50787pt
+Top and edge trims: 56.9055pt and 31.29803pt
+Page height and width: 731.23582pt by 534.9118pt
+Text height and width: 569.85687pt by 312pt
+Spine and edge margins: 71.13188pt and 150.79959pt
+Upper and lower margins: 71.13188pt and 90.24707pt
+Headheight and headsep: 12pt and 18.06749pt
+Footskip: 25.29494pt
+Columnsep and columnseprule: 10pt and 0pt
+Marginparsep and marginparwidth: 8.53581pt and 128.0374pt
+Sidecapsep and sidecapwidth: 7pt and 117pt
+Sidebarhsep and sidebarwidth: 7pt and 117pt
+Sidebarvsep and sidebartopsep: 12pt and 0pt
+Sidebarheight: 596.39996pt
+Sidefoothsep and sidefootwidth: 7pt and 117pt
+Sidefootvsep and sidefootheight: 12pt and 596.39996pt
+******************************************************
+
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2023/06/19 version 6.0.4 text color boxes
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks37
+\pgfutil@tempdima=\dimen276
+\pgfutil@tempdimb=\dimen277
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box72
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks40
+))
+\pgf@x=\dimen278
+\pgf@y=\dimen279
+\pgf@xa=\dimen280
+\pgf@ya=\dimen281
+\pgf@xb=\dimen282
+\pgf@yb=\dimen283
+\pgf@xc=\dimen284
+\pgf@yc=\dimen285
+\pgf@xd=\dimen286
+\pgf@yd=\dimen287
+\w@pgf@writea=\write5
+\r@pgf@reada=\read4
+\c@pgf@counta=\count369
+\c@pgf@countb=\count370
+\c@pgf@countc=\count371
+\c@pgf@countd=\count372
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
+\pgf@sys@id@count=\count373
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count374
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count375
+\pgfsyssoftpath@bigbuffer@items=\count376
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen288
+\pgfmath@count=\count377
+\pgfmath@box=\box73
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count378
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen289
+\pgf@picmaxx=\dimen290
+\pgf@picminy=\dimen291
+\pgf@picmaxy=\dimen292
+\pgf@pathminx=\dimen293
+\pgf@pathmaxx=\dimen294
+\pgf@pathminy=\dimen295
+\pgf@pathmaxy=\dimen296
+\pgf@xx=\dimen297
+\pgf@xy=\dimen298
+\pgf@yx=\dimen299
+\pgf@yy=\dimen300
+\pgf@zx=\dimen301
+\pgf@zy=\dimen302
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen303
+\pgf@path@lasty=\dimen304
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen305
+\pgf@shorten@start@additional=\dimen306
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box74
+\pgf@hbox=\box75
+\pgf@layerbox@main=\box76
+\pgf@picture@serial@count=\count379
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen307
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen308
+\pgf@pt@y=\dimen309
+\pgf@pt@temp=\dimen310
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen311
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen312
+\pgf@sys@shading@range@num=\count380
+\pgf@shadingcount=\count381
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box77
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box78
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen313
+\pgf@nodesepend=\dimen314
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box79
+\tcb@upperbox=\box80
+\tcb@lowerbox=\box81
+\tcb@phantombox=\box82
+\c@tcbbreakpart=\count382
+\c@tcblayer=\count383
+\c@tcolorbox@number=\count384
+\tcb@temp=\box83
+\tcb@temp=\box84
+\tcb@temp=\box85
+\tcb@temp=\box86
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tzplot/tzplot.sty
+Package: tzplot 2022/09/28 v2.1 Plot Graphs with TikZ Abbreviations
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen315
+\pgffor@skip=\dimen316
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count385
+\pgfplotmarksize=\dimen317
+)
+\tikz@lastx=\dimen318
+\tikz@lasty=\dimen319
+\tikz@lastxsaved=\dimen320
+\tikz@lastysaved=\dimen321
+\tikz@lastmovetox=\dimen322
+\tikz@lastmovetoy=\dimen323
+\tikzleveldistance=\dimen324
+\tikzsiblingdistance=\dimen325
+\tikz@figbox=\box87
+\tikz@figbox@bg=\box88
+\tikz@tempbox=\box89
+\tikz@tempbox@bg=\box90
+\tikztreelevel=\count386
+\tikznumberofchildren=\count387
+\tikznumberofcurrentchild=\count388
+\tikz@fig@count=\count389
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count390
+\pgfmatrixcurrentcolumn=\count391
+\pgf@matrix@numberofcolumns=\count392
+)
+\tikz@expandcount=\count393
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen326
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box91
+\pgf@layerboxsaved@background=\box92
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen327
+\pgfdecoratedremainingdistance=\dimen328
+\pgfdecoratedinputsegmentcompleteddistance=\dimen329
+\pgfdecoratedinputsegmentremainingdistance=\dimen330
+\pgf@decorate@distancetomove=\dimen331
+\pgf@decorate@repeatstate=\count394
+\pgfdecorationsegmentamplitude=\dimen332
+\pgfdecorationsegmentlength=\dimen333
+)
+\tikz@lib@dec@box=\box93
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/spath3/tikzlibrarycalligraphy.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/spath3/spath3.sty
+Package: spath3 2022/08/24 v2.7 Functions for manipulating PGF soft paths
+\g__spath_output_int=\count395
+\l__spath_tmpa_dim=\dimen334
+\l__spath_tmpb_dim=\dimen335
+\l__spath_tmpa_int=\count396
+\l__spath_tmpb_int=\count397
+\l__spath_move_x_dim=\dimen336
+\l__spath_move_y_dim=\dimen337
+\l__spath_rectx_dim=\dimen338
+\l__spath_recty_dim=\dimen339
+\g__spath_anon_int=\count398
+)
+\l__cal_tmpa_int=\count399
+\l__cal_tmpb_int=\count400
+\g__cal_path_component_int=\count401
+\g__cal_label_int=\count402
+\l__cal_tmpa_dim=\dimen340
+\l__cal_tmpb_dim=\dimen341
+\l__cal_tmpc_dim=\dimen342
+\l__cal_tmpd_dim=\dimen343
+\l__cal_tmpe_dim=\dimen344
+\l__cal_tmpf_dim=\dimen345
+\l__cal_tmpg_dim=\dimen346
+\l__cal_tmph_dim=\dimen347
+\l__cal_taper_width_dim=\dimen348
+\l__cal_line_width_dim=\dimen349
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+\pgf@intersect@solutions=\count403
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box94
+\pgfnodeparttwobox=\box95
+\pgfnodepartthreebox=\box96
+\pgfnodepartfourbox=\box97
+\pgfnodeparttwentybox=\box98
+\pgfnodepartnineteenbox=\box99
+\pgfnodeparteighteenbox=\box100
+\pgfnodepartseventeenbox=\box101
+\pgfnodepartsixteenbox=\box102
+\pgfnodepartfifteenbox=\box103
+\pgfnodepartfourteenbox=\box104
+\pgfnodepartthirteenbox=\box105
+\pgfnodeparttwelvebox=\box106
+\pgfnodepartelevenbox=\box107
+\pgfnodeparttenbox=\box108
+\pgfnodepartninebox=\box109
+\pgfnodeparteightbox=\box110
+\pgfnodepartsevenbox=\box111
+\pgfnodepartsixbox=\box112
+\pgfnodepartfivebox=\box113
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen350
+\pgfarrowlength=\dimen351
+\pgfarrowwidth=\dimen352
+\pgfarrowlinewidth=\dimen353
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgftransformnonlinearflatness=\dimen354
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@curvilinear@time@a=\dimen355
+\pgf@curvilinear@length@a=\dimen356
+\pgf@curvilinear@length@b=\dimen357
+\pgf@curvilinear@length@c=\dimen358
+\pgf@curvilinear@length@d=\dimen359
+)
+\pgf@arrows@the@rigidity=\dimen360
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryspy.code.tex
+File: tikzlibraryspy.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@spybox=\box114
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex)
+\pgf@layerbox@behind=\box115
+\pgf@layerboxsaved@behind=\box116
+\pgf@layerbox@above=\box117
+\pgf@layerboxsaved@above=\box118
+\pgf@layerbox@foreground=\box119
+\pgf@layerboxsaved@foreground=\box120
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pagecolor/pagecolor.sty
+Package: pagecolor 2023-04-18 v1.2c Provides thepagecolor (HMM)
+
+Package pagecolor Info: \nopagecolor did not work with the crop package
+(pagecolor)             2017/11/19 v1.10. Using
+(pagecolor)             none
+(pagecolor)             as nopagecolor now.
+
+
+Package pagecolor Warning: Option nopagecolor=none requested but this does not work with the
+(pagecolor)                crop package. By option nopagecolor the "color" to be used with
+(pagecolor)                \nopagecolor\ is set. The current value is "none" (maybe by
+(pagecolor)                default), but the crop package broke \nopagecolor.
+(pagecolor)                Therefore the color cannot be "none".
+(pagecolor)                Please change the option accordingly!
+(pagecolor)                As first aid nopagecolor is now set to white.
+
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks49
+\AP@partial=\box121
+\AP@footins=\box122
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/obchaptertoc.sty
+Package: obchaptertoc 2023/01/30, v3.0
+\c@tocmarker=\count404
+\afterchaptertocskip=\skip275
+\c@obchaptocmaxdepth=\count405
+)
+\tmplen=\skip276
+\c@example=\count406
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks50
+\thm@bodyfont=\toks51
+\thm@headfont=\toks52
+\thm@notefont=\toks53
+\thm@headpunct=\toks54
+\thm@preskip=\skip277
+\thm@postskip=\skip278
+\thm@headsep=\skip279
+\dth@everypar=\toks55
+)
+\c@thm=\count407
+\c@mythm=\count408
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-utf/contrib/kotex-logo.sty) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking positions in a document
+\l__sn_x_dim=\dimen361
+\l__sn_y_dim=\dimen362
+\l__sn_xa_dim=\dimen363
+\l__sn_ya_dim=\dimen364
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexcolors/latexcolors.sty
+Package: latexcolors 2019/01/06 v0.1a xcolor definitions for the colors on latexcolor.com
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabularray/tabularray.sty
+Package: tabularray 2023-03-01 v2023A Typeset tabulars and arrays with LaTeX3
+\l__tblr_a_int=\count409
+\l__tblr_c_int=\count410
+\l__tblr_r_int=\count411
+\l__tblr_d_dim=\dimen365
+\l__tblr_h_dim=\dimen366
+\l__tblr_o_dim=\dimen367
+\l__tblr_p_dim=\dimen368
+\l__tblr_q_dim=\dimen369
+\l__tblr_r_dim=\dimen370
+\l__tblr_s_dim=\dimen371
+\l__tblr_t_dim=\dimen372
+\l__tblr_v_dim=\dimen373
+\l__tblr_w_dim=\dimen374
+\l__tblr_a_box=\box123
+\l__tblr_b_box=\box124
+\l__tblr_c_box=\box125
+\l__tblr_d_box=\box126
+\g__tblr_table_count_int=\count412
+\c@rownum=\count413
+\c@colnum=\count414
+\c@rowcount=\count415
+\c@colcount=\count416
+\abovesep=\dimen375
+\belowsep=\dimen376
+\leftsep=\dimen377
+\rightsep=\dimen378
+\g_tblr_level_int=\count417
+\g__tblr_data_row_key_count_int=\count418
+\g__tblr_data_column_key_count_int=\count419
+\g__tblr_data_cell_key_count_int=\count420
+\g__tblr_array_int=\count421
+\l__tblr_key_count_int=\count422
+\l__tblr_key_quotient_int=\count423
+\l__tblr_key_quotient_two_int=\count424
+\l__tblr_key_remainder_int=\count425
+\g__tblr_data_str_value_count_int=\count426
+\rulewidth=\dimen379
+\l__tblr_strut_dp_dim=\dimen380
+\l__tblr_strut_ht_dim=\dimen381
+\g__tblr_cell_wd_dim=\dimen382
+\g__tblr_cell_ht_dim=\dimen383
+\g__tblr_cell_head_dim=\dimen384
+\g__tblr_cell_foot_dim=\dimen385
+\l__column_target_dim=\dimen386
+\l__tblr_caption_box=\box127
+\l__tblr_caption_left_box=\box128
+\l__tblr_row_head_box=\box129
+\l__tblr_row_foot_box=\box130
+\l__tblr_row_head_foot_dim=\dimen387
+\tablewidth=\dimen388
+\l__tblr_table_firsthead_box=\box131
+\l__tblr_table_middlehead_box=\box132
+\l__tblr_table_lasthead_box=\box133
+\l__tblr_table_firstfoot_box=\box134
+\l__tblr_table_middlefoot_box=\box135
+\l__tblr_table_lastfoot_box=\box136
+\l__tblr_remain_height_dim=\dimen389
+\l__tblr_long_from_int=\count427
+\l__tblr_long_to_int=\count428
+\l__tblr_curr_i_int=\count429
+\l__tblr_prev_i_int=\count430
+\l__tblr_table_page_int=\count431
+\l__tblr_table_head_box=\box137
+\l__tblr_table_foot_box=\box138
+\l__tblr_table_head_foot_dim=\dimen390
+\l__tblr_table_head_body_foot_dim=\dimen391
+\l__tblr_table_box=\box139
+\l__tblr_table_hlines_box=\box140
+\l__tblr_hline_box=\box141
+\l__tblr_row_box=\box142
+\l__tblr_col_o_wd_dim=\dimen392
+\l__tblr_col_b_wd_dim=\dimen393
+\l__tblr_hline_leftskip_dim=\dimen394
+\l__tblr_hline_rightskip_dim=\dimen395
+\l__tblr_row_ht_dim=\dimen396
+\l__tblr_row_dp_dim=\dimen397
+\l__tblr_row_abovesep_dim=\dimen398
+\l__tblr_row_belowsep_dim=\dimen399
+\l__tblr_row_vlines_box=\box143
+\l__tblr_vline_box=\box144
+\l__tblr_cell_box=\box145
+\l__row_upper_dim=\dimen400
+\l__row_lower_dim=\dimen401
+\l__row_vpace_dim=\dimen402
+\l__tblr_vline_aboveskip_dim=\dimen403
+\l__tblr_vline_belowskip_dim=\dimen404
+\l__tblr_cell_wd_dim=\dimen405
+\l__tblr_cell_ht_dim=\dimen406
+\l__tblr_diag_box=\box146
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.0.4'
+\c@tcbrastercolumn=\count432
+\c@tcbrasterrow=\count433
+\c@tcbrasternum=\count434
+\c@tcbraster=\count435
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box147
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.0.4'
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box148
+\tcb@totalupperbox=\box149
+\tcb@totallowerbox=\box150
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.0.4'
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.0.4'
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.0.4'
+\tcbfitdim=\dimen407
+\tcb@lowerfitdim=\dimen408
+\tcb@upperfitdim=\dimen409
+\tcb@cur@hbadness=\count436
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count437
+\lst@gtempboxa=\box151
+\lst@token=\toks56
+\lst@length=\count438
+\lst@currlwidth=\dimen410
+\lst@column=\count439
+\lst@pos=\count440
+\lst@lostspace=\dimen411
+\lst@width=\dimen412
+\lst@newlines=\count441
+\lst@lineno=\count442
+\lst@maxwidth=\dimen413
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count443
+\lst@skipnumbers=\count444
+\lst@framebox=\box152
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/04/15 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count445
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. Library `listings` is loaded instead. on input line 29.
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.0.4'
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.0.4'
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.0.4'
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.0.4'
+)
+\c@tcb@cnt@theorem=\count446
+
+Package fontspec Info: FreeMono scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono/B scale = 0.9862671224506187.
+
+
+Package fontspec Info: FreeMono/I scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono/BI scale = 0.9862671224506187.
+
+
+Package fontspec Info: Font family 'FreeMono(0)' created for font 'FreeMono'
+(fontspec)             with options
+(fontspec)             [Scale=MatchLowercase,WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.033569227841895]"FreeMono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9862671224506187]"FreeMono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.033569227841895]"FreeMono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9862671224506187]"FreeMono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: FreeMono scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono/B scale = 0.9862671224506187.
+
+
+Package fontspec Info: FreeMono/I scale = 1.033569227841895.
+
+
+Package fontspec Info: FreeMono/BI scale = 0.9862671224506187.
+
+
+Package fontspec Info: Font family 'FreeMono(1)' created for font 'FreeMono'
+(fontspec)             with options [Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.033569227841895]"FreeMono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9862671224506187]"FreeMono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.033569227841895]"FreeMono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9862671224506187]"FreeMono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> TU/FreeMono(1)/m/n on input line 266.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> TU/FreeMono(1)/bx/n on input line 266.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box153
+\UL@hyphenbox=\box154
+\UL@skip=\skip280
+\UL@hook=\toks57
+\UL@height=\dimen414
+\UL@pe=\count447
+\UL@pixel=\dimen415
+\ULC@box=\box155
+Package: ulem 2019/11/18
+\ULdepth=\dimen416
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/oblivoir-misc.sty
+Package: oblivoir-misc 2023/02/14 version0.4
+\obhlraisedim=\dimen417
+\obhlheight=\dimen418
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count448
+\mult@box=\box156
+\multicol@leftmargin=\dimen419
+\c@unbalance=\count449
+\c@collectmore=\count450
+\doublecol@number=\count451
+\multicoltolerance=\count452
+\multicolpretolerance=\count453
+\full@width=\dimen420
+\page@free=\dimen421
+\premulticols=\dimen422
+\postmulticols=\dimen423
+\multicolsep=\skip281
+\multicolbaselineskip=\skip282
+\partial@page=\box157
+\last@line=\box158
+\mc@boxedresult=\box159
+\maxbalancingoverflow=\dimen424
+\mult@rightbox=\box160
+\mult@grightbox=\box161
+\mult@firstbox=\box162
+\mult@gfirstbox=\box163
+\@tempa=\box164
+\@tempa=\box165
+\@tempa=\box166
+\@tempa=\box167
+\@tempa=\box168
+\@tempa=\box169
+\@tempa=\box170
+\@tempa=\box171
+\@tempa=\box172
+\@tempa=\box173
+\@tempa=\box174
+\@tempa=\box175
+\@tempa=\box176
+\@tempa=\box177
+\@tempa=\box178
+\@tempa=\box179
+\@tempa=\box180
+\@tempa=\box181
+\@tempa=\box182
+\@tempa=\box183
+\@tempa=\box184
+\@tempa=\box185
+\@tempa=\box186
+\@tempa=\box187
+\@tempa=\box188
+\@tempa=\box189
+\@tempa=\box190
+\@tempa=\box191
+\@tempa=\box192
+\@tempa=\box193
+\@tempa=\box194
+\@tempa=\box195
+\@tempa=\box196
+\@tempa=\box197
+\@tempa=\box198
+\@tempa=\box199
+\c@minrows=\count454
+\c@columnbadness=\count455
+\c@finalcolumnbadness=\count456
+\last@try=\dimen425
+\multicolovershoot=\dimen426
+\multicolundershoot=\dimen427
+\mult@nat@firstbox=\box256
+\colbreak@box=\box257
+\mc@col@check@num=\count457
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count458
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count459
+\c@listtotal=\count460
+\c@listcount=\count461
+\c@liststart=\count462
+\c@liststop=\count463
+\c@citecount=\count464
+\c@citetotal=\count465
+\c@multicitecount=\count466
+\c@multicitetotal=\count467
+\c@instcount=\count468
+\c@maxnames=\count469
+\c@minnames=\count470
+\c@maxitems=\count471
+\c@minitems=\count472
+\c@citecounter=\count473
+\c@maxcitecounter=\count474
+\c@savedcitecounter=\count475
+\c@uniquelist=\count476
+\c@uniquename=\count477
+\c@refsection=\count478
+\c@refsegment=\count479
+\c@maxextratitle=\count480
+\c@maxextratitleyear=\count481
+\c@maxextraname=\count482
+\c@maxextradate=\count483
+\c@maxextraalpha=\count484
+\c@abbrvpenalty=\count485
+\c@highnamepenalty=\count486
+\c@lownamepenalty=\count487
+\c@maxparens=\count488
+\c@parenlevel=\count489
+\blx@tempcnta=\count490
+\blx@tempcntb=\count491
+\blx@tempcntc=\count492
+\c@blx@maxsection=\count493
+\blx@maxsegment@0=\count494
+\blx@notetype=\count495
+\blx@parenlevel@text=\count496
+\blx@parenlevel@foot=\count497
+\blx@sectionciteorder@0=\count498
+\blx@sectionciteorderinternal@0=\count499
+\blx@entrysetcounter=\count500
+\blx@biblioinstance=\count501
+\labelnumberwidth=\skip283
+\labelalphawidth=\skip284
+\biblabelsep=\skip285
+\bibnamesep=\skip286
+\bibinitsep=\skip287
+\bibparsep=\skip288
+\bibhang=\skip289
+\blx@bcfin=\read5
+\blx@bcfout=\write6
+\blx@langwohyphens=\language4
+\c@mincomprange=\count502
+\c@maxcomprange=\count503
+\c@mincompwidth=\count504
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count505
+\c@savedafterword=\count506
+\c@annotator=\count507
+\c@savedannotator=\count508
+\c@author=\count509
+\c@savedauthor=\count510
+\c@bookauthor=\count511
+\c@savedbookauthor=\count512
+\c@commentator=\count513
+\c@savedcommentator=\count514
+\c@editor=\count515
+\c@savededitor=\count516
+\c@editora=\count517
+\c@savededitora=\count518
+\c@editorb=\count519
+\c@savededitorb=\count520
+\c@editorc=\count521
+\c@savededitorc=\count522
+\c@foreword=\count523
+\c@savedforeword=\count524
+\c@holder=\count525
+\c@savedholder=\count526
+\c@introduction=\count527
+\c@savedintroduction=\count528
+\c@namea=\count529
+\c@savednamea=\count530
+\c@nameb=\count531
+\c@savednameb=\count532
+\c@namec=\count533
+\c@savednamec=\count534
+\c@translator=\count535
+\c@savedtranslator=\count536
+\c@shortauthor=\count537
+\c@savedshortauthor=\count538
+\c@shorteditor=\count539
+\c@savedshorteditor=\count540
+\c@labelname=\count541
+\c@savedlabelname=\count542
+\c@institution=\count543
+\c@savedinstitution=\count544
+\c@lista=\count545
+\c@savedlista=\count546
+\c@listb=\count547
+\c@savedlistb=\count548
+\c@listc=\count549
+\c@savedlistc=\count550
+\c@listd=\count551
+\c@savedlistd=\count552
+\c@liste=\count553
+\c@savedliste=\count554
+\c@listf=\count555
+\c@savedlistf=\count556
+\c@location=\count557
+\c@savedlocation=\count558
+\c@organization=\count559
+\c@savedorganization=\count560
+\c@origlocation=\count561
+\c@savedoriglocation=\count562
+\c@origpublisher=\count563
+\c@savedorigpublisher=\count564
+\c@publisher=\count565
+\c@savedpublisher=\count566
+\c@language=\count567
+\c@savedlanguage=\count568
+\c@origlanguage=\count569
+\c@savedoriglanguage=\count570
+\c@pageref=\count571
+\c@savedpageref=\count572
+\shorthandwidth=\skip290
+\shortjournalwidth=\skip291
+\shortserieswidth=\skip292
+\shorttitlewidth=\skip293
+\shortauthorwidth=\skip294
+\shorteditorwidth=\skip295
+\locallabelnumberwidth=\skip296
+\locallabelalphawidth=\skip297
+\localshorthandwidth=\skip298
+\localshortjournalwidth=\skip299
+\localshortserieswidth=\skip300
+\localshorttitlewidth=\skip301
+\localshortauthorwidth=\skip302
+\localshorteditorwidth=\skip303
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count573
+\c@textcitetotal=\count574
+\c@textcitemaxnames=\count575
+\c@biburlbigbreakpenalty=\count576
+\c@biburlbreakpenalty=\count577
+\c@biburlnumpenalty=\count578
+\c@biburlucpenalty=\count579
+\c@biburllcpenalty=\count580
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count581
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count582
+\c@bbx:relatedtotal=\count583
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2023-08-11 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+)))
+
+Package fontspec Info: STIX Two Text scale = 0.9112024414005794.
+
+
+Package fontspec Info: Could not resolve font "STIX Two Text/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: STIX Two Text scale = 0.9112024414005794.
+
+
+Package fontspec Info: STIX Two Text scale = 0.9112024414005794.
+
+
+Package fontspec Info: STIX Two Text/I scale = 0.9229090291255791.
+
+
+Package fontspec Info: STIX Two Text/I scale = 0.9229090291255791.
+
+
+Package fontspec Info: STIX Two Text/BI scale = 0.9229090291255791.
+
+
+Package fontspec Info: STIX Two Text/BI scale = 0.9229090291255791.
+
+
+Package fontspec Info: Font family 'STIXTwoText(0)' created for font 'STIX Two
+(fontspec)             Text' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"STIX Two
+(fontspec)             Text/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1]"STIX
+(fontspec)             Two
+(fontspec)             Text/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"STIX Two
+(fontspec)             Text/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"STIX Two
+(fontspec)             Text/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"STIX
+(fontspec)             Two
+(fontspec)             Text/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"STIX Two
+(fontspec)             Text/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 122.
+
+Package fontspec Info: STIX Two Text scale = 0.9999967740478601.
+
+
+Package fontspec Info: Could not resolve font "STIX Two Text/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: STIX Two Text scale = 0.9999967740478601.
+
+
+Package fontspec Info: STIX Two Text scale = 0.9999967740478601.
+
+
+Package fontspec Info: STIX Two Text/I scale = 1.012844138616061.
+
+
+Package fontspec Info: STIX Two Text/I scale = 1.012844138616061.
+
+
+Package fontspec Info: STIX Two Text/BI scale = 1.012844138616061.
+
+
+Package fontspec Info: STIX Two Text/BI scale = 1.012844138616061.
+
+
+Package fontspec Info: Font family 'STIXTwoText(1)' created for font 'STIX Two
+(fontspec)             Text' with options [Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999967740478601]"STIX Two
+(fontspec)             Text/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.9999967740478601]"STIX Two
+(fontspec)             Text/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.012844138616061]"STIX Two
+(fontspec)             Text/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.012844138616061]"STIX Two
+(fontspec)             Text/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.012844138616061]"STIX Two
+(fontspec)             Text/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.012844138616061]"STIX Two
+(fontspec)             Text/BI/OT:script=latn;language=dflt;+smcp;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/STIXTwoText(1)/m/n on input line 122.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> TU/STIXTwoText(1)/m/it on input line 122.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> TU/STIXTwoText(1)/b/n on input line 122.
+
+Package fontspec Info: Noto Serif KR scale = 0.9202300092621178.
+
+
+Package fontspec Info: Could not resolve font "Noto Serif KR/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Noto Serif KR scale = 0.9202300092621178.
+
+
+Package fontspec Info: Noto Serif KR/B scale = 0.9202300092621178.
+
+
+Package fontspec Info: Noto Serif KR/BI scale = 0.9202300092621178.
+
+
+Package fontspec Info: Font family 'NotoSerifKR(0)' created for font 'Noto
+(fontspec)             Serif KR' with options [Scale=MatchLowercase,Scale=.9].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[.9]"Noto Serif
+(fontspec)             KR/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[.9]"Noto Serif
+(fontspec)             KR/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[.9]"Noto
+(fontspec)             Serif KR/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+\clt@idxfile=\write7
+\openout7 = `clt.idx'.
+
+Writing index file clt.idx 
+No file clt.ind.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/07/31 v3.6n Customizing captions (AR)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen428
+\captionmargin=\dimen429
+\caption@leftmargin=\dimen430
+\caption@rightmargin=\dimen431
+\caption@width=\dimen432
+\caption@indent=\dimen433
+\caption@parindent=\dimen434
+\caption@hangindent=\dimen435
+Package caption Info: memoir document class detected.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
+File: caption-memoir.sto 2022/03/02 v2.2b Adaption of the caption package to the memoir document class (AR)
+))
+\c@caption@flags=\count584
+\c@continuedfloat=\count585
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen436
+\caption@adjustwidth@linewidth=\dimen437
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count586
+\float@exts=\toks58
+\float@box=\box258
+\@float@everytoks=\toks59
+\@floatcapt=\box259
+)
+\@float@every@codelisting=\toks60
+\c@codelisting=\count587
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count588
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count589
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
+\BKM@id=\count590
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 189.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kotex-oblivoir/memhangul-x/ob-unfontsdefault.sty
+Package: ob-unfontsdefault 2020/10/26 v0.4 Un and Baekmuk Fonts for xetexko
+
+Package fontspec Info: UnBatang scale = 0.9653034469228683.
+
+
+Package fontspec Info: UnBatang scale = 0.9653034469228683.
+
+
+Package fontspec Info: UnBatangBold scale = 0.9648407468851255.
+
+
+Package fontspec Info: UnGraphic scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnGraphicBold scale = 0.9310983888214727.
+
+
+Package fontspec Info: Font family 'UnBatang.ttf(0)' created for font
+(fontspec)             'UnBatang.ttf' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,BoldFont={UnBatangBold.ttf},ItalicFont={UnGraphic.ttf},BoldItalicFont={UnGraphicBold.ttf},Renderer={OpenType},WordSpace={.95,.45,.25}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9653034469228683]"[UnBatang.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.95\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.25\fontdimen 4\font 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9648407468851255]"[UnBatangBold.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.95\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.25\fontdimen 4\font 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnGraphic.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.95\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.25\fontdimen 4\font 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnGraphicBold.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.95\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.25\fontdimen 4\font 
+
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 9.65302pt on input line 123.
+
+Package fontspec Info: UnDotum scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnDotum scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnDotumBold scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnDinaru scale = 0.8774459990772218.
+
+
+Package fontspec Info: UnYetgul scale = 0.9310983888214727.
+
+
+Package fontspec Info: Font family 'UnDotum.ttf(0)' created for font
+(fontspec)             'UnDotum.ttf' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,BoldFont={UnDotumBold.ttf},ItalicFont={UnDinaru.ttf},BoldItalicFont={UnYetgul.ttf},Renderer={OpenType},WordSpace={.96,.45,.2}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnDotum.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.96\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.2\fontdimen 4\font 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnDotumBold.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.96\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.2\fontdimen 4\font 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8774459990772218]"[UnDinaru.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.96\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.2\fontdimen 4\font 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnYetgul.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =.96\fontdimen 2\font \fontdimen
+(fontspec)             3\font =.45\fontdimen 3\font \fontdimen 4\font
+(fontspec)             =.2\fontdimen 4\font 
+
+)
+
+Package fontspec Info: UnBatang scale = 0.9653034469228683.
+
+
+Package fontspec Info: Could not resolve font "UnBatang/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: UnBatang scale = 0.9653034469228683.
+
+
+Package fontspec Info: UnBatang/B scale = 0.9653034469228683.
+
+
+Package fontspec Info: UnBatang/BI scale = 0.9653034469228683.
+
+
+Package fontspec Info: Font family 'UnBatang(0)' created for font 'UnBatang'
+(fontspec)             with options [Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9653034469228683]"UnBatang/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9653034469228683]"UnBatang/B/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9653034469228683]"UnBatang/BI/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+\symmathhangul=\mathgroup6
+\@quotelevel=\count591
+\@quotereset=\count592
+
+LaTeX Warning: Unused global option(s):
+    [openright].
+
+No file clt.aux.
+\openout1 = `clt.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Font shape `TU/FreeMono(0)/m/n' will be
+(Font)              scaled to size 10.3357pt on input line 195.
+
+Package fontspec Info: UnDotum scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnDotum scale = 0.9310983888214727.
+
+
+Package fontspec Info: UnDotumBold scale = 0.9310983888214727.
+
+
+Package fontspec Info: Font family 'UnDotum.ttf(1)' created for font
+(fontspec)             'UnDotum.ttf' with options
+(fontspec)             [Scale=MatchLowercase,BoldFont={UnDotumBold.ttf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnDotum.ttf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9310983888214727]"[UnDotumBold.ttf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+Package hyperref Info: Link coloring ON on input line 195.
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 195.
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
+(Font)              scaled to size 10.97443pt on input line 195.
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.09744354087821]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.97443pt on input line 195.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 195.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 195.
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097553285232298.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097553285232298.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097553285232298.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097553285232298.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097553285232298.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =7.42969pt\relax \fontdimen 9\font
+(fontspec)             =4.32393pt\relax \fontdimen 10\font =4.87265pt\relax
+(fontspec)             \fontdimen 11\font =7.52846pt\relax \fontdimen 12\font
+(fontspec)             =3.78618pt\relax \fontdimen 13\font =3.98372pt\relax
+(fontspec)             \fontdimen 14\font =3.98372pt\relax \fontdimen 15\font
+(fontspec)             =3.17162pt\relax \fontdimen 16\font =2.71068pt\relax
+(fontspec)             \fontdimen 17\font =2.71068pt\relax \fontdimen 18\font
+(fontspec)             =2.7436pt\relax \fontdimen 19\font =2.19489pt\relax
+(fontspec)             \fontdimen 22\font =2.7436pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.097553285232298]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.097553285232298]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.097553285232298]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =7.42969pt\relax \fontdimen 9\font
+(fontspec)             =4.32393pt\relax \fontdimen 10\font =4.87265pt\relax
+(fontspec)             \fontdimen 11\font =7.52846pt\relax \fontdimen 12\font
+(fontspec)             =3.78618pt\relax \fontdimen 13\font =3.98372pt\relax
+(fontspec)             \fontdimen 14\font =3.98372pt\relax \fontdimen 15\font
+(fontspec)             =3.17162pt\relax \fontdimen 16\font =2.71068pt\relax
+(fontspec)             \fontdimen 17\font =2.71068pt\relax \fontdimen 18\font
+(fontspec)             =2.7436pt\relax \fontdimen 19\font =2.19489pt\relax
+(fontspec)             \fontdimen 22\font =2.7436pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.097553285232298]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =7.42969pt\relax \fontdimen 9\font
+(fontspec)             =4.32393pt\relax \fontdimen 10\font =4.87265pt\relax
+(fontspec)             \fontdimen 11\font =7.52846pt\relax \fontdimen 12\font
+(fontspec)             =3.78618pt\relax \fontdimen 13\font =3.98372pt\relax
+(fontspec)             \fontdimen 14\font =3.98372pt\relax \fontdimen 15\font
+(fontspec)             =3.17162pt\relax \fontdimen 16\font =2.71068pt\relax
+(fontspec)             \fontdimen 17\font =2.71068pt\relax \fontdimen 18\font
+(fontspec)             =2.7436pt\relax \fontdimen 19\font =2.19489pt\relax
+(fontspec)             \fontdimen 22\font =2.7436pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 195.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 195.
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097333796524122.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097333796524122.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097333796524122.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097333796524122.
+
+
+Package fontspec Info: latinmodern-math scale = 1.09744354087821.
+
+
+Package fontspec Info: latinmodern-math scale = 1.097333796524122.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.43898pt\relax \fontdimen 9\font
+(fontspec)             =2.19489pt\relax \fontdimen 10\font =1.83273pt\relax
+(fontspec)             \fontdimen 11\font =1.21815pt\relax \fontdimen 12\font
+(fontspec)             =6.58466pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.097333796524122]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.097333796524122]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.097333796524122]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.43898pt\relax \fontdimen 9\font
+(fontspec)             =2.19489pt\relax \fontdimen 10\font =1.83273pt\relax
+(fontspec)             \fontdimen 11\font =1.21815pt\relax \fontdimen 12\font
+(fontspec)             =6.58466pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.097333796524122]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.43898pt\relax \fontdimen 9\font
+(fontspec)             =2.19489pt\relax \fontdimen 10\font =1.83273pt\relax
+(fontspec)             \fontdimen 11\font =1.21815pt\relax \fontdimen 12\font
+(fontspec)             =6.58466pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 195.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 195.
+LaTeX Info: Redefining \microtypecontext on input line 195.
+Package microtype Info: Applying patch `item' on input line 195.
+Package microtype Info: Applying patch `toc' on input line 195.
+Package microtype Info: Applying patch `eqnum' on input line 195.
+Package microtype Info: Applying patch `footnote' on input line 195.
+Package microtype Info: Applying patch `verbatim' on input line 195.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `STIXTwoText' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+)
+\c@lstlisting=\count593
+Package biblatex Info: Trying to load language 'korean'...
+Package biblatex Info: ... file 'korean.lbx' found.
+(./korean.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout6 = `clt.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'clt.bbl' not found.
+No file clt.bbl.
+Package biblatex Info: Reference section=0 on input line 195.
+Package biblatex Info: Reference segment=0 on input line 195.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 196.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 13.90033pt on input line 196.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 196.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 10.57004pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 12.01698pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.77954pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.58466pt on input line 196.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 196.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.01816pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.7804pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.5853pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 12.01582pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.77869pt on input line 196.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.58401pt on input line 196.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 196.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 196.
+(c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (c:/Users/statkclee/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 10.57004pt on input line 196.
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 7.72241pt on input line 196.
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 5.79181pt on input line 196.
+[1
+
+
+] [2
+
+]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/m/n' will be
+(Font)              scaled to size 9.31091pt on input line 201.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/bx/n' in size <10> not available
+(Font)              Font shape `TU/UnDotum.ttf(0)/b/n' tried instead on input line 201.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/b/n' will be
+(Font)              scaled to size 9.31091pt on input line 201.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/bx/n' in size <20.74> not available
+(Font)              Font shape `TU/UnDotum.ttf(0)/b/n' tried instead on input line 201.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/b/n' will be
+(Font)              scaled to size 19.31084pt on input line 201.
+No file clt.toc.
+[1] [2
+
+]
+
+Package fontspec Info: TeX Gyre Schola scale = 1.015016421140868.
+
+
+Package fontspec Info: TeX Gyre Schola scale = 1.015016421140868.
+
+
+Package fontspec Info: TeX Gyre Schola scale = 1.015016421140868.
+
+
+Package fontspec Info: TeX Gyre Schola/B scale = 0.9999967740478601.
+
+
+Package fontspec Info: TeX Gyre Schola/B scale = 0.9999967740478601.
+
+
+Package fontspec Info: TeX Gyre Schola/I scale = 1.006379455879488.
+
+
+Package fontspec Info: TeX Gyre Schola/I scale = 1.006379455879488.
+
+
+Package fontspec Info: TeX Gyre Schola/BI scale = 0.9874712504539401.
+
+
+Package fontspec Info: TeX Gyre Schola/BI scale = 0.9874712504539401.
+
+
+Package fontspec Info: Font family 'TeXGyreSchola(0)' created for font 'TeX
+(fontspec)             Gyre Schola' with options [Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.015016421140868]"TeX Gyre
+(fontspec)             Schola/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.015016421140868]"TeX Gyre
+(fontspec)             Schola/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999967740478601]"TeX Gyre
+(fontspec)             Schola/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.9999967740478601]"TeX Gyre
+(fontspec)             Schola/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.006379455879488]"TeX Gyre
+(fontspec)             Schola/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.006379455879488]"TeX Gyre
+(fontspec)             Schola/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9874712504539401]"TeX Gyre
+(fontspec)             Schola/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.9874712504539401]"TeX Gyre
+(fontspec)             Schola/BI/OT:script=latn;language=dflt;+smcp;"
+
+LaTeX Font Info:    Font shape `TU/TeXGyreSchola(0)/m/n' will be
+(Font)              scaled to size 10.15015pt on input line 207.
+LaTeX Font Info:    Font shape `TU/TeXGyreSchola(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 207.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/b/n' will be
+(Font)              scaled to size 9.64844pt on input line 207.
+LaTeX Font Info:    Font shape `TU/TeXGyreSchola(0)/b/it' will be
+(Font)              scaled to size 9.87473pt on input line 207.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/b/it' will be
+(Font)              scaled to size 9.31091pt on input line 207.
+LaTeX Font Info:    Font shape `TU/TeXGyreSchola(0)/b/it' will be
+(Font)              scaled to size 67.14813pt on input line 207.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/b/it' will be
+(Font)              scaled to size 63.31421pt on input line 207.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 207.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 8.68771pt on input line 207.
+No file clt.toc.
+[1
+
+]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.6821pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.48721pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.9755pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.68285pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.48775pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.97336pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.68135pt on input line 209.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.48668pt on input line 209.
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 9.65302pt on input line 209.
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 6.75711pt on input line 209.
+LaTeX Font Info:    Font shape `TU/UnBatang(0)/m/n' will be
+(Font)              scaled to size 4.8265pt on input line 209.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 212.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 212.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 212.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/m/n' will be
+(Font)              scaled to size 7.44873pt on input line 221.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/bx/n' in size <8> not available
+(Font)              Font shape `TU/UnDotum.ttf(0)/b/n' tried instead on input line 221.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/b/n' will be
+(Font)              scaled to size 7.44873pt on input line 221.
+[2
+
+]
+
+Package fontspec Info: TeX Gyre Schola scale = 1.015016421140868.
+
+No file clt.toc.
+[3
+
+]
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/bx/n' in size <12> not available
+(Font)              Font shape `TU/UnDotum.ttf(0)/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/b/n' will be
+(Font)              scaled to size 11.1731pt on input line 225.
+
+LaTeX Font Warning: Font shape `TU/STIXTwoText(0)/b/n' undefined
+(Font)              using `TU/STIXTwoText(0)/m/n' instead on input line 235.
+
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 244.
+
+LaTeX Warning: Reference `fig-test' on page 4 undefined on input line 244.
+
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(0)/m/n' will be
+(Font)              scaled to size 8.37982pt on input line 245.
+File: clt_files/figure-pdf/fig-test-1.pdf Graphic file (type pdf)
+<use clt_files/figure-pdf/fig-test-1.pdf>
+[4
+
+]
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(1)/m/n' will be
+(Font)              scaled to size 9.31091pt on input line 280.
+File: clt_files/figure-pdf/fig-test2-1.pdf Graphic file (type pdf)
+<use clt_files/figure-pdf/fig-test2-1.pdf>
+
+LaTeX Warning: Reference `fig-test2' on page 5 undefined on input line 312.
+
+[5]
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/sc' will be
+(Font)              scaled to size 10.0pt on input line 358.
+
+LaTeX Font Warning: Font shape `TU/UnBatang.ttf(0)/m/sc' undefined
+(Font)              using `TU/UnBatang.ttf(0)/m/n' instead on input line 358.
+
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/sc' will be
+(Font)              scaled to size 9.65302pt on input line 358.
+[6]
+
+Package fontspec Info: TeX Gyre Schola scale = 1.015016421140868.
+
+No file clt.toc.
+[7
+
+]
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 367.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 6.75711pt on input line 367.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 382.
+See the caption package documentation for explanation.
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+\tcb@out=\write8
+\openout8 = `clt.listing'.
+
+LaTeX Font Info:    Font shape `TU/FreeMono(0)/m/n' will be
+(Font)              scaled to size 9.30212pt on input line 402.
+LaTeX Font Info:    Font shape `TU/UnDotum.ttf(1)/m/n' will be
+(Font)              scaled to size 8.37982pt on input line 402.
+(./clt.listing)
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/it' will be
+(Font)              scaled to size 7.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/it' will be
+(Font)              scaled to size 6.51764pt on input line 418.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 7.72241pt on input line 418.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/n' will be
+(Font)              scaled to size 5.79181pt on input line 418.
+LaTeX Font Info:    Font shape `TU/STIXTwoText(0)/m/it' will be
+(Font)              scaled to size 6.0pt on input line 418.
+LaTeX Font Info:    Font shape `TU/UnBatang.ttf(0)/m/it' will be
+(Font)              scaled to size 5.58655pt on input line 418.
+
+LaTeX Warning: Citation 'kimuycwung_hankwukphan_2003' on page 8 undefined on input line 435.
+
+
+LaTeX Warning: Citation 'Allport:1992:OND' on page 8 undefined on input line 436.
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 432--438
+\TU/UnBatang.ttf(0)/m/sc/10 참 고 문 헌 인 용 과 목 록 생 성 실 험 을 합 니 다.[][][] 한 국 어 문 헌 과 구 미 어 문
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 432--438
+\TU/UnBatang.ttf(0)/m/sc/10 헌 은 그 목 록 형 성 과 인 용 방 법 이 다 릅 니 다. 한 국 어 문 헌 의 예 를 들 면,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
+\TU/UnBatang.ttf(0)/m/sc/10 [[]] 과 같 고, 영 어 문 헌 은 예 를 들 면,
+ []
+
+[8
+
+] [9] [10
+
+]
+
+LaTeX Warning: Empty bibliography on input line 442.
+
+\tf@toc=\write9
+\openout9 = `clt.toc'.
+
+(./clt.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                clt
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'clt.run.xml'.
+\openout1 = `clt.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 63943 strings out of 477824
+ 1320791 string characters out of 5819855
+ 2386220 words of memory out of 5000000
+ 83862 multiletter control sequences out of 15000+600000
+ 566399 words of font info for 190 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 147i,15n,151p,1148b,2754s stack positions out of 10000i,1000n,20000p,200000b,200000s

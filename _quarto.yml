@@ -1,0 +1,70 @@
+project:
+  type: book
+  output-dir: docs # HTML
+  # output-dir: pdfs # PDF
+  resources:
+    - "data/*.mp3"
+  render:
+    - "*.qmd"
+    - "!*.Rmd"
+    - "!clt.qmd"
+
+lang: ko-KR
+date-format: "YYYY년 MM월 DD일"
+
+book:
+  title: "챗GPT 통계"
+  author:
+    - name: "이광춘"
+      affiliations: "비영리법인 한국 R 사용자회"
+  date: last-modified
+  date-format: "YYYY년 MM월 DD일"
+  chapters:
+    - index.qmd
+    - part: "데이터 관리"
+      chapters:
+        - data_mgmt.qmd
+        - database_mgmt.qmd
+        - document.qmd
+        - document_auto.qmd
+        - model.qmd
+        - model_value.qmd
+
+    - part: "사례연구"
+      chapters:
+        - cs_nightingale.qmd
+        - cs_napolean.qmd
+        - u_boats.qmd
+        - cs_prussia.qmd
+        - cs_german_tank.qmd
+        - cs_bomber.qmd
+
+    - part: "통계책"
+      chapters:
+        - webr.qmd
+        - shinylive.qmd
+        # - clt.qmd
+    - references.qmd
+
+  cover-image: hexlogo/bitPublish_logo.png
+
+bibliography: references.bib
+link-citations: false
+
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>"
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options:
+  chunk_output_type: console
+
+filters:
+  - webr
+  - shinylive
+
+engine: knitr
+

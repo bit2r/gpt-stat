@@ -1,0 +1,52 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+
+source("_common.R")
+```
+
+# 웹R
+
+쿼토 HTML 문서에 서버없이 R 코드를 직접 실행할 수 있습니다.
+[coatless/quarto-webr](https://github.com/coatless/quarto-webr)을 설치한 후 `webr-r` 코드 덩어리를 사용하면 됩니다.
+
+```{webr-r}
+fit = lm(mpg ~ am, data = mtcars)
+summary(fit)
+```
+
+
+## 예제
+
+::: {.panel-tabset}
+
+## Say Hi
+
+```{webr-r}
+print("Hello quarto-webr World!")
+```
+
+## Calculate
+
+
+```{webr-r}
+-3 + 5
+```
+
+
+## Fit a Model
+
+```{webr-r}
+fit = lm(mpg ~ wt, data = mtcars)
+
+summary(fit)
+```
+
+::: 
+
+

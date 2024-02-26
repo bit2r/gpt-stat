@@ -1,0 +1,85 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+
+source("_common.R")
+```
+
+# shinylive
+
+[posit-dev/r-shinylive](https://github.com/posit-dev/r-shinylive)를 설치한 후 `shinylive-r` 코드 블록에 `shiny` 앱을 개발하면 됩니다. 
+
+```{r}
+#| eval: false
+pak::pak("posit-dev/r-shinylive")
+```
+
+
+## 헬로 월드
+
+```{shinylive-r}
+#| standalone: true
+#| components: [editor, viewer]
+
+# Shiny 패키지를 불러온다
+library(shiny)
+
+# UI를 정의한다
+ui <- fluidPage(
+  titlePanel("R Shinylive"),
+  mainPanel(
+    textOutput("greeting")
+  )
+)
+
+# 서버 로직을 정의한다
+server <- function(input, output) {
+  output$greeting <- renderText({
+    return("R과 함계하는 통계 세상으로 오신 것을 환영합니다!")
+  })
+}
+
+# Shiny 앱을 실행한다
+shinyApp(ui = ui, server = server)
+```
+
+## 동전 던지기
+
+```{shinylive-r}
+#| standalone: true
+
+# Shiny 패키지를 불러온다
+library(shiny)
+
+# UI 부분을 정의한다
+ui <- fluidPage(
+  titlePanel("Coin Toss App"),
+  sidebarLayout(
+    sidebarPanel(
+      actionButton("toss_button", "Toss the Coin")
+    ),
+    mainPanel(
+      textOutput("result")
+    )
+  )
+)
+
+# 서버 로직을 정의한다
+server <- function(input, output, session) {
+  observeEvent(input$toss_button, {
+    toss_result <- sample(c("Heads", "Tails"), 1)
+    output$result <- renderText({
+      return(paste("Result: ", toss_result))
+    })
+  })
+}
+
+# Shiny 앱을 실행한다
+shinyApp(ui = ui, server = server)
+```
+
