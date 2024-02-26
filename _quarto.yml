@@ -1,34 +1,54 @@
 project:
   type: book
   output-dir: docs # HTML
-  # output-dir: pdfs # PDF
+  # output-dir: pdfs
+  preview:
+    port: 7771
+    browser: false
   resources:
     - "data/*.mp3"
   render:
     - "*.qmd"
     - "!*.Rmd"
-    - "!clt.qmd"
+    - "!to_do.qmd"
 
 lang: ko-KR
-date-format: "YYYY년 MM월 DD일"
 
+# ---------------------------------- #
 book:
-  title: "챗GPT 통계"
+  title: "챗GPT 확률통계"
+  reader-mode: true
+  subtitle: "인공지능 데이터 사이언스 기본기"
   author:
     - name: "이광춘"
-      affiliations: "비영리법인 한국 R 사용자회"
+      affiliations: "공익법인 한국 R 사용자회"
+  page-footer:
+    left: |
+      챗GPT 쿼토 책은 소프트웨어 카펜트리 ***** 번역한 것이 포함되어 있습니다.
+    right: |
+      순수하게 <a href="https://quarto.org/">쿼토(Quarto)</a>로 제작되었습니다.
+
+  cover-image: images/book_cover.jpg
+  favicon: images/logo.png
+  site-url: https://r2bit.com/gpt-stat/
+  repo-url: https://github.com/bit2r/gpt-stat/
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  google-analytics: "UA-229551680-1"
   date: last-modified
   date-format: "YYYY년 MM월 DD일"
+# ---------------------------------- #
   chapters:
     - index.qmd
-    - part: "데이터 관리"
-      chapters:
-        - data_mgmt.qmd
-        - database_mgmt.qmd
-        - document.qmd
-        - document_auto.qmd
-        - model.qmd
-        - model_value.qmd
+    # - part: "확률"
+    #   chapters:
+    #     - data_mgmt.qmd
+    #     - database_mgmt.qmd
+    #     - document.qmd
+    #     - document_auto.qmd
+    #     - model.qmd
+    #     - model_value.qmd
 
     - part: "사례연구"
       chapters:
@@ -45,26 +65,39 @@ book:
     #     - shinylive.qmd
         # - clt.qmd
     - references.qmd
+# ---------------------------------- #
+filters:
+  - lightbox
+  # - parse-latex
+  # - include-code-files
+  # - webr
+  # - shinylive
+lightbox: auto
 
-  cover-image: hexlogo/bitPublish_logo.png
+code-annotations: hover
 
 bibliography: references.bib
 link-citations: false
+
+# ---------------------------------- #
+
+engine: knitr
 
 knitr:
   opts_chunk:
     message: false
     warning: false
     collapse: true
+    code-overflow: code-overflow
     comment: "#>"
     R.options:
       knitr.graphics.auto_pdf: true
 editor_options:
   chunk_output_type: console
 
-filters:
-  - webr
-  - shinylive
+editor:
+  markdown:
+    wrap: 72
 
-engine: knitr
+
 

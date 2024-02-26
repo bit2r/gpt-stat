@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.534">
+<meta name="generator" content="quarto-1.5.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>챗GPT 통계 - 11&nbsp; 독일 탱크 문제</title>
+<title>챗GPT 확률통계 – 5&nbsp; 독일 탱크 문제</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./cs_bomber.html" rel="next">
 <link href="./cs_prussia.html" rel="prev">
+<link href="./images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,6 +76,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -102,6 +106,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "검색"
   }
 }</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -147,7 +165,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_german_tank.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_german_tank.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -162,7 +180,15 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">챗GPT 통계</a> 
+      <a href="./">챗GPT 확률통계</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/bit2r/gpt-stat/" title="소스 코드" class="quarto-navigation-tool px-1" aria-label="소스 코드"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -181,7 +207,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">데이터 관리</span></a>
+ <span class="menu-text">사례연구</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -189,85 +215,38 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">데이터 관리 방법론</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./database_mgmt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">데이터베이스</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./document.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">문서</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./document_auto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">보고서 자동화</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">모형 관리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./model_value.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">예측모형 가치</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">사례연구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cs_nightingale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">나이팅게일</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">나이팅게일</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_napolean.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./u_boats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">유보드</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_prussia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_german_tank.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_bomber.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">폭격비행기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">폭격비행기</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,19 +267,19 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#중요성" id="toc-중요성" class="nav-link active" data-scroll-target="#중요성"><span class="header-section-number">11.1</span> 중요성</a></li>
-  <li><a href="#데이터-수집" id="toc-데이터-수집" class="nav-link" data-scroll-target="#데이터-수집"><span class="header-section-number">11.2</span> 데이터 수집</a></li>
-  <li><a href="#월별-탱크생산대수" id="toc-월별-탱크생산대수" class="nav-link" data-scroll-target="#월별-탱크생산대수"><span class="header-section-number">11.3</span> 월별 탱크생산대수</a></li>
-  <li><a href="#통계-추정방법" id="toc-통계-추정방법" class="nav-link" data-scroll-target="#통계-추정방법"><span class="header-section-number">11.4</span> 통계 추정방법</a></li>
+  <li><a href="#중요성" id="toc-중요성" class="nav-link active" data-scroll-target="#중요성"><span class="header-section-number">5.1</span> 중요성</a></li>
+  <li><a href="#데이터-수집" id="toc-데이터-수집" class="nav-link" data-scroll-target="#데이터-수집"><span class="header-section-number">5.2</span> 데이터 수집</a></li>
+  <li><a href="#월별-탱크생산대수" id="toc-월별-탱크생산대수" class="nav-link" data-scroll-target="#월별-탱크생산대수"><span class="header-section-number">5.3</span> 월별 탱크생산대수</a></li>
+  <li><a href="#통계-추정방법" id="toc-통계-추정방법" class="nav-link" data-scroll-target="#통계-추정방법"><span class="header-section-number">5.4</span> 통계 추정방법</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bit2r/gpt-stat/edit/main/cs_german_tank.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/bit2r/gpt-stat/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_german_tank.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_german_tank.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></h1>
 </div>
 
 
@@ -385,35 +364,35 @@ window.Quarto = {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="cs_german_tank_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><a href="cs_german_tank_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="cs_german_tank_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/german_tank.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><a href="images/german_tank.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="위키백과 실린 독일 탱크공장"><img src="images/german_tank.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="위키백과 실린 독일 탱크공장"></a></p>
 <figcaption>위키백과 실린 독일 탱크공장</figcaption>
 </figure>
 </div>
-<section id="중요성" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="중요성"><span class="header-section-number">11.1</span> 중요성</h2>
+<section id="중요성" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="중요성"><span class="header-section-number">5.1</span> 중요성</h2>
 <p>제2차 세계대전에서 독일 탱크 생산대수의 정확한 추정은 연합국의 전략적, 전술적 결정 및 심리적 전쟁을 주도하는 데 결정적인 역할을 했다.</p>
 <p>독일의 탱크 생산능력은 그들의 군사 능력과 전쟁 지속 능력을 나타내는 중요한 지표였다. 이를 통해 연합국은 한정된 자원을 어떻게 효율적으로 사용할지 결정할 수 있었다. 만약 독일이 대규모의 탱크를 적극적으로 생산 중이라는 정보를 획득하면, 연합국은 빠르게 자신들의 탱크 생산을 증대시키거나 대탱크 무기의 개발에 투자하는 등의 전략적 대응을 준비했다.</p>
 <p>탱크 생산대수와 탱크종류는 독일군이 다음에 취할 전략과 전술을 예측하는 데 귀중한 정보를 제공했다. 이러한 정보는 전장에서의 우위를 확보하고 적의 움직임을 선제적으로 차단하는 데 도움을 줬고, 심리적 측면에서도 탱크의 생산 정보는 중요했다. 독일의 실제 탱크 생산 능력을 과소 평가하거나 과대 평가하는 것은 연합국의 사기와 전략에 큰 영향을 미쳤다.</p>
 <p>전쟁이 종료된 이후에도, 독일의 탱크 및 기타 군사 장비의 생산 정보는 평화 협정의 조건을 결정하는 데 중요한 자료로 활용되었으며, 독일의 잠재적 군사 능력을 평가하고 장래의 안전 보장을 위한 조치를 결정하는 데 필수적인 정보자산이 되었다.</p>
 </section>
-<section id="데이터-수집" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="데이터-수집"><span class="header-section-number">11.2</span> 데이터 수집</h2>
+<section id="데이터-수집" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="데이터-수집"><span class="header-section-number">5.2</span> 데이터 수집</h2>
 <p>제2차 세계대전 중 독일 탱크의 시리얼 번호 획득은 연합국의 미묘한 정보 수집 작업 중 하나였다. 전투 중 파괴되거나 포획된 독일 탱크들은 대부분 고유의 시리얼 번호가 달려있었으며, 시리얼 번호는 탱크 생산 순서와 일련번호를 나타냈기 때문에, 연합국은 이러한 번호를 꼼꼼히 수집했다. 파손된 탱크 부품에서도 이러한 번호를 발견할 수 있었고, 이를 통해 전체 탱크 생산 규모의 일부를 엿볼 수 있었다. 이런 정보들은 전쟁 중 독일의 탱크 생산 능력을 추정하는 데 매우 중요한 열쇠로 작용했다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/german_tank_serial.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="604"></p>
+<p><a href="images/german_tank_serial.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/german_tank_serial.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="604"></a></p>
 </figure>
 </div>
 </section>
-<section id="월별-탱크생산대수" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="월별-탱크생산대수"><span class="header-section-number">11.3</span> 월별 탱크생산대수</h2>
+<section id="월별-탱크생산대수" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="월별-탱크생산대수"><span class="header-section-number">5.3</span> 월별 탱크생산대수</h2>
 <p>제2차 세계대전 기간 독일 탱크의 생산 대수를 분석한 표에 따르면, 다양한 추정치와 실제 생산된 탱크의 수를 비교할 수 있다. 1940년 6월에는 통계적 방법을 통해 169대의 탱크가 생산되었다고 추정되었으나, 정보기관은 1,000대로 추정했다. 그러나 실제로는 122대만 생산되었다. 이어서 1941년 6월에는 통계적으로는 244대, 정보기관에서는 1,550대로 추정되었고, 실제로는 271대가 생산되었다. 마지막으로 1942년 8월에는 통계적 추정치가 327대, 정보기관의 추정치가 1,550대로 나왔으며, 실제 생산된 탱크는 342대였다. 이를 통해 보면, 통계적 방법으로 추정한 생산 대수가 정보기관의 추정보다 실제 생산량에 더 가까웠음을 알 수 있다.</p>
 <table class="table">
 <thead>
@@ -446,8 +425,8 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="통계-추정방법" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="통계-추정방법"><span class="header-section-number">11.4</span> 통계 추정방법</h2>
+<section id="통계-추정방법" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="통계-추정방법"><span class="header-section-number">5.4</span> 통계 추정방법</h2>
 <p>MLE를 사용하여 독일 탱크의 총 생산 수를 추정하는 방법은 관측된 탱크의 일련 번호 간의 평균 간격을 기준으로 한다.</p>
 <p>예를 들어, 탱크 <span class="math inline">\(k\)</span> 대를 관측했을 때, 가장 큰 일련 번호가 <span class="math inline">\(m\)</span>이면, 평균적으로 탱크 사이의 간격은 <span class="math inline">\(\frac{m}{k}\)</span>이다. 이 간격을 기반으로, 번호 <span class="math inline">\(m\)</span> 이후에 아직 관측되지 않은 탱크는 대략 <span class="math inline">\(\frac{m}{k}\)</span> 대가 더 있을 것으로 예상된다.</p>
 <p>이 정보를 토대로, 전체 탱크 수에 대한 추정치 <span class="math inline">\(N\)</span>는 다음의 공식으로 구할 수 있다:</p>
@@ -626,7 +605,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -788,25 +772,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       };
     }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
           }
-        });
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
       }
   const findCites = (el) => {
     const parentEl = el.parentElement;
@@ -849,17 +872,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cs_prussia.html" class="pagination-link  aria-label=" &lt;span="" 기병&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span>
+      <a href="./cs_prussia.html" class="pagination-link" aria-label="프로이센 기병">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cs_bomber.html" class="pagination-link" aria-label="<span class='chapter-number'>12</span>&nbsp; <span class='chapter-title'>폭격비행기</span>">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">폭격비행기</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cs_bomber.html" class="pagination-link" aria-label="폭격비행기">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">폭격비행기</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>챗GPT 쿼토 책은 소프트웨어 카펜트리 ***** 번역한 것이 포함되어 있습니다.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bit2r/gpt-stat/edit/main/cs_german_tank.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/bit2r/gpt-stat/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>순수하게 <a href="https://quarto.org/">쿼토(Quarto)</a>로 제작되었습니다.</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
