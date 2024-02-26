@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.288">
+<meta name="generator" content="quarto-1.4.534">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,12 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "일치 없음",
     "search-matching-documents-text": "일치된 문서",
@@ -95,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "추가 검색결과",
     "search-more-matches-text": "추가 검색결과",
     "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "취소",
     "search-submit-button-title": "검색",
     "search-label": "검색"
@@ -110,11 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_napolean.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -125,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">챗GPT 통계</a> 
@@ -238,29 +240,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">통계책</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">웹R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./shinylive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">shinylive</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -270,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -308,29 +287,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+
 <p>나폴레옹의 러시아 원정은 1812년, 대륙봉쇄령을 강화하려는 의도로 시작되었다. 영국의 경제를 약화시키기 위해 대륙봉쇄령을 시행하는 나폴레옹은 유럽 주요 국가들에게 영국과 거래 중단을 요청하였으나, 러시아는 이에 따르지 않았다. 이로 인해 두 국가 간의 긴장이 고조되어 나폴레옹은 대대적인 군사 원정을 계획하게 되었다.</p>
 <p>1812년 6월, 나폴레옹은 약 600,000명의 병력을 동원하여 러시아에 침공했다. 러시아의 청야전술과 광활한 황무지는 군대에 큰 시련을 줬다. 나폴레옹 군대가 모스크바에 도착했을 때 이미 모스코바는 화재로 도시 기능을 잃었고, 러시아가 평화 협상에 응하지 않아 기대했던 성과도 거둘 수 없었다. 결국, 군사적 실패와 식량 부족, 추운 날씨, 러시아군의 계속되는 습격에 시달리며 병력 대부분을 잃고 귀환했고, 원정은 실패로 일달락 되었다. 러시아 원정은 나폴레옹 제국 몰락을 앞당긴 결정적 순간으로 기록되었다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/about_napoleon.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">나폴레옹 최대 영토</figcaption>
+<figcaption>나폴레옹 최대 영토</figcaption>
 </figure>
 </div>
 <section id="미나르-지도" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="미나르-지도"><span class="header-section-number">8.1</span> 미나르 지도</h2>
 <p>찰스 조셉 미나르(Charles Joseph Minard)가 제작한 1869년 지도는 나폴레옹의 1812년 러시아 원정을 시각적으로 표현한 것으로, 다양한 데이터 시각화의 원칙과 기술을 혁신적으로 보여주는 명작으로 평가받고 있다. 나폴레옹 군대가 러시아로 진군하고 다시 귀환하는 과정에서 병력이 얼마나 줄어들었는지를 선의 두께로 표시했을 뿐만 아니라, 지도에는 군대 이동 경로, 위치, 날짜, 온도 등 다양한 정보가 함께 표시되어, 단순한 지리적 정보를 넘어서 시간과 조건에 따른 변화까지 한 눈에 파악할 수 있다.</p>
 <p>미나르의 지도는 데이터 시각화의 중요성과 효과를 입증하는 고전으로 여겨진다. 복잡하고 다양한 데이터를 단순하면서도 명확하게 표현함으로써, 복잡한 사건과 현상을 이해하기 쉽게 제작했다. 나폴레옹 군대의 군사적 실패 뿐만 아니라, 병참, 전략, 날씨가 군사 작전에 미치는 영향을 진군과 후퇴를 색상을 달리하여 표현하는 등 시각화를 통해 잘 보여주고 있다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Minard.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">나폴레옹 러시아 원정 미나르 지도</figcaption>
+<figcaption>나폴레옹 러시아 원정 미나르 지도</figcaption>
 </figure>
 </div>
 <p>저자를 포함한 많은 분들이 프랑스 파리에서 출발하여 러시아 원정이 시작되었다고 잘못알고 있으나, 1812년 러시아 원정 시작지는 니멘 강(Neman River)을 건너는 지점으로 니멘 강은 당시 러시아와 프랑스 연합국인 프러시아(당시 동유럽에 위치) 사이에서 경계를 형성하고 있었다. 1812년 6월 24일, 나폴레옹의 대군이 이 강을 건너면서 러시아 침공을 시작됐다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/minard-actual-map.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">미나르 지도를 현재 지도와 매핑</figcaption>
+<figcaption>미나르 지도를 현재 지도와 매핑</figcaption>
 </figure>
 </div>
 </section>
@@ -353,10 +333,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Minard.temp)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>attack_tbl <span class="ot">&lt;-</span> Minard.troops <span class="sc">|&gt;</span> </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(direction <span class="sc">==</span> <span class="st">"A"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(direction <span class="sc">==</span> <span class="st">"A"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>retreat_tbl <span class="ot">&lt;-</span> Minard.troops <span class="sc">|&gt;</span> </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(direction <span class="sc">==</span> <span class="st">"R"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(direction <span class="sc">==</span> <span class="st">"R"</span>)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>attack_gt <span class="ot">&lt;-</span> attack_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
@@ -419,24 +399,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">locale =</span> <span class="st">"ko"</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="akkbpcegse" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bfpkxomarz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#akkbpcegse table {
+#bfpkxomarz table {
   font-family: NanumSquare;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#akkbpcegse thead, #akkbpcegse tbody, #akkbpcegse tfoot, #akkbpcegse tr, #akkbpcegse td, #akkbpcegse th {
+#bfpkxomarz thead, #bfpkxomarz tbody, #bfpkxomarz tfoot, #bfpkxomarz tr, #bfpkxomarz td, #bfpkxomarz th {
   border-style: none;
 }
 
-#akkbpcegse p {
+#bfpkxomarz p {
   margin: 0;
   padding: 0;
 }
 
-#akkbpcegse .gt_table {
+#bfpkxomarz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -462,12 +442,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_caption {
+#bfpkxomarz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#akkbpcegse .gt_title {
+#bfpkxomarz .gt_title {
   color: #333333;
   font-size: 26px;
   font-weight: initial;
@@ -479,7 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#akkbpcegse .gt_subtitle {
+#bfpkxomarz .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -491,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#akkbpcegse .gt_heading {
+#bfpkxomarz .gt_heading {
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -503,13 +483,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_bottom_border {
+#bfpkxomarz .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_col_headings {
+#bfpkxomarz .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -524,7 +504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_col_heading {
+#bfpkxomarz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -544,7 +524,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#akkbpcegse .gt_column_spanner_outer {
+#bfpkxomarz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -556,15 +536,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#akkbpcegse .gt_column_spanner_outer:first-child {
+#bfpkxomarz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#akkbpcegse .gt_column_spanner_outer:last-child {
+#bfpkxomarz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#akkbpcegse .gt_column_spanner {
+#bfpkxomarz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -576,11 +556,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#akkbpcegse .gt_spanner_row {
+#bfpkxomarz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#akkbpcegse .gt_group_heading {
+#bfpkxomarz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -606,7 +586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#akkbpcegse .gt_empty_group_heading {
+#bfpkxomarz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -621,15 +601,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#akkbpcegse .gt_from_md > :first-child {
+#bfpkxomarz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#akkbpcegse .gt_from_md > :last-child {
+#bfpkxomarz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#akkbpcegse .gt_row {
+#bfpkxomarz .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -648,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#akkbpcegse .gt_stub {
+#bfpkxomarz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -661,7 +641,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#akkbpcegse .gt_stub_row_group {
+#bfpkxomarz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -675,15 +655,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#akkbpcegse .gt_row_group_first td {
+#bfpkxomarz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#akkbpcegse .gt_row_group_first th {
+#bfpkxomarz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#akkbpcegse .gt_summary_row {
+#bfpkxomarz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -693,16 +673,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#akkbpcegse .gt_first_summary_row {
+#bfpkxomarz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_first_summary_row.thick {
+#bfpkxomarz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#akkbpcegse .gt_last_summary_row {
+#bfpkxomarz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -712,7 +692,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_grand_summary_row {
+#bfpkxomarz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -722,7 +702,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#akkbpcegse .gt_first_grand_summary_row {
+#bfpkxomarz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -732,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_last_grand_summary_row_top {
+#bfpkxomarz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,11 +722,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_striped {
+#bfpkxomarz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#akkbpcegse .gt_table_body {
+#bfpkxomarz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -755,7 +735,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_footnotes {
+#bfpkxomarz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -769,7 +749,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_footnote {
+#bfpkxomarz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -778,7 +758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#akkbpcegse .gt_sourcenotes {
+#bfpkxomarz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -792,7 +772,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#akkbpcegse .gt_sourcenote {
+#bfpkxomarz .gt_sourcenote {
   font-size: 10px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -800,63 +780,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#akkbpcegse .gt_left {
+#bfpkxomarz .gt_left {
   text-align: left;
 }
 
-#akkbpcegse .gt_center {
+#bfpkxomarz .gt_center {
   text-align: center;
 }
 
-#akkbpcegse .gt_right {
+#bfpkxomarz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#akkbpcegse .gt_font_normal {
+#bfpkxomarz .gt_font_normal {
   font-weight: normal;
 }
 
-#akkbpcegse .gt_font_bold {
+#bfpkxomarz .gt_font_bold {
   font-weight: bold;
 }
 
-#akkbpcegse .gt_font_italic {
+#bfpkxomarz .gt_font_italic {
   font-style: italic;
 }
 
-#akkbpcegse .gt_super {
+#bfpkxomarz .gt_super {
   font-size: 65%;
 }
 
-#akkbpcegse .gt_footnote_marks {
+#bfpkxomarz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#akkbpcegse .gt_asterisk {
+#bfpkxomarz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#akkbpcegse .gt_indent_1 {
+#bfpkxomarz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#akkbpcegse .gt_indent_2 {
+#bfpkxomarz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#akkbpcegse .gt_indent_3 {
+#bfpkxomarz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#akkbpcegse .gt_indent_4 {
+#bfpkxomarz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#akkbpcegse .gt_indent_5 {
+#bfpkxomarz .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -864,60 +844,77 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">후퇴 온도</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold;" scope="col" id="위도">위도</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold;" scope="col" id="기온">기온</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold;" scope="col" id="후퇴날짜">후퇴날짜</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold;" scope="col" id="관측날짜">관측날짜</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">37.6</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">0</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">6</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">1812년 10월 18일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">36.0</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">0</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">6</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">1812년 10월 24일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">33.2</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">-9</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">16</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">1812년 11월 9일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">32.0</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">-21</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">5</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">1812년 11월 14일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">29.2</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">-11</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">10</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">-</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">28.5</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">-20</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">4</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">1812년 11월 28일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">27.2</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">-24</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">3</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">1812년 12월 1일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">26.7</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">-30</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">5</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold;">1812년 12월 6일</td></tr>
-    <tr><td headers="long" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">25.3</td>
-<td headers="temp" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">-26</td>
-<td headers="days" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">1</td>
-<td headers="date" class="gt_row gt_center" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5;">1812년 12월 7일</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">후퇴 온도</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="위도" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold" scope="col">위도</th>
+<th id="기온" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold" scope="col">기온</th>
+<th id="후퇴날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold" scope="col">후퇴날짜</th>
+<th id="관측날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: MaruBuri; font-weight: bold" scope="col">관측날짜</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">37.6</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">0</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">6</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">1812년 10월 18일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold">36.0</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold">0</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold">6</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold">1812년 10월 24일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">33.2</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">-9</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">16</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">1812년 11월 9일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold">32.0</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold">-21</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold">5</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold">1812년 11월 14일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">29.2</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">-11</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">10</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">-</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold">28.5</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold">-20</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold">4</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold">1812년 11월 28일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">27.2</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">-24</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">3</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">1812년 12월 1일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold">26.7</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold">-30</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold">5</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold">1812년 12월 6일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="long" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">25.3</td>
+<td class="gt_row gt_center" headers="temp" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">-26</td>
+<td class="gt_row gt_center" headers="days" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">1</td>
+<td class="gt_row gt_center" headers="date" style="font-family: MaruBuri; font-weight: bold; background-color: #E5E5E5">1812년 12월 7일</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -992,7 +989,7 @@ tbody tr:last-child {
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/나폴레옹_러시아.png" class="img-fluid figure-img"></p>
+<p><img src="images/나폴레옹_러시아.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 
@@ -1128,15 +1125,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1144,6 +1154,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const anchorLink = note.querySelector('a.anchorjs-link');
       if (anchorLink) {
         anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
       }
       return note.innerHTML;
     }
@@ -1187,6 +1200,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1258,6 +1294,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1319,12 +1381,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cs_nightingale.html" class="pagination-link">
+      <a href="./cs_nightingale.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">나이팅게일</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./u_boats.html" class="pagination-link">
+      <a href="./u_boats.html" class="pagination-link" aria-label="<span class='chapter-number'>9</span>&nbsp; <span class='chapter-title'>유보드</span>">
         <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

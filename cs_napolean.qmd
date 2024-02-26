@@ -87,10 +87,10 @@ data(Minard.cities)
 data(Minard.temp)
 
 attack_tbl <- Minard.troops |> 
-  filter(direction == "A")
+  dplyr::filter(direction == "A")
 
 retreat_tbl <- Minard.troops |> 
-  filter(direction == "R")
+  dplyr::filter(direction == "R")
 
 attack_gt <- attack_tbl |> 
   gt() |> 

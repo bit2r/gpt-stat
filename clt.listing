@@ -1,8 +1,0 @@
-\begin{tblr}{
-    colspec = {ccc},
-    hlines = {blue},
-    vlines = {red}
-}
-a & b & c \\
-1 & 2 & 3
-\end{tblr}

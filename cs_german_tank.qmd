@@ -60,7 +60,7 @@ tank_tbl <- tank_html |>
     생산국가 %in% c("Germany and territories", "Hungary", "Romania", "Italian Empire", 
 "Japanese Empire", "Axis") ~ "추축국"
   )) |> 
-  filter(!생산국가 %in% c("Allies", "Axis")) |> 
+  dplyr::filter(!생산국가 %in% c("Allies", "Axis")) |> 
   mutate(생산국가 = str_remove(생산국가, "( and territories)|( Empire)"))
 
 tank_tbl |> 
@@ -68,9 +68,9 @@ tank_tbl |>
     geom_col(width = 0.3) +
     coord_flip() +
     scale_y_continuous(labels = scales::comma) +  
-    geom_text_repel(data = tank_tbl |> filter(구분 == "연합국"), 
+    geom_text_repel(data = tank_tbl |> dplyr::filter(구분 == "연합국"), 
               aes(label = 생산국가), position = position_stack(vjust = .4)) +
-    geom_text_repel(data = tank_tbl |> filter(구분 == "추축국"), 
+    geom_text_repel(data = tank_tbl |> dplyr::filter(구분 == "추축국"), 
               aes(label = 생산국가), position = position_stack(vjust = .4)) +  
     labs(x ="",
          y = "생산 탱크수",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.288">
+<meta name="generator" content="quarto-1.4.534">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,12 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "일치 없음",
     "search-matching-documents-text": "일치된 문서",
@@ -95,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "추가 검색결과",
     "search-more-matches-text": "추가 검색결과",
     "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "취소",
     "search-submit-button-title": "검색",
     "search-label": "검색"
@@ -110,11 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_nightingale.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">나이팅게일</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -125,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">챗GPT 통계</a> 
@@ -238,29 +240,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">통계책</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">웹R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./shinylive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">shinylive</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -270,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -318,14 +297,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+
 <section id="배경" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="배경"><span class="header-section-number">7.1</span> 배경</h2>
 <p>크림 전쟁은 1853년부터 1856년까지 일어난 큰 전쟁이었다. 한쪽에는 러시아, 반면 다른 한쪽에는 영국, 프랑스, 오스만 제국 (현대 투르키에), 그리고 나중에 사르디니아 (현대 이탈리아의 일부)가 동맹을 구성하여 전쟁을 치뤘다. 전쟁이 바로 시작된 이유는 러시아가 오스만 제국 내 정교회 신자들을 보호하려 하려는 명분을 내세웠지만, 사실 더많은 영토를 차지하기 위함이였다. 양측간 전쟁은 흑해를 두고 남하하는 러시아에 맞서 동맹군이 크림반도에서 발생하여 “크림전쟁”(Crimean War)으로 불린다. 영화로 소개된 경기병대의 돌격 (“Charge of the Light Brigade”), 영국 간호사 플로렌스 나이팅게일의 활약, 전신과 철도의 본격적인 도입으로 큰 의미를 갖는 전쟁이기도 하다. 많은 전투와 많은 사람들이 죽은 후, 1856년 파리 조약으로 전쟁은 마무리되어, 러시아 확장은 잠시 멈추게 돼었고, 오스만 제국도 한숨 돌린 계기가 되었다.</p>
 <p>크림 전쟁 중 스쿠타리 막사는 투루키에 스쿠타리 병원(Scutari Hospital, Turkey)은 영국 군 병원으로 개조되었다. 크림전쟁에서 부상을 당한 수많은 병사가 치료를 위해 이곳으로 보내졌지만, 병자와 부상병들을 감당할 수 있도록 설계되지 않았고 제대로된 역할도 수행하지 못했다. 1854년 나이팅게일이 간호사 일행과 함께 도착했을 때, 비위생적인 환경과 고통받는 병사들을 보고 경악했다. 나이팅게일의 스쿠타리 병원에서 경험은 병원과 의료 서비스를 개선하여 이와 같은 고통과 비극이 재발하지 않도록 향후 프로젝트의 중요한 동기와 방향이 되었다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/scutari.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">스쿠타리 병원의 한 병동 석판화 그림 (William Simpson)</figcaption>
+<figcaption>스쿠타리 병원의 한 병동 석판화 그림 (William Simpson)</figcaption>
 </figure>
 </div>
 <p>환자의 사망율을 42%에서 2%로 낮추고 집중치료실(ICU)을 설치하여 상태가 중한 환자를 격리하여 집중관리하는 등 근대적인 간호체계를 수립하는 데 기여하였다.</p>
@@ -333,62 +313,86 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="원본-데이터" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="원본-데이터"><span class="header-section-number">7.2</span> 원본 데이터</h2>
 <p>크림 전쟁 중 스쿠타리 막사는 투루키에 스쿠타리 병원에서 몇년간에 걸쳐 수작업으로 종이에 분석가능한 형태의 자료를 만들어내는 것은 결코 쉬운 작업이 아니다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/nightingale_raw_data.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">원본 데이터</figcaption>
+<figcaption>원본 데이터</figcaption>
 </figure>
 </div>
 </section>
 <section id="그래프-진화" class="level2 page-columns page-full" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="그래프-진화"><span class="header-section-number">7.3</span> 그래프 진화</h2>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">출처: <a href="https://www.scientificamerican.com/article/how-florence-nightingale-changed-data-visualization-forever/">How Florence Nightingale Changed Data Visualization Forever - The celebrated nurse improved public health through her groundbreaking use of graphic storytelling</a></span></div></div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">출처: <a href="https://www.scientificamerican.com/article/how-florence-nightingale-changed-data-visualization-forever/">How Florence Nightingale Changed Data Visualization Forever - The celebrated nurse improved public health through her groundbreaking use of graphic storytelling</a></span></div></div>
 <p>복잡한 논거를 제시하는 대신 구체적인 주장에 데이터 시각화와 데이터 스토리텔링(Storytelling)을 통해 청중에 한걸음 더 다가섰다. 나이팅게일의 스토리텔링은 열악한 위생 상태와 과밀로 인해 불필요한 죽음이 얼마나 많이 발생하는지 이해하기 쉬운 비교를 통해 이야기를 구성해서 설득해 나갔다. 예를 들어, 군대 사망률을 민간인 사망률(유사한 환경의 맨체스터)과 비교하는 프레임을 제시하고, 군대 막사에서 생활하는 평시 병사들이 비슷한 연령대 민간인 남성보다 더 높은 비율로 사망하는 것을 제시했다. 이를 통해, 데이터가 보여주는 현실을 부정할 수 없게 만들었고, 군대 행정에 극적인 개혁을 이끌어냈다.</p>
 <div id="fig-nightingale" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 20.0%;justify-content: center;">
-<div id="fig-barchart" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/nightingale_graph_01.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale"></p>
-<figcaption class="figure-caption">(a) 막대그래프</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nightingale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nightingale" style="flex-basis: 20.0%;justify-content: flex-start;display: flex;">
+<div id="fig-barchart" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-barchart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nightingale_graph_01.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-barchart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 막대그래프
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 20.0%;justify-content: center;">
-<div id="fig-circular" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/nightingale_graph_02.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale"></p>
-<figcaption class="figure-caption">(b) 맨체스터 사망</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nightingale" style="flex-basis: 20.0%;justify-content: flex-start;display: flex;">
+<div id="fig-circular" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nightingale_graph_02.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 맨체스터 사망
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 20.0%;justify-content: center;">
-<div id="fig-circular" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/nightingale_graph_03.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale"></p>
-<figcaption class="figure-caption">(c) 빅토리아 여왕 보고(I)</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nightingale" style="flex-basis: 20.0%;justify-content: flex-start;display: flex;">
+<div id="fig-circular" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nightingale_graph_03.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) 빅토리아 여왕 보고(I)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 20.0%;justify-content: center;">
-<div id="fig-circular" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/nightingale_graph_04.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale"></p>
-<figcaption class="figure-caption">(d) 빅토리아 여왕 보고(II)</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nightingale" style="flex-basis: 20.0%;justify-content: flex-start;display: flex;">
+<div id="fig-circular" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nightingale_graph_04.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) 빅토리아 여왕 보고(II)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 20.0%;justify-content: center;">
-<div id="fig-circular" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/nightingale_graph_05.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale"></p>
-<figcaption class="figure-caption">(e) 빅토리아 여왕 보고(III)</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nightingale" style="flex-basis: 20.0%;justify-content: flex-start;display: flex;">
+<div id="fig-circular" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nightingale_graph_05.png" class="img-fluid figure-img" data-ref-parent="fig-nightingale">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-circular-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e) 빅토리아 여왕 보고(III)
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">그림&nbsp;7.1: 나이팅게일 그래프 진화과정</figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nightingale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.1: 나이팅게일 그래프 진화과정
+</figcaption>
 </figure>
 </div>
 </section>
@@ -396,10 +400,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="7.4" class="anchored" data-anchor-id="설득"><span class="header-section-number">7.4</span> 설득</h2>
 <p>나이팅게일은 크림 전쟁 중 병원에서의 위생 문제와 관련된 데이터를 수집하고 분석하여 그 결과를 시각화했고, 병원에서의 사망 원인 중 대부분이 감염성 질병으로 인한 것을 발견했다. 이러한 감염성 질병은 부적절한 위생 조건과 밀접한 관련이 있음을 확인했다.</p>
 <p>나이팅게일은 병원의 위생 상태를 개선을 통해 수많은 생명을 구할 수 있다는 사실을 확인했고 연구결과와 권장 사항을 다양한 영국 정부부처에 제출했고, 특히 1858년에 영국의 장관들에게 보고서를 제출했다. 이를 통해서 군 병원의 위생 조건을 개선하는 데 큰 영향을 미쳤다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/nightingale_victoria.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">나이팅게일과 빅토리아 여왕</figcaption>
+<figcaption>나이팅게일과 빅토리아 여왕</figcaption>
 </figure>
 </div>
 </section>
@@ -485,16 +489,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 72 × 5</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Date       사망원인 사망자수 체제     해당월</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;date&gt;     &lt;fct&gt;       &lt;dbl&gt; &lt;fct&gt;    &lt;ord&gt; </span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 1854-04-01 질병          1.4 조치이전 4     </span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 1854-04-01 부상          0   조치이전 4     </span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 1854-04-01 기타          7   조치이전 4     </span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 1854-05-01 질병          6.2 조치이전 5     </span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 1854-05-01 부상          0   조치이전 5     </span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 1854-05-01 기타          4.6 조치이전 5     </span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 1854-06-01 질병          4.7 조치이전 6     </span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 1854-06-01 부상          0   조치이전 6     </span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 1854-06-01 기타          2.5 조치이전 6     </span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 1854-07-01 질병        150   조치이전 7     </span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 1854-04-01 질병          1.4 조치이전 " 4"  </span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 1854-04-01 부상          0   조치이전 " 4"  </span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 1854-04-01 기타          7   조치이전 " 4"  </span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 1854-05-01 질병          6.2 조치이전 " 5"  </span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 1854-05-01 부상          0   조치이전 " 5"  </span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 1854-05-01 기타          4.6 조치이전 " 5"  </span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 1854-06-01 질병          4.7 조치이전 " 6"  </span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 1854-06-01 부상          0   조치이전 " 6"  </span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 1854-06-01 기타          2.5 조치이전 " 6"  </span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 1854-07-01 질병        150   조치이전 " 7"  </span></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ 62 more rows</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -644,10 +648,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>before_tbl <span class="ot">&lt;-</span> death_viz <span class="sc">|&gt;</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(체제 <span class="sc">==</span> <span class="st">"조치이전"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(체제 <span class="sc">==</span> <span class="st">"조치이전"</span>)</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>after_tbl <span class="ot">&lt;-</span> death_viz <span class="sc">|&gt;</span> </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(체제 <span class="sc">==</span> <span class="st">"조치이후"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(체제 <span class="sc">==</span> <span class="st">"조치이후"</span>)</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>before_gt <span class="ot">&lt;-</span> before_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> 사망원인, <span class="at">values_from =</span> 사망자수) <span class="sc">|&gt;</span> </span>
@@ -683,24 +687,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <div style="display: inline-block;float:left;">
-<div id="fdcqtyyraq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="espywlbera" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#fdcqtyyraq table {
+#espywlbera table {
   font-family: Chivo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fdcqtyyraq thead, #fdcqtyyraq tbody, #fdcqtyyraq tfoot, #fdcqtyyraq tr, #fdcqtyyraq td, #fdcqtyyraq th {
+#espywlbera thead, #espywlbera tbody, #espywlbera tfoot, #espywlbera tr, #espywlbera td, #espywlbera th {
   border-style: none;
 }
 
-#fdcqtyyraq p {
+#espywlbera p {
   margin: 0;
   padding: 0;
 }
 
-#fdcqtyyraq .gt_table {
+#espywlbera .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -726,12 +730,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_caption {
+#espywlbera .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fdcqtyyraq .gt_title {
+#espywlbera .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -743,7 +747,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#fdcqtyyraq .gt_subtitle {
+#espywlbera .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -755,7 +759,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#fdcqtyyraq .gt_heading {
+#espywlbera .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -767,13 +771,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_bottom_border {
+#espywlbera .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_col_headings {
+#espywlbera .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -788,7 +792,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_col_heading {
+#espywlbera .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -808,7 +812,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fdcqtyyraq .gt_column_spanner_outer {
+#espywlbera .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -820,15 +824,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#fdcqtyyraq .gt_column_spanner_outer:first-child {
+#espywlbera .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fdcqtyyraq .gt_column_spanner_outer:last-child {
+#espywlbera .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fdcqtyyraq .gt_column_spanner {
+#espywlbera .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -840,11 +844,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#fdcqtyyraq .gt_spanner_row {
+#espywlbera .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fdcqtyyraq .gt_group_heading {
+#espywlbera .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -870,7 +874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#fdcqtyyraq .gt_empty_group_heading {
+#espywlbera .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -885,15 +889,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#fdcqtyyraq .gt_from_md > :first-child {
+#espywlbera .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fdcqtyyraq .gt_from_md > :last-child {
+#espywlbera .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fdcqtyyraq .gt_row {
+#espywlbera .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -912,7 +916,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fdcqtyyraq .gt_stub {
+#espywlbera .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -925,7 +929,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fdcqtyyraq .gt_stub_row_group {
+#espywlbera .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -939,15 +943,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#fdcqtyyraq .gt_row_group_first td {
+#espywlbera .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fdcqtyyraq .gt_row_group_first th {
+#espywlbera .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fdcqtyyraq .gt_summary_row {
+#espywlbera .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -957,16 +961,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fdcqtyyraq .gt_first_summary_row {
+#espywlbera .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_first_summary_row.thick {
+#espywlbera .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fdcqtyyraq .gt_last_summary_row {
+#espywlbera .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -976,7 +980,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_grand_summary_row {
+#espywlbera .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -986,7 +990,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fdcqtyyraq .gt_first_grand_summary_row {
+#espywlbera .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -996,7 +1000,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_last_grand_summary_row_top {
+#espywlbera .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1006,11 +1010,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_striped {
+#espywlbera .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fdcqtyyraq .gt_table_body {
+#espywlbera .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1019,7 +1023,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_footnotes {
+#espywlbera .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1033,7 +1037,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_footnote {
+#espywlbera .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1042,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fdcqtyyraq .gt_sourcenotes {
+#espywlbera .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1056,7 +1060,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fdcqtyyraq .gt_sourcenote {
+#espywlbera .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1064,63 +1068,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fdcqtyyraq .gt_left {
+#espywlbera .gt_left {
   text-align: left;
 }
 
-#fdcqtyyraq .gt_center {
+#espywlbera .gt_center {
   text-align: center;
 }
 
-#fdcqtyyraq .gt_right {
+#espywlbera .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fdcqtyyraq .gt_font_normal {
+#espywlbera .gt_font_normal {
   font-weight: normal;
 }
 
-#fdcqtyyraq .gt_font_bold {
+#espywlbera .gt_font_bold {
   font-weight: bold;
 }
 
-#fdcqtyyraq .gt_font_italic {
+#espywlbera .gt_font_italic {
   font-style: italic;
 }
 
-#fdcqtyyraq .gt_super {
+#espywlbera .gt_super {
   font-size: 65%;
 }
 
-#fdcqtyyraq .gt_footnote_marks {
+#espywlbera .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fdcqtyyraq .gt_asterisk {
+#espywlbera .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fdcqtyyraq .gt_indent_1 {
+#espywlbera .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fdcqtyyraq .gt_indent_2 {
+#espywlbera .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fdcqtyyraq .gt_indent_3 {
+#espywlbera .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fdcqtyyraq .gt_indent_4 {
+#espywlbera .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fdcqtyyraq .gt_indent_5 {
+#espywlbera .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1128,108 +1132,128 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="날짜">날짜</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="조치 이전">
-        <span class="gt_column_spanner">조치 이전</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="합계">합계</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="질병">질병</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="부상">부상</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="기타">기타</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="날짜" class="gt_row gt_center">1854-04-01</td>
-<td headers="질병" class="gt_row gt_center">1</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">7</td>
-<td headers="합계" class="gt_row gt_center">8</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-05-01</td>
-<td headers="질병" class="gt_row gt_center">6</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">5</td>
-<td headers="합계" class="gt_row gt_center">11</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-06-01</td>
-<td headers="질병" class="gt_row gt_center">5</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">2</td>
-<td headers="합계" class="gt_row gt_center">7</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-07-01</td>
-<td headers="질병" class="gt_row gt_center">150</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">10</td>
-<td headers="합계" class="gt_row gt_center">160</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-08-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #F9B7B9; color: #000000;">328</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #FFEBEE; color: #000000;">0</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #FFEBEE; color: #000000;">12</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #FFDEE2; color: #000000;">341</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-09-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #FBC0C3; color: #000000;">312</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #EB8887; color: #000000;">32</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #FEC7CC; color: #000000;">28</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #FFD4D9; color: #000000;">372</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-10-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #FFEBEE; color: #000000;">197</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #EF5350; color: #FFFFFF;">52</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #E9807F; color: #FFFFFF;">50</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #FFEBEE; color: #000000;">299</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-11-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #F7B0B2; color: #000000;">341</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #B71C1C; color: #FFFFFF;">116</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #EE9493; color: #000000;">43</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #EE9898; color: #000000;">499</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1854-12-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #F3483D; color: #FFFFFF;">632</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #E86D6B; color: #FFFFFF;">42</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #EA8585; color: #FFFFFF;">48</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #F14E47; color: #FFFFFF;">721</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-01-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #B71C1C; color: #FFFFFF;">1,023</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #EC8C8C; color: #000000;">31</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #CB2B2B; color: #FFFFFF;">120</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #B71C1C; color: #FFFFFF;">1,174</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-02-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #D63130; color: #FFFFFF;">823</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #FCC1C4; color: #000000;">16</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #B71C1C; color: #FFFFFF;">140</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #D32F2F; color: #FFFFFF;">979</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-03-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #E67070; color: #FFFFFF;">480</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #FFCED3; color: #000000;">13</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #EF5451; color: #FFFFFF;">69</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #E87F7E; color: #FFFFFF;">562</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" id="날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">날짜</th>
+<th colspan="3" id="조치 이전" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">조치 이전</span></th>
+<th rowspan="2" id="합계" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">합계</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="질병" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">질병</th>
+<th id="부상" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">부상</th>
+<th id="기타" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">기타</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1854-04-01</td>
+<td class="gt_row gt_center" headers="질병">1</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">7</td>
+<td class="gt_row gt_center" headers="합계">8</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1854-05-01</td>
+<td class="gt_row gt_center" headers="질병">6</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">5</td>
+<td class="gt_row gt_center" headers="합계">11</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1854-06-01</td>
+<td class="gt_row gt_center" headers="질병">5</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">2</td>
+<td class="gt_row gt_center" headers="합계">7</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1854-07-01</td>
+<td class="gt_row gt_center" headers="질병">150</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">10</td>
+<td class="gt_row gt_center" headers="합계">160</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1854-08-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #F9B7B9; color: #000000">328</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #FFEBEE; color: #000000">0</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #FFEBEE; color: #000000">12</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #FFDEE2; color: #000000">341</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1854-09-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #FBC0C3; color: #000000">312</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #EB8887; color: #000000">32</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #FEC7CC; color: #000000">28</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #FFD4D9; color: #000000">372</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1854-10-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #FFEBEE; color: #000000">197</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #EF5350; color: #FFFFFF">52</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #E9807F; color: #FFFFFF">50</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #FFEBEE; color: #000000">299</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1854-11-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #F7B0B2; color: #000000">341</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #B71C1C; color: #FFFFFF">116</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #EE9493; color: #000000">43</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #EE9898; color: #000000">499</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1854-12-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #F3483D; color: #FFFFFF">632</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #E86D6B; color: #FFFFFF">42</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #EA8585; color: #FFFFFF">48</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #F14E47; color: #FFFFFF">721</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-01-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #B71C1C; color: #FFFFFF">1,023</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #EC8C8C; color: #000000">31</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #CB2B2B; color: #FFFFFF">120</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #B71C1C; color: #FFFFFF">1,174</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-02-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #D63130; color: #FFFFFF">823</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #FCC1C4; color: #000000">16</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #B71C1C; color: #FFFFFF">140</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #D32F2F; color: #FFFFFF">979</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-03-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #E67070; color: #FFFFFF">480</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #FFCED3; color: #000000">13</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #EF5451; color: #FFFFFF">69</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #E87F7E; color: #FFFFFF">562</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
 <div style="display: inline-block;float:right;">
-<div id="tgrpcerrlb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="nhuzcjenrf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#tgrpcerrlb table {
+#nhuzcjenrf table {
   font-family: Chivo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tgrpcerrlb thead, #tgrpcerrlb tbody, #tgrpcerrlb tfoot, #tgrpcerrlb tr, #tgrpcerrlb td, #tgrpcerrlb th {
+#nhuzcjenrf thead, #nhuzcjenrf tbody, #nhuzcjenrf tfoot, #nhuzcjenrf tr, #nhuzcjenrf td, #nhuzcjenrf th {
   border-style: none;
 }
 
-#tgrpcerrlb p {
+#nhuzcjenrf p {
   margin: 0;
   padding: 0;
 }
 
-#tgrpcerrlb .gt_table {
+#nhuzcjenrf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1255,12 +1279,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_caption {
+#nhuzcjenrf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tgrpcerrlb .gt_title {
+#nhuzcjenrf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1272,7 +1296,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#tgrpcerrlb .gt_subtitle {
+#nhuzcjenrf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1284,7 +1308,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#tgrpcerrlb .gt_heading {
+#nhuzcjenrf .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1296,13 +1320,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_bottom_border {
+#nhuzcjenrf .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_col_headings {
+#nhuzcjenrf .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1317,7 +1341,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_col_heading {
+#nhuzcjenrf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1337,7 +1361,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#tgrpcerrlb .gt_column_spanner_outer {
+#nhuzcjenrf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1349,15 +1373,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#tgrpcerrlb .gt_column_spanner_outer:first-child {
+#nhuzcjenrf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tgrpcerrlb .gt_column_spanner_outer:last-child {
+#nhuzcjenrf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tgrpcerrlb .gt_column_spanner {
+#nhuzcjenrf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1369,11 +1393,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#tgrpcerrlb .gt_spanner_row {
+#nhuzcjenrf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tgrpcerrlb .gt_group_heading {
+#nhuzcjenrf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1399,7 +1423,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#tgrpcerrlb .gt_empty_group_heading {
+#nhuzcjenrf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1414,15 +1438,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#tgrpcerrlb .gt_from_md > :first-child {
+#nhuzcjenrf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tgrpcerrlb .gt_from_md > :last-child {
+#nhuzcjenrf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tgrpcerrlb .gt_row {
+#nhuzcjenrf .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1441,7 +1465,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#tgrpcerrlb .gt_stub {
+#nhuzcjenrf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1454,7 +1478,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#tgrpcerrlb .gt_stub_row_group {
+#nhuzcjenrf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1468,15 +1492,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#tgrpcerrlb .gt_row_group_first td {
+#nhuzcjenrf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tgrpcerrlb .gt_row_group_first th {
+#nhuzcjenrf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tgrpcerrlb .gt_summary_row {
+#nhuzcjenrf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1486,16 +1510,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#tgrpcerrlb .gt_first_summary_row {
+#nhuzcjenrf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_first_summary_row.thick {
+#nhuzcjenrf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tgrpcerrlb .gt_last_summary_row {
+#nhuzcjenrf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1505,7 +1529,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_grand_summary_row {
+#nhuzcjenrf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1515,7 +1539,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#tgrpcerrlb .gt_first_grand_summary_row {
+#nhuzcjenrf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1525,7 +1549,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_last_grand_summary_row_top {
+#nhuzcjenrf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1535,11 +1559,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_striped {
+#nhuzcjenrf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tgrpcerrlb .gt_table_body {
+#nhuzcjenrf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1548,7 +1572,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_footnotes {
+#nhuzcjenrf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1562,7 +1586,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_footnote {
+#nhuzcjenrf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1571,7 +1595,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#tgrpcerrlb .gt_sourcenotes {
+#nhuzcjenrf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1585,7 +1609,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#tgrpcerrlb .gt_sourcenote {
+#nhuzcjenrf .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1593,63 +1617,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#tgrpcerrlb .gt_left {
+#nhuzcjenrf .gt_left {
   text-align: left;
 }
 
-#tgrpcerrlb .gt_center {
+#nhuzcjenrf .gt_center {
   text-align: center;
 }
 
-#tgrpcerrlb .gt_right {
+#nhuzcjenrf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tgrpcerrlb .gt_font_normal {
+#nhuzcjenrf .gt_font_normal {
   font-weight: normal;
 }
 
-#tgrpcerrlb .gt_font_bold {
+#nhuzcjenrf .gt_font_bold {
   font-weight: bold;
 }
 
-#tgrpcerrlb .gt_font_italic {
+#nhuzcjenrf .gt_font_italic {
   font-style: italic;
 }
 
-#tgrpcerrlb .gt_super {
+#nhuzcjenrf .gt_super {
   font-size: 65%;
 }
 
-#tgrpcerrlb .gt_footnote_marks {
+#nhuzcjenrf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tgrpcerrlb .gt_asterisk {
+#nhuzcjenrf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tgrpcerrlb .gt_indent_1 {
+#nhuzcjenrf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tgrpcerrlb .gt_indent_2 {
+#nhuzcjenrf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tgrpcerrlb .gt_indent_3 {
+#nhuzcjenrf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tgrpcerrlb .gt_indent_4 {
+#nhuzcjenrf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tgrpcerrlb .gt_indent_5 {
+#nhuzcjenrf .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1657,102 +1681,124 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="날짜">날짜</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="조치 이후">
-        <span class="gt_column_spanner">조치 이후</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="합계">합계</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="질병">질병</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="부상">부상</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="기타">기타</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="날짜" class="gt_row gt_center">1855-04-01</td>
-<td headers="질병" class="gt_row gt_center">178</td>
-<td headers="부상" class="gt_row gt_center">18</td>
-<td headers="기타" class="gt_row gt_center">21</td>
-<td headers="합계" class="gt_row gt_center">217</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-05-01</td>
-<td headers="질병" class="gt_row gt_center">172</td>
-<td headers="부상" class="gt_row gt_center">17</td>
-<td headers="기타" class="gt_row gt_center">12</td>
-<td headers="합계" class="gt_row gt_center">201</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-06-01</td>
-<td headers="질병" class="gt_row gt_center" style="background-color: #F24B43; color: #FFFFFF;">248</td>
-<td headers="부상" class="gt_row gt_center" style="background-color: #F24B43; color: #FFFFFF;">64</td>
-<td headers="기타" class="gt_row gt_center" style="background-color: #F24B43; color: #FFFFFF;">10</td>
-<td headers="합계" class="gt_row gt_center" style="background-color: #F24B43; color: #FFFFFF;">322</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-07-01</td>
-<td headers="질병" class="gt_row gt_center">108</td>
-<td headers="부상" class="gt_row gt_center">38</td>
-<td headers="기타" class="gt_row gt_center">9</td>
-<td headers="합계" class="gt_row gt_center">154</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-08-01</td>
-<td headers="질병" class="gt_row gt_center">130</td>
-<td headers="부상" class="gt_row gt_center">44</td>
-<td headers="기타" class="gt_row gt_center">7</td>
-<td headers="합계" class="gt_row gt_center">181</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-09-01</td>
-<td headers="질병" class="gt_row gt_center">48</td>
-<td headers="부상" class="gt_row gt_center">69</td>
-<td headers="기타" class="gt_row gt_center">5</td>
-<td headers="합계" class="gt_row gt_center">122</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-10-01</td>
-<td headers="질병" class="gt_row gt_center">33</td>
-<td headers="부상" class="gt_row gt_center">14</td>
-<td headers="기타" class="gt_row gt_center">5</td>
-<td headers="합계" class="gt_row gt_center">51</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-11-01</td>
-<td headers="질병" class="gt_row gt_center">56</td>
-<td headers="부상" class="gt_row gt_center">10</td>
-<td headers="기타" class="gt_row gt_center">10</td>
-<td headers="합계" class="gt_row gt_center">77</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1855-12-01</td>
-<td headers="질병" class="gt_row gt_center">25</td>
-<td headers="부상" class="gt_row gt_center">5</td>
-<td headers="기타" class="gt_row gt_center">8</td>
-<td headers="합계" class="gt_row gt_center">38</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1856-01-01</td>
-<td headers="질병" class="gt_row gt_center">11</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">13</td>
-<td headers="합계" class="gt_row gt_center">25</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1856-02-01</td>
-<td headers="질병" class="gt_row gt_center">7</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">5</td>
-<td headers="합계" class="gt_row gt_center">12</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_center">1856-03-01</td>
-<td headers="질병" class="gt_row gt_center">4</td>
-<td headers="부상" class="gt_row gt_center">0</td>
-<td headers="기타" class="gt_row gt_center">9</td>
-<td headers="합계" class="gt_row gt_center">13</td></tr>
-  </tbody>
-  
-  
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" id="날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">날짜</th>
+<th colspan="3" id="조치 이후" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">조치 이후</span></th>
+<th rowspan="2" id="합계" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">합계</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="질병" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">질병</th>
+<th id="부상" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">부상</th>
+<th id="기타" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">기타</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-04-01</td>
+<td class="gt_row gt_center" headers="질병">178</td>
+<td class="gt_row gt_center" headers="부상">18</td>
+<td class="gt_row gt_center" headers="기타">21</td>
+<td class="gt_row gt_center" headers="합계">217</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-05-01</td>
+<td class="gt_row gt_center" headers="질병">172</td>
+<td class="gt_row gt_center" headers="부상">17</td>
+<td class="gt_row gt_center" headers="기타">12</td>
+<td class="gt_row gt_center" headers="합계">201</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-06-01</td>
+<td class="gt_row gt_center" headers="질병" style="background-color: #F24B43; color: #FFFFFF">248</td>
+<td class="gt_row gt_center" headers="부상" style="background-color: #F24B43; color: #FFFFFF">64</td>
+<td class="gt_row gt_center" headers="기타" style="background-color: #F24B43; color: #FFFFFF">10</td>
+<td class="gt_row gt_center" headers="합계" style="background-color: #F24B43; color: #FFFFFF">322</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-07-01</td>
+<td class="gt_row gt_center" headers="질병">108</td>
+<td class="gt_row gt_center" headers="부상">38</td>
+<td class="gt_row gt_center" headers="기타">9</td>
+<td class="gt_row gt_center" headers="합계">154</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-08-01</td>
+<td class="gt_row gt_center" headers="질병">130</td>
+<td class="gt_row gt_center" headers="부상">44</td>
+<td class="gt_row gt_center" headers="기타">7</td>
+<td class="gt_row gt_center" headers="합계">181</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-09-01</td>
+<td class="gt_row gt_center" headers="질병">48</td>
+<td class="gt_row gt_center" headers="부상">69</td>
+<td class="gt_row gt_center" headers="기타">5</td>
+<td class="gt_row gt_center" headers="합계">122</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-10-01</td>
+<td class="gt_row gt_center" headers="질병">33</td>
+<td class="gt_row gt_center" headers="부상">14</td>
+<td class="gt_row gt_center" headers="기타">5</td>
+<td class="gt_row gt_center" headers="합계">51</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1855-11-01</td>
+<td class="gt_row gt_center" headers="질병">56</td>
+<td class="gt_row gt_center" headers="부상">10</td>
+<td class="gt_row gt_center" headers="기타">10</td>
+<td class="gt_row gt_center" headers="합계">77</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1855-12-01</td>
+<td class="gt_row gt_center" headers="질병">25</td>
+<td class="gt_row gt_center" headers="부상">5</td>
+<td class="gt_row gt_center" headers="기타">8</td>
+<td class="gt_row gt_center" headers="합계">38</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1856-01-01</td>
+<td class="gt_row gt_center" headers="질병">11</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">13</td>
+<td class="gt_row gt_center" headers="합계">25</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="날짜">1856-02-01</td>
+<td class="gt_row gt_center" headers="질병">7</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">5</td>
+<td class="gt_row gt_center" headers="합계">12</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="날짜">1856-03-01</td>
+<td class="gt_row gt_center" headers="질병">4</td>
+<td class="gt_row gt_center" headers="부상">0</td>
+<td class="gt_row gt_center" headers="기타">9</td>
+<td class="gt_row gt_center" headers="합계">13</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
+
 </div>
 </div>
 </div>
-</section>
+</section></main></div>
+
+
 <section id="커뮤니케이션" class="level2" data-number="7.9">
-<h2 data-number="7.9" class="anchored" data-anchor-id="커뮤니케이션"><span class="header-section-number">7.9</span> 커뮤니케이션</h2>
+<h2 data-number="7.9" data-anchor-id="커뮤니케이션"><span class="header-section-number">7.9</span> 커뮤니케이션</h2>
 <p>데이터를 기반으로 뭔가 유용한 것을 창출한 후에 이를 알리기 위해 커뮤니케이션 단계를 거치게 된다. 가장 흔히 사용하는 방식은 엑셀, 워드, 파워포인트와 같은 MS 오피스 제품을 활용하는 방식이다. 과거 SAS, SPSS, 미니탭 등 외산 통계 팩키지로 데이터를 분석하고 유용한 모형 등을 찾아낸 후에 이를 커뮤니케이션하기 위해 MS 오피스 제품을 통해 커뮤니케이션을 하기도 했다. 하지만, 각각은 별개의 시스템으로 분리되어 있어 일일이 사람손이 가는 번거러움이 많았다. 이를 해결하기 하는 방법은 하나의 도구 혹은 언어로 모든 작업을 처리하는 것이다. [^meghan]</p>
 <p>[^meghan] : <a href="https://meghan.rbind.io/slides/rstudio/hall_rstudio_2021">Meghan Hall (June 15, 2021), “Extending R Markdown”, RStudio: R in Sports Analytics,</a></p>
 <p>우선 엑셀은 <code>tidyverse</code> 로 대체가 되고, 워드는 R 마크다운을 거쳐 쿼토(Quarto), 파워포인트도 R 마크다운(<code>xaringan</code> 등)에서 진화한 <code>reveal.js</code> 기반 쿼토 슬라이드가 빠르게 자리를 잡아가고 있다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/nightingale_office.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">오피스 기반 커뮤니케이션 현재 상태점검</figcaption>
+<figcaption>오피스 기반 커뮤니케이션 현재 상태점검</figcaption>
 </figure>
 </div>
 <p>데이터 과학을 커뮤니케이션하는 방식은 다양한 방식이 존재하지만 직장상사 뿐만 아니라 집단지성을 넘어 AI를 적극 도입하여 데이터 분석 역량을 고도화하는데 동료 개발자 및 협업하시는 분들과 커뮤니케이션 뿐만 아니라 불특정 다수를 대상으로 한 인터넷에 공개와 공유를 통해 새로운 관계를 맺어가는 것도 그 중요성을 더해가고 있다.</p>
@@ -1776,7 +1822,7 @@ tbody tr:last-child {
 
 </section>
 
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1905,15 +1951,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1921,6 +1980,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const anchorLink = note.querySelector('a.anchorjs-link');
       if (anchorLink) {
         anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
       }
       return note.innerHTML;
     }
@@ -1964,6 +2026,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -2035,6 +2120,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2096,17 +2207,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./model_value.html" class="pagination-link">
+      <a href="./model_value.html" class="pagination-link  aria-label=" &lt;span="" 가치&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">예측모형 가치</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cs_napolean.html" class="pagination-link">
+      <a href="./cs_napolean.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>나폴레옹 러시아 침공</span>">
         <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 

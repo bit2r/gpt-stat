@@ -154,7 +154,7 @@ kick_tbl |>
 
 ```{r}
 kick_tbl |> 
-  filter(사망횟수 != "합계") |> 
+  dplyr::filter(사망횟수 != "합계") |> 
   ggplot() +
     geom_segment(aes(x = 사망횟수, xend = 사망횟수, y = 0, yend=빈도수),
                  linewidth= 2) +

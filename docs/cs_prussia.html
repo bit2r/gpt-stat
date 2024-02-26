@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.288">
+<meta name="generator" content="quarto-1.4.534">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,12 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "일치 없음",
     "search-matching-documents-text": "일치된 문서",
@@ -95,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "추가 검색결과",
     "search-more-matches-text": "추가 검색결과",
     "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "취소",
     "search-submit-button-title": "검색",
     "search-label": "검색"
@@ -104,6 +106,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar floating">
@@ -112,11 +141,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./cs_prussia.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">프로이센 기병</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -127,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">챗GPT 통계</a> 
@@ -240,29 +269,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">통계책</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./webr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">웹R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./shinylive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">shinylive</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -272,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -316,6 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+
 <section id="교통사고" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="교통사고"><span class="header-section-number">10.1</span> 교통사고</h2>
 <p>포아송은 미래에 발생할 경우의 수를 예측하기 위해서 포아송 분포를 창안했다. 좀더 구체적으로 고정된 시간 범위에 발생할 사건을 예측하기 위해서다.</p>
@@ -354,33 +361,29 @@ P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>(<span class="at">ascii =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(월, 사고건수 <span class="ot">=</span> 사고건수_건) </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>accident_tbl</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 2
-   월    사고건수
-   &lt;chr&gt;    &lt;dbl&gt;
- 1 01월     15894
- 2 02월     12362
- 3 03월     13620
- 4 04월     16472
- 5 05월     18065
- 6 06월     16481
- 7 07월     17115
- 8 08월     16496
- 9 09월     17216
-10 10월     18508
-11 11월     17578
-12 12월     17029</code></pre>
-</div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>accident_tbl</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 12 × 2</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    월    사고건수</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;    &lt;dbl&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 01월     15894</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 02월     12362</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 03월     13620</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 04월     16472</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 05월     18065</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 06월     16481</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 07월     17115</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 08월     16496</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 09월     17216</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 10월     18508</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 11월     17578</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 12월     17029</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>월별 평균 사고건수를 <code>mean()</code> 함수를 사용해서 계산할 수 있다. 교통량은 상당히 크고, 교통사고 확률은 매우 낮기 때문에 포아송 분포로 근사를 하는 것이 가능하다. 교통사고 건수가 많기 때문에 단위를 천대 기준으로 조정하여 포아송 분포 모수 <span class="math inline">\(\lambda\)</span>를 계산한다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>accident_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(accident_tbl<span class="sc">$</span>사고건수) <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>accident_mean</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 16.403</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>accident_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(accident_tbl<span class="sc">$</span>사고건수) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>accident_mean</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 16.403</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>월별로 2만대 이상 교통사고가 발생될 경우 교통사고 환자수가 급증하여 병원에 큰 부하가 걸려 사회적 문제가 된다는 가정하에 월별로 2만대 이상 교통사고가 발생할 확률을 계산해보자.</p>
 <p><span class="math inline">\(P(X \geq 20)\)</span> 확률값은 전체 경우의 수에서 0 ~ 1.9 만대 사고건수가 발생할 확률을 빼주면 계산이 가능하고 다음과 같이 수식으로 표현할 수 있다.</p>
@@ -389,15 +392,13 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
 \]</span></p>
 <p>이를 R 코드로 작성하면 다음과 같이 함수형 프로그래밍 <code>purrr</code> 패키지 <code>map_dbl()</code> 함수와 포아송 함수에 <span class="math inline">\(\lambda = 16.403\)</span>를 넣어 계산이 가능하거나 내장 함수 <code>ppois()</code>로 직접 동일한 계산작업을 수행할 수 있다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>accident_prob <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">map_dbl</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">19</span>, <span class="sc">~</span> (accident_mean<span class="sc">^</span>.x <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>accident_mean)) <span class="sc">/</span> <span class="fu">factorial</span>(.x)))</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 - ppois(19, lambda = 16.403)</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>accident_prob</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2169535</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>accident_prob <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">map_dbl</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">19</span>, <span class="sc">~</span> (accident_mean<span class="sc">^</span>.x <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>accident_mean)) <span class="sc">/</span> <span class="fu">factorial</span>(.x)))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 - ppois(19, lambda = 16.403)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>accident_prob</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.2169535</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -407,50 +408,50 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
 <p><img src="images/horse_kicks.jpg" class="img-fluid"></p>
 <p>원본 데이터를 디지털로 복원한 후에 고정된 기간 말 발차기 사망자수를 빈도통계를 통해 표로 정리할 수 있다. 총 관측 횟수는 <span class="math inline">\(14 \times 20 = 280\)</span> (즉, 1875년부터 1894년까지 20년간 프로이센 군단 14개를 관측), 총 사망자 병사수가 196명으로부터 평균 사망병사수를 <span class="math inline">\(\lambda = \frac{196}{280} = 0.7\)</span> 으로 계산할 수 있다. 다음으로 포아송분포에 적합시켜서 분포로부터 말 발차기 사망자수 빈도수를 계산한다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>kick_raw <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="at">x =</span> <span class="st">'https://www.randomservices.org/random/data/HorseKicks.html'</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># kick_raw |&gt; </span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   write_csv("data/horse_kick.csv")</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="ot">&lt;-</span> kick_raw <span class="sc">|&gt;</span> </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Year, <span class="at">names_to =</span> <span class="st">"군단"</span>, <span class="at">values_to =</span> <span class="st">"병사수"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(사망횟수 <span class="ot">=</span> 병사수, <span class="at">name =</span> <span class="st">"빈도수"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(사망자수 <span class="ot">=</span> 사망횟수 <span class="sc">*</span> 빈도수)  <span class="sc">|&gt;</span> </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(포아송적합 <span class="ot">=</span> <span class="fu">map_dbl</span>(사망횟수, dpois, <span class="at">lambda =</span> <span class="dv">196</span><span class="sc">/</span><span class="dv">280</span>) <span class="sc">*</span> <span class="dv">280</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(포아송적합 <span class="ot">=</span> <span class="fu">round</span>(포아송적합, <span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>), <span class="at">name =</span> <span class="st">"합계"</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">tab_spanner</span>(<span class="at">label =</span> <span class="st">"데이터"</span>, </span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">columns =</span> <span class="fu">c</span>(사망횟수, 빈도수))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>kick_raw <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="at">x =</span> <span class="st">'https://www.randomservices.org/random/data/HorseKicks.html'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># kick_raw |&gt; </span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   write_csv("data/horse_kick.csv")</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="ot">&lt;-</span> kick_raw <span class="sc">|&gt;</span> </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Year, <span class="at">names_to =</span> <span class="st">"군단"</span>, <span class="at">values_to =</span> <span class="st">"병사수"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(사망횟수 <span class="ot">=</span> 병사수, <span class="at">name =</span> <span class="st">"빈도수"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(사망자수 <span class="ot">=</span> 사망횟수 <span class="sc">*</span> 빈도수)  <span class="sc">|&gt;</span> </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(포아송적합 <span class="ot">=</span> <span class="fu">map_dbl</span>(사망횟수, dpois, <span class="at">lambda =</span> <span class="dv">196</span><span class="sc">/</span><span class="dv">280</span>) <span class="sc">*</span> <span class="dv">280</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(포아송적합 <span class="ot">=</span> <span class="fu">round</span>(포아송적합, <span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>), <span class="at">name =</span> <span class="st">"합계"</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">tab_spanner</span>(<span class="at">label =</span> <span class="st">"데이터"</span>, </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">columns =</span> <span class="fu">c</span>(사망횟수, 빈도수))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="iutuvkgxzu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vxexnazdtn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#iutuvkgxzu table {
+#vxexnazdtn table {
   font-family: Chivo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iutuvkgxzu thead, #iutuvkgxzu tbody, #iutuvkgxzu tfoot, #iutuvkgxzu tr, #iutuvkgxzu td, #iutuvkgxzu th {
+#vxexnazdtn thead, #vxexnazdtn tbody, #vxexnazdtn tfoot, #vxexnazdtn tr, #vxexnazdtn td, #vxexnazdtn th {
   border-style: none;
 }
 
-#iutuvkgxzu p {
+#vxexnazdtn p {
   margin: 0;
   padding: 0;
 }
 
-#iutuvkgxzu .gt_table {
+#vxexnazdtn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -476,12 +477,12 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-left-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_caption {
+#vxexnazdtn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iutuvkgxzu .gt_title {
+#vxexnazdtn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -493,7 +494,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-bottom-width: 0;
 }
 
-#iutuvkgxzu .gt_subtitle {
+#vxexnazdtn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -505,7 +506,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-top-width: 0;
 }
 
-#iutuvkgxzu .gt_heading {
+#vxexnazdtn .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -517,13 +518,13 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-right-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_bottom_border {
+#vxexnazdtn .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_col_headings {
+#vxexnazdtn .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -538,7 +539,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-right-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_col_heading {
+#vxexnazdtn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -558,7 +559,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   overflow-x: hidden;
 }
 
-#iutuvkgxzu .gt_column_spanner_outer {
+#vxexnazdtn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -570,15 +571,15 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 4px;
 }
 
-#iutuvkgxzu .gt_column_spanner_outer:first-child {
+#vxexnazdtn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iutuvkgxzu .gt_column_spanner_outer:last-child {
+#vxexnazdtn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iutuvkgxzu .gt_column_spanner {
+#vxexnazdtn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -590,11 +591,11 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   width: 100%;
 }
 
-#iutuvkgxzu .gt_spanner_row {
+#vxexnazdtn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iutuvkgxzu .gt_group_heading {
+#vxexnazdtn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -620,7 +621,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   text-align: left;
 }
 
-#iutuvkgxzu .gt_empty_group_heading {
+#vxexnazdtn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -635,15 +636,15 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   vertical-align: middle;
 }
 
-#iutuvkgxzu .gt_from_md > :first-child {
+#vxexnazdtn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iutuvkgxzu .gt_from_md > :last-child {
+#vxexnazdtn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iutuvkgxzu .gt_row {
+#vxexnazdtn .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -662,7 +663,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   overflow-x: hidden;
 }
 
-#iutuvkgxzu .gt_stub {
+#vxexnazdtn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -675,7 +676,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 5px;
 }
 
-#iutuvkgxzu .gt_stub_row_group {
+#vxexnazdtn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -689,15 +690,15 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   vertical-align: top;
 }
 
-#iutuvkgxzu .gt_row_group_first td {
+#vxexnazdtn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iutuvkgxzu .gt_row_group_first th {
+#vxexnazdtn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iutuvkgxzu .gt_summary_row {
+#vxexnazdtn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -707,16 +708,16 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 5px;
 }
 
-#iutuvkgxzu .gt_first_summary_row {
+#vxexnazdtn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_first_summary_row.thick {
+#vxexnazdtn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iutuvkgxzu .gt_last_summary_row {
+#vxexnazdtn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -726,7 +727,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-bottom-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_grand_summary_row {
+#vxexnazdtn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -736,7 +737,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 5px;
 }
 
-#iutuvkgxzu .gt_first_grand_summary_row {
+#vxexnazdtn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -746,7 +747,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-top-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_last_grand_summary_row_top {
+#vxexnazdtn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -756,11 +757,11 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-bottom-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_striped {
+#vxexnazdtn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iutuvkgxzu .gt_table_body {
+#vxexnazdtn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -769,7 +770,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-bottom-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_footnotes {
+#vxexnazdtn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -783,7 +784,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-right-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_footnote {
+#vxexnazdtn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -792,7 +793,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 5px;
 }
 
-#iutuvkgxzu .gt_sourcenotes {
+#vxexnazdtn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -806,7 +807,7 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   border-right-color: #D3D3D3;
 }
 
-#iutuvkgxzu .gt_sourcenote {
+#vxexnazdtn .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -814,63 +815,63 @@ P(X \geq 20) = 1 - (P(X=0) + P(X=1) + \ldots + P(X=19))
   padding-right: 5px;
 }
 
-#iutuvkgxzu .gt_left {
+#vxexnazdtn .gt_left {
   text-align: left;
 }
 
-#iutuvkgxzu .gt_center {
+#vxexnazdtn .gt_center {
   text-align: center;
 }
 
-#iutuvkgxzu .gt_right {
+#vxexnazdtn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iutuvkgxzu .gt_font_normal {
+#vxexnazdtn .gt_font_normal {
   font-weight: normal;
 }
 
-#iutuvkgxzu .gt_font_bold {
+#vxexnazdtn .gt_font_bold {
   font-weight: bold;
 }
 
-#iutuvkgxzu .gt_font_italic {
+#vxexnazdtn .gt_font_italic {
   font-style: italic;
 }
 
-#iutuvkgxzu .gt_super {
+#vxexnazdtn .gt_super {
   font-size: 65%;
 }
 
-#iutuvkgxzu .gt_footnote_marks {
+#vxexnazdtn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iutuvkgxzu .gt_asterisk {
+#vxexnazdtn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iutuvkgxzu .gt_indent_1 {
+#vxexnazdtn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iutuvkgxzu .gt_indent_2 {
+#vxexnazdtn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iutuvkgxzu .gt_indent_3 {
+#vxexnazdtn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iutuvkgxzu .gt_indent_4 {
+#vxexnazdtn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iutuvkgxzu .gt_indent_5 {
+#vxexnazdtn .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -878,67 +879,80 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="데이터">
-        <span class="gt_column_spanner">데이터</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="사망자수">사망자수</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="포아송적합">포아송적합</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="사망횟수">사망횟수</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="빈도수">빈도수</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="사망횟수" class="gt_row gt_center">0</td>
-<td headers="빈도수" class="gt_row gt_center">144</td>
-<td headers="사망자수" class="gt_row gt_center">0</td>
-<td headers="포아송적합" class="gt_row gt_center">139</td></tr>
-    <tr><td headers="사망횟수" class="gt_row gt_center">1</td>
-<td headers="빈도수" class="gt_row gt_center">91</td>
-<td headers="사망자수" class="gt_row gt_center">91</td>
-<td headers="포아송적합" class="gt_row gt_center">97</td></tr>
-    <tr><td headers="사망횟수" class="gt_row gt_center">2</td>
-<td headers="빈도수" class="gt_row gt_center">32</td>
-<td headers="사망자수" class="gt_row gt_center">64</td>
-<td headers="포아송적합" class="gt_row gt_center">34</td></tr>
-    <tr><td headers="사망횟수" class="gt_row gt_center">3</td>
-<td headers="빈도수" class="gt_row gt_center">11</td>
-<td headers="사망자수" class="gt_row gt_center">33</td>
-<td headers="포아송적합" class="gt_row gt_center">8</td></tr>
-    <tr><td headers="사망횟수" class="gt_row gt_center">4</td>
-<td headers="빈도수" class="gt_row gt_center">2</td>
-<td headers="사망자수" class="gt_row gt_center">8</td>
-<td headers="포아송적합" class="gt_row gt_center">1</td></tr>
-    <tr><td headers="사망횟수" class="gt_row gt_center">합계</td>
-<td headers="빈도수" class="gt_row gt_center">280</td>
-<td headers="사망자수" class="gt_row gt_center">196</td>
-<td headers="포아송적합" class="gt_row gt_center">279</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th colspan="2" id="데이터" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">데이터</span></th>
+<th rowspan="2" id="사망자수" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">사망자수</th>
+<th rowspan="2" id="포아송적합" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">포아송적합</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="사망횟수" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">사망횟수</th>
+<th id="빈도수" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">빈도수</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="사망횟수">0</td>
+<td class="gt_row gt_center" headers="빈도수">144</td>
+<td class="gt_row gt_center" headers="사망자수">0</td>
+<td class="gt_row gt_center" headers="포아송적합">139</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="사망횟수">1</td>
+<td class="gt_row gt_center" headers="빈도수">91</td>
+<td class="gt_row gt_center" headers="사망자수">91</td>
+<td class="gt_row gt_center" headers="포아송적합">97</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="사망횟수">2</td>
+<td class="gt_row gt_center" headers="빈도수">32</td>
+<td class="gt_row gt_center" headers="사망자수">64</td>
+<td class="gt_row gt_center" headers="포아송적합">34</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="사망횟수">3</td>
+<td class="gt_row gt_center" headers="빈도수">11</td>
+<td class="gt_row gt_center" headers="사망자수">33</td>
+<td class="gt_row gt_center" headers="포아송적합">8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="사망횟수">4</td>
+<td class="gt_row gt_center" headers="빈도수">2</td>
+<td class="gt_row gt_center" headers="사망자수">8</td>
+<td class="gt_row gt_center" headers="포아송적합">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="사망횟수">합계</td>
+<td class="gt_row gt_center" headers="빈도수">280</td>
+<td class="gt_row gt_center" headers="사망자수">196</td>
+<td class="gt_row gt_center" headers="포아송적합">279</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <p>시각적으로 실제 관측한 빈도수와 포아송 분포로부터 추정한 값을 함께 겹칠 경우 일부 차이가 있긴 하지만 대체로 포아송 분포에 잘 적합됨을 확인할 수 있다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(사망횟수 <span class="sc">!=</span> <span class="st">"합계"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> 사망횟수, <span class="at">xend =</span> 사망횟수, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend=</span>빈도수),</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">linewidth=</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(사망횟수, 포아송적합), <span class="at">size=</span><span class="dv">3</span>, <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"말 발차기로 사망한 병사 수"</span>,</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"빈도수"</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">title =</span> <span class="st">"말 발길질로 인한 프로이센 병사 사망"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">"실제 관측 데이터와 포아송분포 적합 기대값"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>kick_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(사망횟수 <span class="sc">!=</span> <span class="st">"합계"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> 사망횟수, <span class="at">xend =</span> 사망횟수, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend=</span>빈도수),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">linewidth=</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(사망횟수, 포아송적합), <span class="at">size=</span><span class="dv">3</span>, <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"말 발차기로 사망한 병사 수"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"빈도수"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">title =</span> <span class="st">"말 발길질로 인한 프로이센 병사 사망"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">"실제 관측 데이터와 포아송분포 적합 기대값"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="cs_prussia_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="cs_prussia_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -949,35 +963,35 @@ tbody tr:last-child {
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="v2-data"><span class="header-section-number">10.3.1</span> 데이터</h3>
 <p>가장 먼저 데이터를 준비한다. 데이터는 <a href="https://www.actuaries.org.uk/system/files/documents/pdf/0481.pdf">R.D. Clarke, “An Applicatin of the Poisson Distribution”</a>을 참조한다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 기본 데이터 --------- </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>bombs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0 개"</span>,<span class="st">"1 개"</span>, <span class="st">"2 개"</span>,<span class="st">"3 개"</span>,<span class="st">"4 개"</span>,<span class="st">"5 개 이상"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>hit <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">229</span>, <span class="dv">211</span>, <span class="dv">93</span>, <span class="dv">35</span>, <span class="dv">7</span>, <span class="dv">1</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>expected <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">226.74</span>, <span class="fl">211.39</span>, <span class="fl">98.54</span>, <span class="fl">30.62</span>, <span class="fl">7.14</span>, <span class="fl">1.57</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(bombs, hit, expected)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="sc">|&gt;</span> </span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 기본 데이터 --------- </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>bombs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0 개"</span>,<span class="st">"1 개"</span>, <span class="st">"2 개"</span>,<span class="st">"3 개"</span>,<span class="st">"4 개"</span>,<span class="st">"5 개 이상"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>hit <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">229</span>, <span class="dv">211</span>, <span class="dv">93</span>, <span class="dv">35</span>, <span class="dv">7</span>, <span class="dv">1</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>expected <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">226.74</span>, <span class="fl">211.39</span>, <span class="fl">98.54</span>, <span class="fl">30.62</span>, <span class="fl">7.14</span>, <span class="fl">1.57</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(bombs, hit, expected)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="sc">|&gt;</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="ziwndjmvcs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="badlubcorg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#ziwndjmvcs table {
+#badlubcorg table {
   font-family: Chivo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ziwndjmvcs thead, #ziwndjmvcs tbody, #ziwndjmvcs tfoot, #ziwndjmvcs tr, #ziwndjmvcs td, #ziwndjmvcs th {
+#badlubcorg thead, #badlubcorg tbody, #badlubcorg tfoot, #badlubcorg tr, #badlubcorg td, #badlubcorg th {
   border-style: none;
 }
 
-#ziwndjmvcs p {
+#badlubcorg p {
   margin: 0;
   padding: 0;
 }
 
-#ziwndjmvcs .gt_table {
+#badlubcorg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1003,12 +1017,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_caption {
+#badlubcorg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ziwndjmvcs .gt_title {
+#badlubcorg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1020,7 +1034,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#ziwndjmvcs .gt_subtitle {
+#badlubcorg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1032,7 +1046,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#ziwndjmvcs .gt_heading {
+#badlubcorg .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1044,13 +1058,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_bottom_border {
+#badlubcorg .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_col_headings {
+#badlubcorg .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1065,7 +1079,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_col_heading {
+#badlubcorg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1085,7 +1099,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#ziwndjmvcs .gt_column_spanner_outer {
+#badlubcorg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1097,15 +1111,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#ziwndjmvcs .gt_column_spanner_outer:first-child {
+#badlubcorg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ziwndjmvcs .gt_column_spanner_outer:last-child {
+#badlubcorg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ziwndjmvcs .gt_column_spanner {
+#badlubcorg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1117,11 +1131,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#ziwndjmvcs .gt_spanner_row {
+#badlubcorg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ziwndjmvcs .gt_group_heading {
+#badlubcorg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1147,7 +1161,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#ziwndjmvcs .gt_empty_group_heading {
+#badlubcorg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1162,15 +1176,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#ziwndjmvcs .gt_from_md > :first-child {
+#badlubcorg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ziwndjmvcs .gt_from_md > :last-child {
+#badlubcorg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ziwndjmvcs .gt_row {
+#badlubcorg .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1189,7 +1203,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#ziwndjmvcs .gt_stub {
+#badlubcorg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1202,7 +1216,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#ziwndjmvcs .gt_stub_row_group {
+#badlubcorg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1216,15 +1230,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#ziwndjmvcs .gt_row_group_first td {
+#badlubcorg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ziwndjmvcs .gt_row_group_first th {
+#badlubcorg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ziwndjmvcs .gt_summary_row {
+#badlubcorg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1234,16 +1248,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#ziwndjmvcs .gt_first_summary_row {
+#badlubcorg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_first_summary_row.thick {
+#badlubcorg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ziwndjmvcs .gt_last_summary_row {
+#badlubcorg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1253,7 +1267,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_grand_summary_row {
+#badlubcorg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1263,7 +1277,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#ziwndjmvcs .gt_first_grand_summary_row {
+#badlubcorg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1273,7 +1287,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_last_grand_summary_row_top {
+#badlubcorg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1283,11 +1297,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_striped {
+#badlubcorg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ziwndjmvcs .gt_table_body {
+#badlubcorg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1296,7 +1310,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_footnotes {
+#badlubcorg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1310,7 +1324,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_footnote {
+#badlubcorg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1319,7 +1333,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#ziwndjmvcs .gt_sourcenotes {
+#badlubcorg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1333,7 +1347,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#ziwndjmvcs .gt_sourcenote {
+#badlubcorg .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1341,63 +1355,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#ziwndjmvcs .gt_left {
+#badlubcorg .gt_left {
   text-align: left;
 }
 
-#ziwndjmvcs .gt_center {
+#badlubcorg .gt_center {
   text-align: center;
 }
 
-#ziwndjmvcs .gt_right {
+#badlubcorg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ziwndjmvcs .gt_font_normal {
+#badlubcorg .gt_font_normal {
   font-weight: normal;
 }
 
-#ziwndjmvcs .gt_font_bold {
+#badlubcorg .gt_font_bold {
   font-weight: bold;
 }
 
-#ziwndjmvcs .gt_font_italic {
+#badlubcorg .gt_font_italic {
   font-style: italic;
 }
 
-#ziwndjmvcs .gt_super {
+#badlubcorg .gt_super {
   font-size: 65%;
 }
 
-#ziwndjmvcs .gt_footnote_marks {
+#badlubcorg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ziwndjmvcs .gt_asterisk {
+#badlubcorg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ziwndjmvcs .gt_indent_1 {
+#badlubcorg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ziwndjmvcs .gt_indent_2 {
+#badlubcorg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ziwndjmvcs .gt_indent_3 {
+#badlubcorg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ziwndjmvcs .gt_indent_4 {
+#badlubcorg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ziwndjmvcs .gt_indent_5 {
+#badlubcorg .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1405,38 +1419,49 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="bombs">bombs</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="hit">hit</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="expected">expected</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="bombs" class="gt_row gt_left">0 개</td>
-<td headers="hit" class="gt_row gt_right">229</td>
-<td headers="expected" class="gt_row gt_right">226.74</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">1 개</td>
-<td headers="hit" class="gt_row gt_right">211</td>
-<td headers="expected" class="gt_row gt_right">211.39</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">2 개</td>
-<td headers="hit" class="gt_row gt_right">93</td>
-<td headers="expected" class="gt_row gt_right">98.54</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">3 개</td>
-<td headers="hit" class="gt_row gt_right">35</td>
-<td headers="expected" class="gt_row gt_right">30.62</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">4 개</td>
-<td headers="hit" class="gt_row gt_right">7</td>
-<td headers="expected" class="gt_row gt_right">7.14</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">5 개 이상</td>
-<td headers="hit" class="gt_row gt_right">1</td>
-<td headers="expected" class="gt_row gt_right">1.57</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="bombs" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">bombs</th>
+<th id="hit" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">hit</th>
+<th id="expected" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">expected</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">0 개</td>
+<td class="gt_row gt_right" headers="hit">229</td>
+<td class="gt_row gt_right" headers="expected">226.74</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">1 개</td>
+<td class="gt_row gt_right" headers="hit">211</td>
+<td class="gt_row gt_right" headers="expected">211.39</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">2 개</td>
+<td class="gt_row gt_right" headers="hit">93</td>
+<td class="gt_row gt_right" headers="expected">98.54</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">3 개</td>
+<td class="gt_row gt_right" headers="hit">35</td>
+<td class="gt_row gt_right" headers="expected">30.62</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">4 개</td>
+<td class="gt_row gt_right" headers="hit">7</td>
+<td class="gt_row gt_right" headers="expected">7.14</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">5 개 이상</td>
+<td class="gt_row gt_right" headers="hit">1</td>
+<td class="gt_row gt_right" headers="expected">1.57</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1446,22 +1471,25 @@ tbody tr:last-child {
 <p>런던에 떨어진 폭탄이 포아송 분포, 즉 무작위로 떨어진 것이라고 가정하고 시각화를 한다. 포아송 분포는 모수가 <span class="math inline">\(\lambda\)</span> 하나만 추정하면 되기 때문에 데이터에서 모수를 추정한다.</p>
 <p><span class="math display">\[P(\text{ 해당 구간에서 발생한 k개 사건(k events in interval)}) = e^{-\lambda}\frac{\lambda^k}{k!}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 포아송 분포 --------- </span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>hit <span class="ot">&lt;-</span> <span class="dv">537</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>area <span class="ot">&lt;-</span> <span class="dv">576</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>(lambda <span class="ot">&lt;-</span> hit<span class="sc">/</span>area)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9322917</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bomb_df, <span class="fu">aes</span>(<span class="at">x=</span>bombs,<span class="at">xend=</span>bombs, <span class="at">y=</span><span class="dv">0</span>, <span class="at">yend=</span>hit)) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bombs, expected), <span class="at">size=</span><span class="dv">2</span>, <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"런던 지역에 투하된 폭탄 수"</span>, <span class="at">y=</span><span class="st">"런던 지역 숫자"</span>, <span class="at">title=</span><span class="st">"영국 런던에 떨어진 V2 로켓 폭탄"</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"실제 투하 폭탄수와 포아송 분포로 추정한 폭탄수"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 포아송 분포 --------- </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>hit <span class="ot">&lt;-</span> <span class="dv">537</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>area <span class="ot">&lt;-</span> <span class="dv">576</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>(lambda <span class="ot">&lt;-</span> hit<span class="sc">/</span>area)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.9322917</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bomb_df, <span class="fu">aes</span>(<span class="at">x=</span>bombs,<span class="at">xend=</span>bombs, <span class="at">y=</span><span class="dv">0</span>, <span class="at">yend=</span>hit)) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bombs, expected), <span class="at">size=</span><span class="dv">2</span>, <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"런던 지역에 투하된 폭탄 수"</span>, <span class="at">y=</span><span class="st">"런던 지역 숫자"</span>, <span class="at">title=</span><span class="st">"영국 런던에 떨어진 V2 로켓 폭탄"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"실제 투하 폭탄수와 포아송 분포로 추정한 폭탄수"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="cs_prussia_files/figure-html/v2-viz-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="cs_prussia_files/figure-html/v2-viz-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>모수(<span class="math inline">\(\lambda\)</span>)는 0.9322917로 추정된다. 이를 실제 데이터와 포아송 분포에서 나온 데이터와 겹쳐 시각화한다.</p>
@@ -1469,10 +1497,8 @@ tbody tr:last-child {
 <p><span class="math display">\[P(x=0) = e^{-0.9322917}\frac{0.9322917^0}{0!} = 0.3936506\]</span></p>
 <p>이를 R 코드로 표현하면 다음과 같다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lambda<span class="sc">^</span><span class="dv">0</span> <span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>lambda) <span class="sc">/</span> <span class="fu">factorial</span>(<span class="dv">0</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3936506</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>lambda<span class="sc">^</span><span class="dv">0</span> <span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>lambda) <span class="sc">/</span> <span class="fu">factorial</span>(<span class="dv">0</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.3936506</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="v2-goodness-of-fit" class="level3" data-number="10.3.3">
@@ -1484,43 +1510,42 @@ tbody tr:last-child {
 </ul>
 <p>유의수준을 설정하고 검정통계량 <span class="math inline">\(\chi^2\)</span>을 정의해서 계산하면 귀무가설을 채택하게 된다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 통계적 검정 --------- </span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(bomb_df<span class="sc">$</span>hit, <span class="at">p=</span>bomb_df<span class="sc">$</span>expected, <span class="at">rescale.p=</span><span class="cn">TRUE</span>, <span class="at">simulate.p.value=</span><span class="cn">TRUE</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Chi-squared test for given probabilities with simulated p-value (based
-    on 2000 replicates)
-
-data:  bomb_df$hit
-X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. 최종 데이터 ---------</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>bomb_df<span class="sc">$</span>r_expected <span class="ot">&lt;-</span> <span class="dv">573</span> <span class="sc">*</span> <span class="fu">c</span>( <span class="fu">dpois</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>, lambda), <span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">dpois</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>, lambda)))</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="sc">|&gt;</span> </span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_538</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 통계적 검정 --------- </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(bomb_df<span class="sc">$</span>hit, <span class="at">p=</span>bomb_df<span class="sc">$</span>expected, <span class="at">rescale.p=</span><span class="cn">TRUE</span>, <span class="at">simulate.p.value=</span><span class="cn">TRUE</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Chi-squared test for given probabilities with simulated p-value (based</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  on 2000 replicates)</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  bomb_df$hit</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; X-squared = 1.1709, df = NA, p-value = 0.945</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. 최종 데이터 ---------</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>bomb_df<span class="sc">$</span>r_expected <span class="ot">&lt;-</span> <span class="dv">573</span> <span class="sc">*</span> <span class="fu">c</span>( <span class="fu">dpois</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>, lambda), <span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">dpois</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>, lambda)))</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>bomb_df <span class="sc">|&gt;</span> </span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_538</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="uenchswjum" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bnrlhslhbh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#uenchswjum table {
+#bnrlhslhbh table {
   font-family: Chivo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#uenchswjum thead, #uenchswjum tbody, #uenchswjum tfoot, #uenchswjum tr, #uenchswjum td, #uenchswjum th {
+#bnrlhslhbh thead, #bnrlhslhbh tbody, #bnrlhslhbh tfoot, #bnrlhslhbh tr, #bnrlhslhbh td, #bnrlhslhbh th {
   border-style: none;
 }
 
-#uenchswjum p {
+#bnrlhslhbh p {
   margin: 0;
   padding: 0;
 }
 
-#uenchswjum .gt_table {
+#bnrlhslhbh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1546,12 +1571,12 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#uenchswjum .gt_caption {
+#bnrlhslhbh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#uenchswjum .gt_title {
+#bnrlhslhbh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1563,7 +1588,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-bottom-width: 0;
 }
 
-#uenchswjum .gt_subtitle {
+#bnrlhslhbh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1575,7 +1600,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-top-width: 0;
 }
 
-#uenchswjum .gt_heading {
+#bnrlhslhbh .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1587,13 +1612,13 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#uenchswjum .gt_bottom_border {
+#bnrlhslhbh .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uenchswjum .gt_col_headings {
+#bnrlhslhbh .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1608,7 +1633,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#uenchswjum .gt_col_heading {
+#bnrlhslhbh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1628,7 +1653,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   overflow-x: hidden;
 }
 
-#uenchswjum .gt_column_spanner_outer {
+#bnrlhslhbh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1640,15 +1665,15 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 4px;
 }
 
-#uenchswjum .gt_column_spanner_outer:first-child {
+#bnrlhslhbh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uenchswjum .gt_column_spanner_outer:last-child {
+#bnrlhslhbh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uenchswjum .gt_column_spanner {
+#bnrlhslhbh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1660,11 +1685,11 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   width: 100%;
 }
 
-#uenchswjum .gt_spanner_row {
+#bnrlhslhbh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#uenchswjum .gt_group_heading {
+#bnrlhslhbh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1690,7 +1715,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   text-align: left;
 }
 
-#uenchswjum .gt_empty_group_heading {
+#bnrlhslhbh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1705,15 +1730,15 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   vertical-align: middle;
 }
 
-#uenchswjum .gt_from_md > :first-child {
+#bnrlhslhbh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uenchswjum .gt_from_md > :last-child {
+#bnrlhslhbh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uenchswjum .gt_row {
+#bnrlhslhbh .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1732,7 +1757,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   overflow-x: hidden;
 }
 
-#uenchswjum .gt_stub {
+#bnrlhslhbh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1745,7 +1770,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 5px;
 }
 
-#uenchswjum .gt_stub_row_group {
+#bnrlhslhbh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1759,15 +1784,15 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   vertical-align: top;
 }
 
-#uenchswjum .gt_row_group_first td {
+#bnrlhslhbh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#uenchswjum .gt_row_group_first th {
+#bnrlhslhbh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#uenchswjum .gt_summary_row {
+#bnrlhslhbh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1777,16 +1802,16 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 5px;
 }
 
-#uenchswjum .gt_first_summary_row {
+#bnrlhslhbh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#uenchswjum .gt_first_summary_row.thick {
+#bnrlhslhbh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#uenchswjum .gt_last_summary_row {
+#bnrlhslhbh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1796,7 +1821,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#uenchswjum .gt_grand_summary_row {
+#bnrlhslhbh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1806,7 +1831,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 5px;
 }
 
-#uenchswjum .gt_first_grand_summary_row {
+#bnrlhslhbh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1816,7 +1841,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#uenchswjum .gt_last_grand_summary_row_top {
+#bnrlhslhbh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1826,11 +1851,11 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#uenchswjum .gt_striped {
+#bnrlhslhbh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uenchswjum .gt_table_body {
+#bnrlhslhbh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1839,7 +1864,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#uenchswjum .gt_footnotes {
+#bnrlhslhbh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1853,7 +1878,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#uenchswjum .gt_footnote {
+#bnrlhslhbh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1862,7 +1887,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 5px;
 }
 
-#uenchswjum .gt_sourcenotes {
+#bnrlhslhbh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1876,7 +1901,7 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#uenchswjum .gt_sourcenote {
+#bnrlhslhbh .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1884,63 +1909,63 @@ X-squared = 1.1709, df = NA, p-value = 0.9465</code></pre>
   padding-right: 5px;
 }
 
-#uenchswjum .gt_left {
+#bnrlhslhbh .gt_left {
   text-align: left;
 }
 
-#uenchswjum .gt_center {
+#bnrlhslhbh .gt_center {
   text-align: center;
 }
 
-#uenchswjum .gt_right {
+#bnrlhslhbh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uenchswjum .gt_font_normal {
+#bnrlhslhbh .gt_font_normal {
   font-weight: normal;
 }
 
-#uenchswjum .gt_font_bold {
+#bnrlhslhbh .gt_font_bold {
   font-weight: bold;
 }
 
-#uenchswjum .gt_font_italic {
+#bnrlhslhbh .gt_font_italic {
   font-style: italic;
 }
 
-#uenchswjum .gt_super {
+#bnrlhslhbh .gt_super {
   font-size: 65%;
 }
 
-#uenchswjum .gt_footnote_marks {
+#bnrlhslhbh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#uenchswjum .gt_asterisk {
+#bnrlhslhbh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#uenchswjum .gt_indent_1 {
+#bnrlhslhbh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#uenchswjum .gt_indent_2 {
+#bnrlhslhbh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#uenchswjum .gt_indent_3 {
+#bnrlhslhbh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#uenchswjum .gt_indent_4 {
+#bnrlhslhbh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#uenchswjum .gt_indent_5 {
+#bnrlhslhbh .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1948,45 +1973,56 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="bombs">bombs</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="hit">hit</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="expected">expected</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black;" scope="col" id="r_expected">r_expected</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="bombs" class="gt_row gt_left">0 개</td>
-<td headers="hit" class="gt_row gt_right">229</td>
-<td headers="expected" class="gt_row gt_right">226.74</td>
-<td headers="r_expected" class="gt_row gt_right">225.561771</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">1 개</td>
-<td headers="hit" class="gt_row gt_right">211</td>
-<td headers="expected" class="gt_row gt_right">211.39</td>
-<td headers="r_expected" class="gt_row gt_right">210.289359</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">2 개</td>
-<td headers="hit" class="gt_row gt_right">93</td>
-<td headers="expected" class="gt_row gt_right">98.54</td>
-<td headers="r_expected" class="gt_row gt_right">98.025509</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">3 개</td>
-<td headers="hit" class="gt_row gt_right">35</td>
-<td headers="expected" class="gt_row gt_right">30.62</td>
-<td headers="r_expected" class="gt_row gt_right">30.462788</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">4 개</td>
-<td headers="hit" class="gt_row gt_right">7</td>
-<td headers="expected" class="gt_row gt_right">7.14</td>
-<td headers="r_expected" class="gt_row gt_right">7.100051</td></tr>
-    <tr><td headers="bombs" class="gt_row gt_left">5 개 이상</td>
-<td headers="hit" class="gt_row gt_right">1</td>
-<td headers="expected" class="gt_row gt_right">1.57</td>
-<td headers="r_expected" class="gt_row gt_right">1.560522</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="bombs" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">bombs</th>
+<th id="hit" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">hit</th>
+<th id="expected" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">expected</th>
+<th id="r_expected" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black" scope="col">r_expected</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">0 개</td>
+<td class="gt_row gt_right" headers="hit">229</td>
+<td class="gt_row gt_right" headers="expected">226.74</td>
+<td class="gt_row gt_right" headers="r_expected">225.561771</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">1 개</td>
+<td class="gt_row gt_right" headers="hit">211</td>
+<td class="gt_row gt_right" headers="expected">211.39</td>
+<td class="gt_row gt_right" headers="r_expected">210.289359</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">2 개</td>
+<td class="gt_row gt_right" headers="hit">93</td>
+<td class="gt_row gt_right" headers="expected">98.54</td>
+<td class="gt_row gt_right" headers="r_expected">98.025509</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">3 개</td>
+<td class="gt_row gt_right" headers="hit">35</td>
+<td class="gt_row gt_right" headers="expected">30.62</td>
+<td class="gt_row gt_right" headers="r_expected">30.462788</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="bombs">4 개</td>
+<td class="gt_row gt_right" headers="hit">7</td>
+<td class="gt_row gt_right" headers="expected">7.14</td>
+<td class="gt_row gt_right" headers="r_expected">7.100051</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="bombs">5 개 이상</td>
+<td class="gt_row gt_right" headers="hit">1</td>
+<td class="gt_row gt_right" headers="expected">1.57</td>
+<td class="gt_row gt_right" headers="r_expected">1.560522</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1995,45 +2031,47 @@ tbody tr:last-child {
 <h3 data-number="10.3.4" class="anchored" data-anchor-id="v2-spatial"><span class="header-section-number">10.3.4</span> 지리정보를 통한 이해</h3>
 <p>공간정보를 활용한 사례로 이를 공간정보에 시각화하면 다음과 같다. 물론 정확한 데이터가 없어 런던 남부에 떨어진 폭탄이 포아송 분포를 따른다고 가정하고 576개 구획으로 나눈 것에 임의로 폭탄이 떨어진 것을 시각화하면 다음과 같다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. 지리정보 ---------</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spatstat)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 24*24 = 576</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>south_london <span class="ot">&lt;-</span> <span class="fu">rpoispp</span>(lambda, <span class="at">win =</span> <span class="fu">owin</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>)))</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(south_london, <span class="at">main=</span><span class="st">""</span>, <span class="at">cex=</span><span class="fl">0.5</span>)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">v =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">col =</span> <span class="st">"lightgray"</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. 지리정보 ---------</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spatstat)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 24*24 = 576</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>south_london <span class="ot">&lt;-</span> <span class="fu">rpoispp</span>(lambda, <span class="at">win =</span> <span class="fu">owin</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>)))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(south_london, <span class="at">main=</span><span class="st">""</span>, <span class="at">cex=</span><span class="fl">0.5</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">v =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">col =</span> <span class="st">"lightgray"</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="cs_prussia_files/figure-html/v2-spatial-viz-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="cs_prussia_files/figure-html/v2-spatial-viz-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>포아송 분포를 가정하고 통계적 검정도 물론 가능하다. <code>spatstat</code> 팩키지의 함수를 활용하여 통계적 검정을 해도 동일한 결론에 도달하게 된다.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>bomb_test <span class="ot">&lt;-</span> <span class="fu">quadrat.test</span>(south_london, <span class="at">nx =</span> <span class="dv">24</span>, <span class="at">ny =</span> <span class="dv">24</span>, <span class="at">method=</span><span class="st">"Chisq"</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>bomb_test</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Chi-squared test of CSR using quadrat counts
-
-data:  south_london
-X2 = 637.88, df = 575, p-value = 0.07029
-alternative hypothesis: two.sided
-
-Quadrats: 24 by 24 grid of tiles
-Tessellation is marked</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bomb_test <span class="ot">&lt;-</span> <span class="fu">quadrat.test</span>(south_london, <span class="at">nx =</span> <span class="dv">24</span>, <span class="at">ny =</span> <span class="dv">24</span>, <span class="at">method=</span><span class="st">"Chisq"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bomb_test</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Chi-squared test of CSR using quadrat counts</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  south_london</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; X2 = 559, df = 575, p-value = 0.648</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: two.sided</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Quadrats: 24 by 24 grid of tiles</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Tessellation is marked</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
 </section>
 </section>
-<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p><a href="">R. D. Clarke, “An Application of the Poisson Distribution,” Journal of the Institute of Actuaries, Vol. 72 (1946), p.&nbsp;481; V-2</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><a href="http://data.princeton.edu/wws509/notes/c4s1.html">Generalized Linear Models - 4. Poisson Models for Count Data</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2164,15 +2202,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -2180,6 +2231,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const anchorLink = note.querySelector('a.anchorjs-link');
       if (anchorLink) {
         anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
       }
       return note.innerHTML;
     }
@@ -2223,6 +2277,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -2294,6 +2371,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2355,12 +2458,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./u_boats.html" class="pagination-link">
+      <a href="./u_boats.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cs_german_tank.html" class="pagination-link">
+      <a href="./cs_german_tank.html" class="pagination-link" aria-label="<span class='chapter-number'>11</span>&nbsp; <span class='chapter-title'>독일 탱크 문제</span>">
         <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
