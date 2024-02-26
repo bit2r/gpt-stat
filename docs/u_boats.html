@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.534">
+<meta name="generator" content="quarto-1.5.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>챗GPT 통계 - 9&nbsp; 유보드</title>
+<title>챗GPT 확률통계 – 3&nbsp; 유보드</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,6 +86,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./cs_prussia.html" rel="next">
 <link href="./cs_napolean.html" rel="prev">
+<link href="./images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -95,6 +96,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,6 +127,20 @@ div.csl-indent {
   }
 }</script>
 
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
 
 </head>
 
@@ -135,7 +153,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./u_boats.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./u_boats.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">유보드</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,7 +168,15 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">챗GPT 통계</a> 
+      <a href="./">챗GPT 확률통계</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/bit2r/gpt-stat/" title="소스 코드" class="quarto-navigation-tool px-1" aria-label="소스 코드"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -169,7 +195,7 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">데이터 관리</span></a>
+ <span class="menu-text">사례연구</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -177,85 +203,38 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">데이터 관리 방법론</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./database_mgmt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">데이터베이스</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./document.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">문서</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./document_auto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">보고서 자동화</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">모형 관리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./model_value.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">예측모형 가치</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">사례연구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cs_nightingale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">나이팅게일</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">나이팅게일</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_napolean.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./u_boats.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">유보드</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_prussia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_german_tank.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">독일 탱크 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cs_bomber.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">폭격비행기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">폭격비행기</span></span></a>
   </div>
 </li>
       </ul>
@@ -276,22 +255,22 @@ div.csl-indent {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#유보트-데이터" id="toc-유보트-데이터" class="nav-link active" data-scroll-target="#유보트-데이터"><span class="header-section-number">9.1</span> 유보트 데이터</a>
+  <li><a href="#유보트-데이터" id="toc-유보트-데이터" class="nav-link active" data-scroll-target="#유보트-데이터"><span class="header-section-number">3.1</span> 유보트 데이터</a>
   <ul class="collapse">
-  <li><a href="#유보트-성과" id="toc-유보트-성과" class="nav-link" data-scroll-target="#유보트-성과"><span class="header-section-number">9.1.1</span> 유보트 성과</a></li>
+  <li><a href="#유보트-성과" id="toc-유보트-성과" class="nav-link" data-scroll-target="#유보트-성과"><span class="header-section-number">3.1.1</span> 유보트 성과</a></li>
   </ul></li>
-  <li><a href="#목표선박-데이터" id="toc-목표선박-데이터" class="nav-link" data-scroll-target="#목표선박-데이터"><span class="header-section-number">9.2</span> 목표선박 데이터</a></li>
-  <li><a href="#유보트-사령관" id="toc-유보트-사령관" class="nav-link" data-scroll-target="#유보트-사령관"><span class="header-section-number">9.3</span> 유보트 사령관</a></li>
-  <li><a href="#유보트와-선박" id="toc-유보트와-선박" class="nav-link" data-scroll-target="#유보트와-선박"><span class="header-section-number">9.4</span> 유보트와 선박</a></li>
+  <li><a href="#목표선박-데이터" id="toc-목표선박-데이터" class="nav-link" data-scroll-target="#목표선박-데이터"><span class="header-section-number">3.2</span> 목표선박 데이터</a></li>
+  <li><a href="#유보트-사령관" id="toc-유보트-사령관" class="nav-link" data-scroll-target="#유보트-사령관"><span class="header-section-number">3.3</span> 유보트 사령관</a></li>
+  <li><a href="#유보트와-선박" id="toc-유보트와-선박" class="nav-link" data-scroll-target="#유보트와-선박"><span class="header-section-number">3.4</span> 유보트와 선박</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bit2r/gpt-stat/edit/main/u_boats.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/bit2r/gpt-stat/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./u_boats.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cs_nightingale.html">사례연구</a></li><li class="breadcrumb-item"><a href="./u_boats.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">유보드</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">유보드</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">유보드</span></h1>
 </div>
 
 
@@ -314,8 +293,8 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">"https://raw.githubusercontent.com/kadenhendron/uboat-data/master/data/uboat-data.csv"</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">"data/uboat-data.csv"</span>, <span class="at">model =</span> <span class="st">"w"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="유보트-데이터" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="유보트-데이터"><span class="header-section-number">9.1</span> 유보트 데이터</h2>
+<section id="유보트-데이터" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="유보트-데이터"><span class="header-section-number">3.1</span> 유보트 데이터</h2>
 <p>총 1,153대 유보트가 활동했으며 전쟁이 끝난 후에 유보트 운명을 표로 정리하면 다음과 같다.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -362,24 +341,25 @@ div.csl-indent {
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">"자료출처: uboat.net"</span></span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="kxtepphjnf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div>
+<div id="ugroveikpc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#kxtepphjnf table {
+#ugroveikpc table {
   font-family: NanumSquare;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kxtepphjnf thead, #kxtepphjnf tbody, #kxtepphjnf tfoot, #kxtepphjnf tr, #kxtepphjnf td, #kxtepphjnf th {
+#ugroveikpc thead, #ugroveikpc tbody, #ugroveikpc tfoot, #ugroveikpc tr, #ugroveikpc td, #ugroveikpc th {
   border-style: none;
 }
 
-#kxtepphjnf p {
+#ugroveikpc p {
   margin: 0;
   padding: 0;
 }
 
-#kxtepphjnf .gt_table {
+#ugroveikpc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -405,12 +385,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_caption {
+#ugroveikpc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kxtepphjnf .gt_title {
+#ugroveikpc .gt_title {
   color: #333333;
   font-size: 26px;
   font-weight: initial;
@@ -422,7 +402,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#kxtepphjnf .gt_subtitle {
+#ugroveikpc .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -434,7 +414,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#kxtepphjnf .gt_heading {
+#ugroveikpc .gt_heading {
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -446,13 +426,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_bottom_border {
+#ugroveikpc .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_col_headings {
+#ugroveikpc .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -467,7 +447,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_col_heading {
+#ugroveikpc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -487,7 +467,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#kxtepphjnf .gt_column_spanner_outer {
+#ugroveikpc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -499,15 +479,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#kxtepphjnf .gt_column_spanner_outer:first-child {
+#ugroveikpc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kxtepphjnf .gt_column_spanner_outer:last-child {
+#ugroveikpc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kxtepphjnf .gt_column_spanner {
+#ugroveikpc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -519,11 +499,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#kxtepphjnf .gt_spanner_row {
+#ugroveikpc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kxtepphjnf .gt_group_heading {
+#ugroveikpc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -549,7 +529,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#kxtepphjnf .gt_empty_group_heading {
+#ugroveikpc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -564,15 +544,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#kxtepphjnf .gt_from_md > :first-child {
+#ugroveikpc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kxtepphjnf .gt_from_md > :last-child {
+#ugroveikpc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kxtepphjnf .gt_row {
+#ugroveikpc .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -591,7 +571,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#kxtepphjnf .gt_stub {
+#ugroveikpc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -604,7 +584,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kxtepphjnf .gt_stub_row_group {
+#ugroveikpc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -618,15 +598,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#kxtepphjnf .gt_row_group_first td {
+#ugroveikpc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kxtepphjnf .gt_row_group_first th {
+#ugroveikpc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kxtepphjnf .gt_summary_row {
+#ugroveikpc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -636,16 +616,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kxtepphjnf .gt_first_summary_row {
+#ugroveikpc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_first_summary_row.thick {
+#ugroveikpc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kxtepphjnf .gt_last_summary_row {
+#ugroveikpc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -655,7 +635,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_grand_summary_row {
+#ugroveikpc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -665,7 +645,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kxtepphjnf .gt_first_grand_summary_row {
+#ugroveikpc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -675,7 +655,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_last_grand_summary_row_top {
+#ugroveikpc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -685,11 +665,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_striped {
+#ugroveikpc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kxtepphjnf .gt_table_body {
+#ugroveikpc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -698,7 +678,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_footnotes {
+#ugroveikpc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -712,7 +692,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_footnote {
+#ugroveikpc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -721,7 +701,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kxtepphjnf .gt_sourcenotes {
+#ugroveikpc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -735,7 +715,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kxtepphjnf .gt_sourcenote {
+#ugroveikpc .gt_sourcenote {
   font-size: 10px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -743,63 +723,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kxtepphjnf .gt_left {
+#ugroveikpc .gt_left {
   text-align: left;
 }
 
-#kxtepphjnf .gt_center {
+#ugroveikpc .gt_center {
   text-align: center;
 }
 
-#kxtepphjnf .gt_right {
+#ugroveikpc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kxtepphjnf .gt_font_normal {
+#ugroveikpc .gt_font_normal {
   font-weight: normal;
 }
 
-#kxtepphjnf .gt_font_bold {
+#ugroveikpc .gt_font_bold {
   font-weight: bold;
 }
 
-#kxtepphjnf .gt_font_italic {
+#ugroveikpc .gt_font_italic {
   font-style: italic;
 }
 
-#kxtepphjnf .gt_super {
+#ugroveikpc .gt_super {
   font-size: 65%;
 }
 
-#kxtepphjnf .gt_footnote_marks {
+#ugroveikpc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kxtepphjnf .gt_asterisk {
+#ugroveikpc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kxtepphjnf .gt_indent_1 {
+#ugroveikpc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kxtepphjnf .gt_indent_2 {
+#ugroveikpc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kxtepphjnf .gt_indent_3 {
+#ugroveikpc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kxtepphjnf .gt_indent_4 {
+#ugroveikpc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kxtepphjnf .gt_indent_5 {
+#ugroveikpc .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -908,8 +888,9 @@ tbody tr:last-child {
 </div>
 </div>
 </div>
-<section id="유보트-성과" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="유보트-성과"><span class="header-section-number">9.1.1</span> 유보트 성과</h3>
+</div>
+<section id="유보트-성과" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="유보트-성과"><span class="header-section-number">3.1.1</span> 유보트 성과</h3>
 <p>유보트가 침몰시킨 선박수(<code>ships_sunk</code>) 정보가 담겨있어 이를 바탕으로 활동성과를 분석해보자.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>uboat_tbl <span class="ot">&lt;-</span> uboat_raw <span class="sc">|&gt;</span> </span>
@@ -952,24 +933,25 @@ tbody tr:last-child {
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fmt_integer</span>(침몰선박수) <span class="sc">|&gt;</span> </span>
 <span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_spanner</span>(<span class="at">label =</span> <span class="st">"침몰선박"</span>, <span class="at">columns =</span> <span class="fu">c</span>(침몰선박수, 비율))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="pftallzsmu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div>
+<div id="zfbhempifa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#pftallzsmu table {
+#zfbhempifa table {
   font-family: NanumSquare;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pftallzsmu thead, #pftallzsmu tbody, #pftallzsmu tfoot, #pftallzsmu tr, #pftallzsmu td, #pftallzsmu th {
+#zfbhempifa thead, #zfbhempifa tbody, #zfbhempifa tfoot, #zfbhempifa tr, #zfbhempifa td, #zfbhempifa th {
   border-style: none;
 }
 
-#pftallzsmu p {
+#zfbhempifa p {
   margin: 0;
   padding: 0;
 }
 
-#pftallzsmu .gt_table {
+#zfbhempifa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -995,12 +977,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_caption {
+#zfbhempifa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pftallzsmu .gt_title {
+#zfbhempifa .gt_title {
   color: #333333;
   font-size: 26px;
   font-weight: initial;
@@ -1012,7 +994,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#pftallzsmu .gt_subtitle {
+#zfbhempifa .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -1024,7 +1006,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#pftallzsmu .gt_heading {
+#zfbhempifa .gt_heading {
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1036,13 +1018,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_bottom_border {
+#zfbhempifa .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_col_headings {
+#zfbhempifa .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1057,7 +1039,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_col_heading {
+#zfbhempifa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1077,7 +1059,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#pftallzsmu .gt_column_spanner_outer {
+#zfbhempifa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1089,15 +1071,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#pftallzsmu .gt_column_spanner_outer:first-child {
+#zfbhempifa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pftallzsmu .gt_column_spanner_outer:last-child {
+#zfbhempifa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pftallzsmu .gt_column_spanner {
+#zfbhempifa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1109,11 +1091,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#pftallzsmu .gt_spanner_row {
+#zfbhempifa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pftallzsmu .gt_group_heading {
+#zfbhempifa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1139,7 +1121,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#pftallzsmu .gt_empty_group_heading {
+#zfbhempifa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1154,15 +1136,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#pftallzsmu .gt_from_md > :first-child {
+#zfbhempifa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pftallzsmu .gt_from_md > :last-child {
+#zfbhempifa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pftallzsmu .gt_row {
+#zfbhempifa .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -1181,7 +1163,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#pftallzsmu .gt_stub {
+#zfbhempifa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1194,7 +1176,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#pftallzsmu .gt_stub_row_group {
+#zfbhempifa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1208,15 +1190,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#pftallzsmu .gt_row_group_first td {
+#zfbhempifa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pftallzsmu .gt_row_group_first th {
+#zfbhempifa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pftallzsmu .gt_summary_row {
+#zfbhempifa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1226,16 +1208,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#pftallzsmu .gt_first_summary_row {
+#zfbhempifa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_first_summary_row.thick {
+#zfbhempifa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pftallzsmu .gt_last_summary_row {
+#zfbhempifa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1245,7 +1227,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_grand_summary_row {
+#zfbhempifa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1255,7 +1237,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#pftallzsmu .gt_first_grand_summary_row {
+#zfbhempifa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1265,7 +1247,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_last_grand_summary_row_top {
+#zfbhempifa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1275,11 +1257,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_striped {
+#zfbhempifa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pftallzsmu .gt_table_body {
+#zfbhempifa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1288,7 +1270,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_footnotes {
+#zfbhempifa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1302,7 +1284,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_footnote {
+#zfbhempifa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1311,7 +1293,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#pftallzsmu .gt_sourcenotes {
+#zfbhempifa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1325,7 +1307,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#pftallzsmu .gt_sourcenote {
+#zfbhempifa .gt_sourcenote {
   font-size: 10px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1333,63 +1315,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#pftallzsmu .gt_left {
+#zfbhempifa .gt_left {
   text-align: left;
 }
 
-#pftallzsmu .gt_center {
+#zfbhempifa .gt_center {
   text-align: center;
 }
 
-#pftallzsmu .gt_right {
+#zfbhempifa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pftallzsmu .gt_font_normal {
+#zfbhempifa .gt_font_normal {
   font-weight: normal;
 }
 
-#pftallzsmu .gt_font_bold {
+#zfbhempifa .gt_font_bold {
   font-weight: bold;
 }
 
-#pftallzsmu .gt_font_italic {
+#zfbhempifa .gt_font_italic {
   font-style: italic;
 }
 
-#pftallzsmu .gt_super {
+#zfbhempifa .gt_super {
   font-size: 65%;
 }
 
-#pftallzsmu .gt_footnote_marks {
+#zfbhempifa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pftallzsmu .gt_asterisk {
+#zfbhempifa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pftallzsmu .gt_indent_1 {
+#zfbhempifa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pftallzsmu .gt_indent_2 {
+#zfbhempifa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pftallzsmu .gt_indent_3 {
+#zfbhempifa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pftallzsmu .gt_indent_4 {
+#zfbhempifa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pftallzsmu .gt_indent_5 {
+#zfbhempifa .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1513,6 +1495,7 @@ tbody tr:last-child {
 </div>
 </div>
 </div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># extrafont::font_import(pattern = "NanumSquare", prompt = FALSE)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># extrafont::loadfonts()</span></span>
@@ -1535,7 +1518,7 @@ tbody tr:last-child {
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>uboat_trends_gg</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="images/uboat_trends_gg.jpg" class="img-fluid"></p>
+<p><a href="images/uboat_trends_gg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/uboat_trends_gg.jpg" class="img-fluid"></a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(giscoR)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
@@ -1569,11 +1552,11 @@ tbody tr:last-child {
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>sunk_sf_gg</span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="images/sunk_sf_gg.jpg" class="img-fluid"></p>
+<p><a href="images/sunk_sf_gg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/sunk_sf_gg.jpg" class="img-fluid"></a></p>
 </section>
 </section>
-<section id="목표선박-데이터" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="목표선박-데이터"><span class="header-section-number">9.2</span> 목표선박 데이터</h2>
+<section id="목표선박-데이터" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="목표선박-데이터"><span class="header-section-number">3.2</span> 목표선박 데이터</h2>
 <p>GitHub 저장소에 침몰선박에 대한 정보도 확인해보자.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">"https://raw.githubusercontent.com/kadenhendron/uboat-data/master/data/uboat-target-data.csv"</span>, </span>
@@ -1656,10 +1639,10 @@ tbody tr:last-child {
 <span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(target_uboat_gt, <span class="st">"images/target_uboat_gt.png"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="images/target_uboat_gt.png" class="img-fluid"></p>
+<p><a href="images/target_uboat_gt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/target_uboat_gt.png" class="img-fluid"></a></p>
 </section>
-<section id="유보트-사령관" class="level2 page-columns page-full" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="유보트-사령관"><span class="header-section-number">9.3</span> 유보트 사령관</h2>
+<section id="유보트-사령관" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="유보트-사령관"><span class="header-section-number">3.3</span> 유보트 사령관</h2>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside"><a href="https://bjnnowak.netlify.app/2021/10/04/r-beautiful-tables-with-gt-and-gtextras/">Riding tables with {gt} and {gtExtras}</a></span></div></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>commander_uboat <span class="ot">&lt;-</span> target_tbl <span class="sc">|&gt;</span> </span>
@@ -1705,10 +1688,10 @@ tbody tr:last-child {
 <span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(target_commander_gt, <span class="st">"images/target_commander_gt.png"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="images/target_commander_gt.png" class="img-fluid"></p>
+<p><a href="images/target_commander_gt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/target_commander_gt.png" class="img-fluid"></a></p>
 </section>
-<section id="유보트와-선박" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="유보트와-선박"><span class="header-section-number">9.4</span> 유보트와 선박</h2>
+<section id="유보트와-선박" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="유보트와-선박"><span class="header-section-number">3.4</span> 유보트와 선박</h2>
 <p>침몰된 선박과 유보트 손실을 월별 시각화를 통해서 1943년을 기점으로 유보트에 대한 연합국의 대응이 효과를 발휘하여 선박손실을 급격히 줄어든 반면 유보트 손실이 급격히 올라간 것을 확인할 수 있다.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>uboat_yearmon <span class="ot">&lt;-</span> uboat_tbl <span class="sc">|&gt;</span> </span>
@@ -1739,7 +1722,7 @@ tbody tr:last-child {
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>uboat_yearmon_gg</span>
 <span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="images/uboat_yearmon_gg.jpg" class="img-fluid"></p>
+<p><a href="images/uboat_yearmon_gg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/uboat_yearmon_gg.jpg" class="img-fluid"></a></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -1911,7 +1894,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -2073,25 +2061,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       };
     }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
           }
-        });
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
       }
   const findCites = (el) => {
     const parentEl = el.parentElement;
@@ -2134,17 +2161,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cs_napolean.html" class="pagination-link  aria-label=" &lt;span="" 러시아="" 침공&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span>
+      <a href="./cs_napolean.html" class="pagination-link" aria-label="나폴레옹 러시아 침공">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">나폴레옹 러시아 침공</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cs_prussia.html" class="pagination-link" aria-label="<span class='chapter-number'>10</span>&nbsp; <span class='chapter-title'>프로이센 기병</span>">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cs_prussia.html" class="pagination-link" aria-label="프로이센 기병">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">프로이센 기병</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>챗GPT 쿼토 책은 소프트웨어 카펜트리 ***** 번역한 것이 포함되어 있습니다.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bit2r/gpt-stat/edit/main/u_boats.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/bit2r/gpt-stat/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>순수하게 <a href="https://quarto.org/">쿼토(Quarto)</a>로 제작되었습니다.</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
