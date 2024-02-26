@@ -39,10 +39,10 @@ book:
         - cs_german_tank.qmd
         - cs_bomber.qmd
 
-    - part: "통계책"
-      chapters:
-        - webr.qmd
-        - shinylive.qmd
+    # - part: "통계책"
+    #   chapters:
+    #     - webr.qmd
+    #     - shinylive.qmd
         # - clt.qmd
     - references.qmd
 

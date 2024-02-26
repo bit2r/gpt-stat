@@ -292,10 +292,10 @@ library(gt)
 library(gtExtras)
 
 before_tbl <- death_viz |> 
-  filter(체제 == "조치이전")
+  dplyr::filter(체제 == "조치이전")
 
 after_tbl <- death_viz |> 
-  filter(체제 == "조치이후")
+  dplyr::filter(체제 == "조치이후")
 
 before_gt <- before_tbl |> 
   pivot_wider(names_from = 사망원인, values_from = 사망자수) |> 
