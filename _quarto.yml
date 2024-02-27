@@ -65,6 +65,28 @@ book:
     #     - shinylive.qmd
         # - clt.qmd
     - references.qmd
+
+# ---------------------------------- #
+format:
+  html:
+    mermaid:
+      theme: neutral # https://quarto.org/docs/authoring/diagrams.html#mermaid-theming
+    theme:
+      - cosmo
+      - r2bit.scss
+    number-depth: 3
+    number-sections: true
+    colorlinks: true
+    # cite-method: biblatex
+    code-overflow: wrap
+    code-link: true
+
+    author-meta: "이광춘"
+    include-in-header: "plausible.html"
+    callout-appearance: simple
+
+    # 마크다운 표 캡션 위치
+    tbl-cap-location: bottom
 # ---------------------------------- #
 filters:
   - lightbox
