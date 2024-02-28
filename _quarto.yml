@@ -3,7 +3,7 @@ project:
   output-dir: docs # HTML
   # output-dir: pdfs
   preview:
-    port: 7771
+    port: 7772
     browser: false
   resources:
     - "data/*.mp3"
@@ -41,9 +41,9 @@ book:
 # ---------------------------------- #
   chapters:
     - index.qmd
-    # - part: "확률"
-    #   chapters:
-    #     - data_mgmt.qmd
+    - part: "확률"
+      chapters:
+        - math.qmd
     #     - database_mgmt.qmd
     #     - document.qmd
     #     - document_auto.qmd
@@ -90,6 +90,7 @@ format:
 # ---------------------------------- #
 filters:
   - lightbox
+  - pyodide
   # - parse-latex
   # - include-code-files
   # - webr

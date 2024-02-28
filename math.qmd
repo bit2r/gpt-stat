@@ -1,0 +1,15 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# 파이썬 수학
+
+
+```{pyodide-python}
+# Let's make a graph
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
+plt.ylabel('제곱수')
+plt.show()
+```
