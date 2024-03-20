@@ -44,6 +44,7 @@ book:
     - part: "확률"
       chapters:
         - math.qmd
+        - probability.qmd
     #     - database_mgmt.qmd
     #     - document.qmd
     #     - document_auto.qmd
@@ -59,6 +60,13 @@ book:
         - cs_german_tank.qmd
         - cs_bomber.qmd
 
+    - part: "**9부** 데이터 과학"
+      chapters:
+        - simpson.qmd
+        - basic_stat.qmd
+        - sampling.qmd
+        - hypothesis.qmd
+        - NHST.qmd
     # - part: "통계책"
     #   chapters:
     #     - webr.qmd
